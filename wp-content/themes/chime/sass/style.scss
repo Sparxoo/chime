@@ -1,0 +1,194 @@
+//import all of the variables
+@import 'variables';
+
+//import all of the mixins
+@import 'mixins';
+
+//import custom animations
+@import 'animations';
+
+//logic to hide and show the backup image if SVG is not supported
+.no-svg{
+	.nonsvg-icon-backup{display:inline-block !important}
+	.svg-icon{display:none !important}
+}
+.svg{
+	.nonsvg-icon-backup{display:none !important}
+	.svg-icon{display:inline-block !important}
+}
+
+/****************************
+ADD ALL YOUR SASS/CSS BELOW
+Please be sure and use SASS nesting
+http://sass-lang.com/guide#topic-3
+****************************/
+
+
+//nesting example
+//you can delete this and add your own relevant nested content
+nav {
+  ul {
+	  li{
+		  a {
+
+		  }
+	  }
+  }
+}
+
+/*********************
+HERO BANNER
+*********************/
+#hero{
+	.hero-image{
+		min-height:500px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		position:relative;
+		
+		#mobile-hero-image{
+			display:none;
+			
+		    @include breakpoint($screen-sm-min){
+		        display:block;
+				
+				img{
+					width:100%;
+					height:auto;
+					display:block;
+				}
+				position:relative;
+		    }
+		}
+		
+	    @include breakpoint($screen-sm-min){
+	        background-image:none !important;
+			min-height:inherit;
+	    }
+	
+		.hero-info{
+			position:absolute;
+			top:30%;
+			display:block;
+			width:100%;
+			z-index:2;
+			
+			@include breakpoint($screen-sm-min){
+				position:static;
+			}
+	
+			h1{
+				&.title{				
+					.small-title{
+					}
+				}
+			}
+		}
+		
+		
+		#hero-banner-video{
+			video{
+		        position: absolute;
+				z-index:1;
+		        top:0;
+				right:0;
+		        min-width:100%;
+				min-height:100%;
+				display:block;
+			
+				-webkit-backface-visibility: hidden;
+				-webkit-transform: translateZ(0);
+			
+				.touch & {
+					display:none;
+				}
+			
+			}
+		}
+	}
+}
+
+
+/*********************
+BANNER VIDEO
+*********************/
+#video-block-container{
+	position:relative;
+	display:block;
+	width:100%;
+	height:400px;
+	background-size:cover;
+	#banner-video-container{
+		position:absolute;
+		top:0;
+		left:0;
+		z-index:10;
+		display:block;
+		width:100%;
+		height:100%;
+		background:$black;
+		text-align:center;
+		
+		#video-close-button{
+			color:$white;
+			position:absolute;
+			top:0px;
+			right:10px;
+			font-size:2em;
+		}
+		
+		iframe{
+			margin:20px 0 0;
+		}
+	
+		&.hide{
+			display:none;
+		}
+	}	
+	
+	#video-playbutton-container{
+		text-align:center;
+		
+		.video-play-button{
+			color:$white;
+			font-size:3em;
+			
+			a{
+				color:$white;
+			}
+		}
+		
+		#video-play-button-touch{
+			display:none;
+		}
+		
+	}
+}
+
+//only show the touch play button on touch devices
+.touch{
+	#video-block-container{
+		#video-playbutton-container{		
+
+			#video-play-button-touch{
+				display:block;
+			}
+			
+			#video-play-button{
+				display:none;
+			}
+		
+		}
+	}
+}
+
+
+
+/*********************
+SOCIAL ICONS
+*********************/
+#social-icons{
+	
+}

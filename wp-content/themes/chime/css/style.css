@@ -1,0 +1,168 @@
+/*********************
+Color Variables
+*********************/
+/*********************
+BREAKPOINTS
+*********************/
+/*********************
+TYPOGRAPHY
+*********************/
+/* 	To embed your own fonts, use this syntax
+	and place your fonts inside the
+	/fonts folder. For more information
+	on embedding fonts, go to:
+	http://www.fontsquirrel.com/
+	Be sure to remove the comment brackets.
+*/
+/** 
+@font-face { 	font-family: 'museo300-regular'; 	src: url('../fonts/museo300-regular.eot'); 	src: url('../fonts/museo300-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/museo300-regular.woff') format('woff'), url('../fonts/museo300-regular.ttf') format('truetype'), url('../fonts/museo300-regular.svg#museo300-regular') format('svg'); 	font-weight: normal; 	font-style: normal;
+}
+
+$museo300-regular: "museo300-regular", Verdana, Times New Roman, Times, serif;
+**/
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+/******************************************************************
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of Sass' great features:
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+******************************************************************/
+/*********************
+CLEARFIXIN'
+*********************/
+.clearfix, .cf { zoom: 1; }
+.clearfix:before, .clearfix:after, .cf:before, .cf:after { content: ""; display: table; }
+.clearfix:after, .cf:after { clear: both; }
+
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp { font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important; font-style: italic; }
+
+/*********************
+TRANSITION
+*********************/
+/*
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+OPACITY
+adds an opacity to an HTML element
+USAGE:  @include opacity(.8,80);
+*********************/
+/*********************
+VENDOR PREFIX
+allows us to add one line of code that works accross all the browsers for CCS3 elements
+USAGE:  @include vendor-prefix('border-radius', '6px');
+*********************/
+/*********************
+HTML LIST ITEM WITH NOT LIST STYLE 
+removes the list-style settings from an HTML list
+USAGE:  @include listNoStyle
+*********************/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+This is a great tool for creating CSS gradients:  http://www.colorzilla.com/gradient-editor/
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/* @include css-gradient(#dfdfdf,0%, #f8f8f8, 80%); */
+/* @include css-gradient(#dfdfdf,0%, #f8f8f8, 80%); */
+/* @include css-gradient(#dfdfdf,0%, #f8f8f8, 20%, #000000, 20%, #f8f8f8, 90%); */
+/*********************
+BORDER RADIUS
+USAGE:  @include border-radius-fourcorners(10px)
+*********************/
+/*********************
+TRANSFORM
+rotate USAGE:  @include rotate(20deg)
+scale USAGE:  @include scale(1.3)
+*********************/
+/******************************************************************
+Stylesheet: Animations
+
+This is where we can add some fun CSS3 animations that can be called in the style.scss file.
+
+When adding CSS animations to a element you will want to include these lines of code in addition to the animation-name:
+	@include vendor-prefix('animation-timing-function', 'linear');
+	@include vendor-prefix('animation-duration', '20s' );
+	@include vendor-prefix('animation-iteration-count', 'infinite');
+	@include vendor-prefix('animation-fill-mode', 'both');
+	@include vendor-prefix('transform-style', 'preserve-3D');
+******************************************************************/
+/*********************
+360 Rotationi Animation
+USAGE: @include vendor-prefix('animation-name', 'spin360');
+*********************/
+@-webkit-keyframes spin360 { 0% { -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); } }
+@-moz-keyframes spin360 { 0% { -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); } }
+@-o-keyframes spin360 { 0% { -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); } }
+@keyframes spin360 { 0% { -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); } }
+/*********************
+EXAMPLE animation used to make an item rotate around in a circle.
+*********************/
+@-webkit-keyframes orbitTopMiddle { from { -webkit-transform: rotate(0deg) translateY(-200px) rotate(0deg); }
+  to { -webkit-transform: rotate(360deg) translateY(-200px) rotate(-360deg); } }
+@-moz-keyframes orbitTopMiddle { from { -moz-transform: rotate(0deg) translateY(-200px) rotate(0deg); }
+  to { -moz-transform: rotate(360deg) translateY(-200px) rotate(-360deg); } }
+@-o-keyframes orbitTopMiddle { from { -o-transform: rotate(0deg) translateY(-200px) rotate(0deg); }
+  to { -o-transform: rotate(360deg) translateY(-200px) rotate(-360deg); } }
+@keyframes orbitTopMiddle { from { transform: rotate(0deg) translateY(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateY(-200px) rotate(-360deg); } }
+.no-svg .nonsvg-icon-backup { display: inline-block !important; }
+.no-svg .svg-icon { display: none !important; }
+
+.svg .nonsvg-icon-backup { display: none !important; }
+.svg .svg-icon { display: inline-block !important; }
+
+/****************************
+ADD ALL YOUR SASS/CSS BELOW
+Please be sure and use SASS nesting
+http://sass-lang.com/guide#topic-3
+****************************/
+/*********************
+HERO BANNER
+*********************/
+#hero .hero-image { min-height: 500px; background-position: center center; background-repeat: no-repeat; background-size: cover; width: 100%; position: relative; }
+#hero .hero-image #mobile-hero-image { display: none; }
+@media screen and (max-width: 768px) { #hero .hero-image #mobile-hero-image { display: block; position: relative; }
+  #hero .hero-image #mobile-hero-image img { width: 100%; height: auto; display: block; } }
+@media screen and (max-width: 768px) { #hero .hero-image { background-image: none !important; min-height: inherit; } }
+#hero .hero-image .hero-info { position: absolute; top: 30%; display: block; width: 100%; z-index: 2; }
+@media screen and (max-width: 768px) { #hero .hero-image .hero-info { position: static; } }
+#hero .hero-image #hero-banner-video video { position: absolute; z-index: 1; top: 0; right: 0; min-width: 100%; min-height: 100%; display: block; -webkit-backface-visibility: hidden; -webkit-transform: translateZ(0); }
+.touch #hero .hero-image #hero-banner-video video { display: none; }
+
+/*********************
+BANNER VIDEO
+*********************/
+#video-block-container { position: relative; display: block; width: 100%; height: 400px; background-size: cover; }
+#video-block-container #banner-video-container { position: absolute; top: 0; left: 0; z-index: 10; display: block; width: 100%; height: 100%; background: #000000; text-align: center; }
+#video-block-container #banner-video-container #video-close-button { color: #ffffff; position: absolute; top: 0px; right: 10px; font-size: 2em; }
+#video-block-container #banner-video-container iframe { margin: 20px 0 0; }
+#video-block-container #banner-video-container.hide { display: none; }
+#video-block-container #video-playbutton-container { text-align: center; }
+#video-block-container #video-playbutton-container .video-play-button { color: #ffffff; font-size: 3em; }
+#video-block-container #video-playbutton-container .video-play-button a { color: #ffffff; }
+#video-block-container #video-playbutton-container #video-play-button-touch { display: none; }
+
+.touch #video-block-container #video-playbutton-container #video-play-button-touch { display: block; }
+.touch #video-block-container #video-playbutton-container #video-play-button { display: none; }
+
+/*********************
+SOCIAL ICONS
+*********************/
