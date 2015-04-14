@@ -22,20 +22,96 @@ ADD ALL YOUR SASS/CSS BELOW
 Please be sure and use SASS nesting
 http://sass-lang.com/guide#topic-3
 ****************************/
-
-
-//nesting example
-//you can delete this and add your own relevant nested content
-nav {
-  ul {
-	  li{
-		  a {
-
-		  }
-	  }
-  }
+a:focus{
+	outline:none;
 }
 
+.padding0{
+	padding: $padding0;
+}
+.site-header{
+	@extend .fullwidth;
+	padding: 10px 0 0;	
+	position:relative;
+	z-index:9999;
+		
+	ul.nav{
+		@extend .fright;
+		padding:52px 0 0 0;
+		
+		li{
+			@extend .fleft;
+			padding:0 0 0 34px;
+			position:relative;
+			
+			a{
+				@extend .fleft;
+				color:#444444;
+				font:700 16px/18px $opensans;
+				text-transform:uppercase;
+				padding:0;
+				text-decoration:none;
+			}
+			
+			a:hover{
+				background:none;
+			}
+			
+			ul.sub-menu{
+				display:none;
+				position:absolute;
+				left:15px;
+				top:100%;
+				list-style:none;
+				padding:22px 0 0 0;				
+				width:189px;
+				
+				li{
+					padding:0;
+					background:#160d47;
+					@extend .fleft;
+					@extend .fullwidth;
+					border-top:1px solid #312b53;
+					
+					a{
+						padding:20px;
+						@extend .fullwidth;
+					}				
+				}
+				:hover{
+					background:#7dba3d;
+				}
+				:first-child{
+					border:0;
+				}
+			}
+		}
+
+		li:hover{
+			
+			a{
+				color:#7dba3d;
+			}
+		
+			ul.sub-menu{
+				display:block;
+				
+				a{
+					color:$white;
+				}
+			}
+		}
+	}
+}
+//nesting example
+//you can delete this and add your own relevant nested content
+
+
+
+.site-content{
+	@extend .fleft;
+	@extend .fullwidth;
+}
 /*********************
 HERO BANNER
 *********************/
@@ -184,11 +260,104 @@ BANNER VIDEO
 	}
 }
 
-
+/*********************
+After Banner
+*********************/
+.after-banner{
+	@extend .fullwidth;
+	padding: 70px 0 94px;
+	
+	h1{
+		font:700 30px/32px $opensans;
+		text-transform:uppercase;
+		color:#444444;
+		padding:0 0 26px 0;
+		margin:0 0 41px;
+		background:url(../images/three-lins.png) no-repeat center bottom;
+	}
+	
+	p{
+		font:400 16px/24px $arail;
+		color:#444444;
+	}
+}
+/*********************
+Services Section
+*********************/
+.services-section{
+	@extend .fullwidth;
+	background:url(../images/services-bg.png) no-repeat left center;
+	background-size:cover;
+	padding:23px 0 0 0;
+	
+	.services{
+		-ms-transform: rotate(5deg);
+		-webkit-transform: rotate(5deg);
+		transform: rotate(5deg);
+		list-style:none;
+		width:340px;
+		
+		li{
+			text-transform:uppercase;
+			-ms-transform: rotate(-5deg);
+		-webkit-transform: rotate(-5deg);
+		transform: rotate(-5deg);
+			float:right;
+			width:100%;background:url(../images/last-round-1.png) no-repeat center top;
+			padding-top:40px;
+			
+			a{float:right;width:100%;text-align:center;			
+			
+						-ms-transform: rotate(30deg);
+		-webkit-transform: rotate(30deg);
+		transform: rotate(30deg);}
+		}
+	}
+	
+	.services-right{
+		.top{
+			@extend .fullwidth;
+		}
+	}
+}
 
 /*********************
-SOCIAL ICONS
+Footer Section
 *********************/
-#social-icons{
+.site-footer{
+	@extend .fullwidth;
+	border-top:1px solid #000000;
+	padding:26px 0;
 	
+	ul{
+		@extend .fleft;
+		
+		li{
+			@extend .fleft;
+			padding: 0 30px 0 0;
+			
+			a{
+				@extend .fleft;
+				padding:0;
+				color:#999999;
+				font:700 14px/16px $opensans;
+				text-transform:uppercase;				
+			}
+			:hover{
+				background:none;
+			}
+		}
+	}
+	.site-by{
+		@extend .fright;
+		
+		a{
+			@extend .fleft;
+			padding:0;
+			color:#999999;
+			font:700 14px/16px $opensans;
+			text-transform:uppercase;	
+			text-decoration:none;
+		}
+	}
 }

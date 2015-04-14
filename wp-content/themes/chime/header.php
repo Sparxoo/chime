@@ -43,21 +43,23 @@
 
 <body <?php body_class(); ?>>
 
-<header id="masthead" class="site-header" role="banner">
-	<a id="logo" href="<?php echo home_url(); ?>" rel="nofollow">	
-		<?php
-			//uses the svg_png_backup function defined in inc/extras.php.  The first paramater is the image file name and the second paramater is the alt title text.  Use this funciton for all SVG img tags.
-			//svg_png_backup('logo', 'The Gathering Spot');	
-		?>	
-	</a>
-	
-	<?php
+<header id="masthead" class="site-header pull-left" role="banner">
+	<div class="container">
+		<div class="row">			
+			<a id="logo" href="<?php echo home_url(); ?>" rel="nofollow">	
+				<?php
+					//uses the svg_png_backup function defined in inc/extras.php.  The first paramater is the image file name and the second paramater is the alt title text.  Use this funciton for all SVG img tags.
+					//svg_png_backup('logo', 'The Gathering Spot');	
+				?>	
+				<img src="<?php bloginfo('template_url');?>/images/logo.png" alt="">
+			</a>
 		
-	?>
-	<?php 
-		//add the main menu that is defined in the funcitons.php file
-		bp_main_top_nav(); 
-	?>
+			<?php 
+				//add the main menu that is defined in the funcitons.php file
+				bp_main_top_nav(); 
+			?>					
+		</div>
+	</div>
 </header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content pull-left">

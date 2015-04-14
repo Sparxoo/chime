@@ -104,6 +104,15 @@ function sparxoo_bp_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+	register_sidebar( array(
+		'name'          => __( 'Site By', 'sparxoo-bp' ),
+		'id'            => 'site-by',
+		'description'   => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
 }
 add_action( 'widgets_init', 'sparxoo_bp_widgets_init' );
 
@@ -124,7 +133,8 @@ function sparxoo_bp_scripts() {
 		wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/css/style.css' );
 		
 		//add custom Google fonts.  The can be replaced with the Google fonts that are relevant to this theme.
-	    wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
+	    //wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
+	    wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,400italic,600italic,700,700italic,800,800italic');
 	
 		//jQuery
 		wp_enqueue_script( 'jquery');
@@ -136,6 +146,8 @@ function sparxoo_bp_scripts() {
 		wp_enqueue_script( 'Froogaloop-js', get_template_directory_uri() . '/js/lib/Froogaloop.min.js', array('jquery'), '', false );
 		
 		//all our custom jquery
+		wp_enqueue_script( 'plugins-js', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '', false );
+		wp_enqueue_script( 'circletype-js', get_template_directory_uri() . '/js/circletype.js', array('jquery'), '', false );
 		wp_enqueue_script( 'scripts-js', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '', false );
 		
 

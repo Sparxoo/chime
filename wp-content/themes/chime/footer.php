@@ -10,12 +10,20 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer pull-left" role="contentinfo">
+		<div class="container">
+			<div class="row">				
+				<?php
+					//add the footer menu that is defined in the funcitons.php file
+					bp_footer_nav();
+				?>
+				<div class="site-by pull-right">
+					<?php dynamic_sidebar('site-by');?>
+				</div>
+			</div>
+			
+		</div>
 		
-		<?php
-		    //add the footer menu that is defined in the funcitons.php file
-			bp_footer_nav();
-		?>
 		
 		
 		<?php 

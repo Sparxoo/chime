@@ -22,6 +22,8 @@ TYPOGRAPHY
 
 $sans-serif:        Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$opensans:          "Open Sans", sans-serif;
+$arail:            	Arial, sans-serif;
 
 
 /* 	To embed your own fonts, use this syntax
@@ -51,3 +53,13 @@ $museo300-regular: "museo300-regular", Verdana, Times New Roman, Times, serif;
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
+
+/*********************
+Float Variables
+*********************/
+.fleft{float:left;}
+.fright{float:right;}
+.fnone{float:none;}
+.fullwidth{width:100%;}
+
+$padding0: 0;
