@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 <?php 
 	//add the hero banner to the header.
-	//get_template_part("content", "hero"); 
+	get_template_part("content", "hero"); 
 ?>
 <div class="after-banner pull-left">
 	<div class="container">

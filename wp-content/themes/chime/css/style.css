@@ -27,13 +27,13 @@ http://simplebits.com/notebook/2008/08/14/ampersands-2/
 /*********************
 Float Variables
 *********************/
-.fleft, .site-header ul.nav li, .site-header ul.nav li a, .site-header ul.nav li ul.sub-menu li, .site-content, .site-footer ul, .site-footer ul li, .site-footer ul li a, .site-footer .site-by a { float: left; }
+.fleft, .site-header ul.nav li, .site-header ul.nav li a, .site-header ul.nav li ul.sub-menu li, .site-footer ul, .site-footer ul li, .site-footer ul li a, .site-footer .site-by a { float: left; }
 
 .fright, .site-header ul.nav, .site-footer .site-by { float: right; }
 
 .fnone { float: none; }
 
-.fullwidth, .site-header, .site-header ul.nav li ul.sub-menu li, .site-header ul.nav li ul.sub-menu li a, .site-content, .after-banner, .services-section, .services-section .services-right .top, .site-footer { width: 100%; }
+.fullwidth, .site-header, .site-header ul.nav li ul.sub-menu li, .site-header ul.nav li ul.sub-menu li a, .site-content, .after-banner, .services-section, .services-section .services-left, .services-section .services-right .top, .site-footer, .service-detail { width: 100%; }
 
 /******************************************************************
 Stylesheet: Mixins & Constants Stylesheet
@@ -149,11 +149,11 @@ a:focus { outline: none; }
 
 .padding0 { padding: 0; }
 
-.site-header { padding: 10px 0 0; position: relative; z-index: 9999; }
+.site-header { padding: 10px 0 12px; position: relative; z-index: 9999; }
 .site-header ul.nav { padding: 52px 0 0 0; }
 .site-header ul.nav li { padding: 0 0 0 34px; position: relative; }
-.site-header ul.nav li a { color: #444444; font: 700 16px/18px "Open Sans", sans-serif; text-transform: uppercase; padding: 0; text-decoration: none; }
-.site-header ul.nav li a:hover { background: none; }
+.site-header ul.nav li a { color: #444444; font: 700 16px/18px "Open Sans", sans-serif; text-transform: uppercase; padding: 0; text-decoration: none; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+.site-header ul.nav li a:hover { background: none; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 .site-header ul.nav li ul.sub-menu { display: none; position: absolute; left: 15px; top: 100%; list-style: none; padding: 22px 0 0 0; width: 189px; }
 .site-header ul.nav li ul.sub-menu li { padding: 0; background: #160d47; border-top: 1px solid #312b53; }
 .site-header ul.nav li ul.sub-menu li a { padding: 20px; }
@@ -167,14 +167,21 @@ a:focus { outline: none; }
 HERO BANNER
 *********************/
 #hero .hero-image { min-height: 500px; background-position: center center; background-repeat: no-repeat; background-size: cover; width: 100%; position: relative; }
+#hero .hero-image img { width: 100%; height: auto; }
 #hero .hero-image #mobile-hero-image { display: none; }
 @media screen and (max-width: 768px) { #hero .hero-image #mobile-hero-image { display: block; position: relative; }
   #hero .hero-image #mobile-hero-image img { width: 100%; height: auto; display: block; } }
 @media screen and (max-width: 768px) { #hero .hero-image { background-image: none !important; min-height: inherit; } }
-#hero .hero-image .hero-info { position: absolute; top: 30%; display: block; width: 100%; z-index: 2; }
+#hero .hero-image .hero-info { position: absolute; top: 17%; display: block; width: 100%; z-index: 2; }
 @media screen and (max-width: 768px) { #hero .hero-image .hero-info { position: static; } }
+#hero .hero-image .hero-info .description h2 { color: #444444; font: 700 45px/46px "Open Sans", sans-serif; text-transform: uppercase; letter-spacing: 5px; margin: 0; padding-bottom: 15px; }
+#hero .hero-image .hero-info .description h3 { color: #444444; font: 400 45px/46px "Open Sans", sans-serif; text-transform: uppercase; letter-spacing: 4px; margin: 0; padding-bottom: 33px; }
+#hero .hero-image .hero-info .description a { float: right; background: #7cb93d; color: #fff; font: 600 16px/40px "Open Sans", sans-serif; text-transform: uppercase; letter-spacing: 2px; padding: 0 50px 0 28px; text-decoration: none; display: block; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; position: relative; }
+#hero .hero-image .hero-info .description a:after { position: absolute; right: 15px; top: 0; content: ""; background: url(../images/right-angle.png) no-repeat center center; height: 40px; width: 7px; }
+#hero .hero-image .hero-info .description a:hover { background: #61ae12; }
 #hero .hero-image #hero-banner-video video { position: absolute; z-index: 1; top: 0; right: 0; min-width: 100%; min-height: 100%; display: block; -webkit-backface-visibility: hidden; -webkit-transform: translateZ(0); }
 .touch #hero .hero-image #hero-banner-video video { display: none; }
+#hero .hero-image h1 { background: rgba(0, 0, 0, 0.6); color: #ffffff; font: 700 36px/36px "Open Sans", sans-serif; text-transform: uppercase; margin: 0; position: absolute; left: 0; bottom: 0; width: 100%; text-align: center; letter-spacing: 4px; padding: 12px 0; }
 
 /*********************
 BANNER VIDEO
@@ -195,7 +202,7 @@ BANNER VIDEO
 /*********************
 After Banner
 *********************/
-.after-banner { padding: 70px 0 94px; }
+.after-banner { padding: 71px 0 94px; }
 .after-banner h1 { font: 700 30px/32px "Open Sans", sans-serif; text-transform: uppercase; color: #444444; padding: 0 0 26px 0; margin: 0 0 41px; background: url(../images/three-lins.png) no-repeat center bottom; }
 .after-banner p { font: 400 16px/24px Arial, sans-serif; color: #444444; }
 
@@ -203,9 +210,13 @@ After Banner
 Services Section
 *********************/
 .services-section { background: url(../images/services-bg.png) no-repeat left center; background-size: cover; padding: 23px 0 0 0; }
-.services-section .services { -ms-transform: rotate(5deg); -webkit-transform: rotate(5deg); transform: rotate(5deg); list-style: none; width: 340px; }
-.services-section .services li { text-transform: uppercase; -ms-transform: rotate(-5deg); -webkit-transform: rotate(-5deg); transform: rotate(-5deg); float: right; width: 100%; background: url(../images/last-round-1.png) no-repeat center top; padding-top: 40px; }
-.services-section .services li a { float: right; width: 100%; text-align: center; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); }
+.services-section .services { -ms-transform: rotate(1deg); -webkit-transform: rotate(1deg); transform: rotate(1deg); list-style: none; width: 357px; position: absolute; top: 0; right: -11; }
+.services-section .services li { text-transform: uppercase; -ms-transform: rotate(-5deg); -webkit-transform: rotate(-5deg); transform: rotate(-5deg); float: right; width: 100%; padding-top: 40px; }
+.services-section .services li a { float: right; width: 100%; text-align: center; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); opacity: 0; }
+.services-section .services-left { position: relative; }
+.services-section .services-left img { margin-left: -100px; }
+.services-section .services-right .top h3 { text-transform: uppercase; font: 700 30px/32px "Open Sans", sans-serif; }
+.services-section .services-right .top p { text-transform: uppercase; font: 400 16px/18px "Open Sans", sans-serif; color: #999999; }
 
 /*********************
 Footer Section
@@ -215,3 +226,9 @@ Footer Section
 .site-footer ul li a { padding: 0; color: #999999; font: 700 14px/16px "Open Sans", sans-serif; text-transform: uppercase; }
 .site-footer ul li :hover { background: none; }
 .site-footer .site-by a { padding: 0; color: #999999; font: 700 14px/16px "Open Sans", sans-serif; text-transform: uppercase; text-decoration: none; }
+
+/**********************
+Service Detail Page
+**********************/
+.service-detail h2 { font: 700 18px/18px "Open Sans", sans-serif; color: #160d47; text-transform: uppercase; text-align: center; margin: 0; }
+.service-detail p { font: 400 16px/24px Arial, sans-serif; color: #333333; }

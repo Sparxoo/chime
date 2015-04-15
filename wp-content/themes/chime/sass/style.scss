@@ -31,7 +31,7 @@ a:focus{
 }
 .site-header{
 	@extend .fullwidth;
-	padding: 10px 0 0;	
+	padding: 10px 0 12px;	
 	position:relative;
 	z-index:9999;
 		
@@ -51,10 +51,12 @@ a:focus{
 				text-transform:uppercase;
 				padding:0;
 				text-decoration:none;
+				@include hoverEffect(all, 0.2s, ease-in-out);
 			}
 			
 			a:hover{
 				background:none;
+				@include hoverEffect(all, 0.2s, ease-in-out);
 			}
 			
 			ul.sub-menu{
@@ -109,7 +111,6 @@ a:focus{
 
 
 .site-content{
-	@extend .fleft;
 	@extend .fullwidth;
 }
 /*********************
@@ -123,6 +124,11 @@ HERO BANNER
 		background-size: cover;
 		width: 100%;
 		position:relative;
+		
+		img{
+			width:100%;
+			height:auto;
+		}
 		
 		#mobile-hero-image{
 			display:none;
@@ -146,7 +152,7 @@ HERO BANNER
 	
 		.hero-info{
 			position:absolute;
-			top:30%;
+			top:17%;
 			display:block;
 			width:100%;
 			z-index:2;
@@ -155,11 +161,56 @@ HERO BANNER
 				position:static;
 			}
 	
-			h1{
-				&.title{				
-					.small-title{
-					}
+			
+			
+			.description{
+				h2{
+					color:#444444;
+					font:700 45px/46px $opensans;
+					text-transform:uppercase;
+					letter-spacing: 5px;
+					margin:0;
+					padding-bottom:15px;
 				}
+				
+				h3{
+					color:#444444;
+					font:400 45px/46px $opensans;
+					text-transform:uppercase;
+					letter-spacing: 4px;
+					margin:0;
+					padding-bottom:33px;
+				}
+				
+				a{
+					float:right;
+					background:#7cb93d;
+					color:#fff;
+					font:600 16px/40px $opensans;
+					text-transform:uppercase;
+					letter-spacing: 2px;
+					padding:0 50px 0 28px;
+					text-decoration:none;
+					display:block;
+					@include hoverEffect(all, 0.5s, ease-in-out);
+					position:relative;
+				}	
+				
+				a:after{
+					position:absolute;
+					right:15px;
+					top:0;
+					content:"";
+					background:url(../images/right-angle.png) no-repeat center center;
+					height:40px;
+					width:7px;
+				}
+				
+				a:hover{
+					background:#61ae12;
+				}
+				
+				
 			}
 		}
 		
@@ -183,6 +234,22 @@ HERO BANNER
 			
 			}
 		}
+		
+		h1{
+			background:rgba(0, 0, 0, 0.6);
+			color:#ffffff;
+			font:700 36px/36px $opensans;
+			text-transform:uppercase;
+			margin:0;
+			position:absolute;
+			left:0;
+			bottom:0;
+			width:100%;
+			text-align:center;
+			letter-spacing:4px;
+			padding:12px 0;
+		}
+		
 	}
 }
 
@@ -265,7 +332,7 @@ After Banner
 *********************/
 .after-banner{
 	@extend .fullwidth;
-	padding: 70px 0 94px;
+	padding: 71px 0 94px;
 	
 	h1{
 		font:700 30px/32px $opensans;
@@ -291,32 +358,58 @@ Services Section
 	padding:23px 0 0 0;
 	
 	.services{
-		-ms-transform: rotate(5deg);
-		-webkit-transform: rotate(5deg);
-		transform: rotate(5deg);
+		-ms-transform: rotate(1deg);
+		-webkit-transform: rotate(1deg);
+		transform: rotate(1deg);
 		list-style:none;
-		width:340px;
+		width:357px;
+		position:absolute;
+		top:0;right:-11;
 		
 		li{
 			text-transform:uppercase;
 			-ms-transform: rotate(-5deg);
-		-webkit-transform: rotate(-5deg);
-		transform: rotate(-5deg);
+			-webkit-transform: rotate(-5deg);
+			transform: rotate(-5deg);
 			float:right;
-			width:100%;background:url(../images/last-round-1.png) no-repeat center top;
+			width:100%;
 			padding-top:40px;
 			
-			a{float:right;width:100%;text-align:center;			
-			
-						-ms-transform: rotate(30deg);
-		-webkit-transform: rotate(30deg);
-		transform: rotate(30deg);}
+			a{
+				float:right;
+				width:100%;
+				text-align:center;
+				-ms-transform: rotate(30deg);
+				-webkit-transform: rotate(30deg);
+				transform: rotate(30deg);
+				opacity:0;
+			}
+		}
+	}
+	
+	.services-left{
+		@extend .fullwidth;
+		position:relative;
+		
+		img{
+			margin-left:-100px;
 		}
 	}
 	
 	.services-right{
 		.top{
 			@extend .fullwidth;
+			
+			h3{
+				text-transform:uppercase;
+				font:700 30px/32px $opensans;
+			}
+			
+			p{
+				text-transform:uppercase;
+				font:400 16px/18px $opensans;
+				color:#999999;
+			}
 		}
 	}
 }
@@ -359,5 +452,26 @@ Footer Section
 			text-transform:uppercase;	
 			text-decoration:none;
 		}
+	}
+}
+
+
+/**********************
+Service Detail Page
+**********************/
+.service-detail{
+	@extend .fullwidth;
+	
+	h2{
+		font:700 18px/18px $opensans;
+		color:#160d47;
+		text-transform:uppercase;	
+		text-align:center;
+		margin:0;
+	}
+	
+	p{
+		font:400 16px/24px $arail;
+		color:#333333;
 	}
 }

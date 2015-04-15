@@ -47,27 +47,34 @@ endwhile; endif ;
 <?php if(has_post_thumbnail() || $videoWebm || $videoMp4 || $video_ogg):?>
 				
 		<section id="hero">
-			<div style="background-image:url('<?php print $hero_image ?>');" class="hero-image" <?= $parallaxData; ?> >
-				
+			<?php /* ?><div style="background-image:url('<?php print $hero_image ?>');" class="hero-image" <?= $parallaxData; ?> ><?php */?>
+				<div class="hero-image">
 					<?php
 					//add the image to use for the mobile version of the site.
 					//TODO:  Figure out how to do this without having an extra image loaded to the site.
 					?>
-					<div id="mobile-hero-image">
+					<!--<div id="mobile-hero-image">
 						<?php // display the title differently for the mobile site. ?>
-						<img src="<?php print $hero_mobile; ?>" alt="<?= $hero_alt ?>">
-					</div>
+						<img src="<?php //print $hero_mobile; ?>" alt="<?= $hero_alt ?>">
+					</div>-->
 				
-				
+				<img src="<?php print $hero_mobile; ?>" alt="<?= $hero_alt ?>">
+				<?php if($hero_title): ?>
+					<h1 class="title"><?php print $hero_title; ?></h1>
+				<?php endif; ?>
 					<?php
 					//do the following if the title or description exists
 					if($hero_title || $hero_description): ?>
 						<div class="hero-info">
-							<?php if($hero_title): ?>
-								<h1 class="title"><?php print $hero_title; ?></h1>
-							<?php endif; ?>
+							
 							<?php if($hero_description): ?>
-								<div class="description"><?php print $hero_description; ?></div>
+								<div class="container">
+									<div class="row">
+										<div class="col-md-8 col-sm-8 col-xs-8 pull-right padding0">
+											<div class="description"><?php print $hero_description; ?></div>
+										</div>
+									</div>
+								</div>
 							<?php endif; ?>
 						</div>
 					<?php endif; ?>

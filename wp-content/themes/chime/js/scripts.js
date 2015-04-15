@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
   	  $('#banner-video-container').addClass('hide');
 	  
     });
-	$('.services li a').circleType({radius: 130});
+	$('.services li a').circleType({radius: 170});
 	$(function() {
 	    var iframe = $('#video-player')[0];
 	    var player = $f(iframe);
