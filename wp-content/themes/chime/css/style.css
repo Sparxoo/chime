@@ -33,7 +33,18 @@ Float Variables
 
 .fnone { float: none; }
 
-.fullwidth, .site-header, .site-header ul.nav li ul.sub-menu li, .site-header ul.nav li ul.sub-menu li a, .site-content, .after-banner, .services-section, .services-section .services-left, .services-section .services-right .top, .site-footer, .service-detail { width: 100%; }
+.fullwidth, .site-header, .site-header ul.nav li ul.sub-menu li, .site-header ul.nav li ul.sub-menu li a, .site-content, .after-banner, .services-section, .services-section .services-left, .services-section .services-right .top, .site-footer, .service-detail, .services-links, .services-links span { width: 100%; }
+
+/*********************
+Display Variables
+*********************/
+.dnone { display: none; }
+
+.dblock { display: block; }
+
+.dib, .services-links a { display: inline-block; }
+
+.dinline { display: inline; }
 
 /******************************************************************
 Stylesheet: Mixins & Constants Stylesheet
@@ -230,5 +241,11 @@ Footer Section
 /**********************
 Service Detail Page
 **********************/
-.service-detail h2 { font: 700 18px/18px "Open Sans", sans-serif; color: #160d47; text-transform: uppercase; text-align: center; margin: 0; }
-.service-detail p { font: 400 16px/24px Arial, sans-serif; color: #333333; }
+.service-detail { padding: 37px 0 84px 0; margin: 25px 0 0; background: url(../images/three-lins.png) no-repeat center top; }
+.service-detail h2 { font: 700 18px/24px "Open Sans", sans-serif; color: #160d47; text-transform: uppercase; text-align: center; margin: 0; padding: 0 0 17px 0; letter-spacing: 4px; }
+.service-detail p { font: 400 16px/24px Arial, sans-serif; color: #333333; padding: 0 0 15px 0; margin: 0; }
+
+.services-links { text-transform: uppercase; padding: 53px 0 0; background-size: cover; }
+.services-links h4 { margin: 0; font: 700 24px/24px "Open Sans", sans-serif; color: #160d47; padding: 0 0 45px 0; }
+.services-links a { width: 100px; height: 100px; border: 5px solid #8cc640; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 90px; }
+.services-links span { font: 700 18px/24px "Open Sans", sans-serif; color: #333333; padding: 22px 0 55px 0; }

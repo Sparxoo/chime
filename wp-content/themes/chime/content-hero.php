@@ -58,7 +58,7 @@ endwhile; endif ;
 						<img src="<?php //print $hero_mobile; ?>" alt="<?= $hero_alt ?>">
 					</div>-->
 				
-				<img src="<?php print $hero_mobile; ?>" alt="<?= $hero_alt ?>">
+				<img src="<?php print $hero_image ?>" alt="<?= $hero_alt ?>">
 				<?php if($hero_title): ?>
 					<h1 class="title"><?php print $hero_title; ?></h1>
 				<?php endif; ?>

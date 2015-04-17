@@ -23,12 +23,23 @@
 		</div>
 	</div>
 </div>
-<?php 
-	//uncomment the below line to display a video on the home page.
-	//get_template_part("content", "video"); 
-?>
-<?php 
-	//get_template_part("content", "services"); 
-?>
+<div class="services-links pull-left text-center" style="background-image:url(<?php echo get_field('backgound_image', $post->ID);?>);">
+	<div class="container">
+		<div class="row">
+			<h4><?php if(get_field('service_section_title', $post->ID) !=''){
+				echo get_field('service_section_title', $post->ID);
+			} else {
+				echo "Our Services";
+			}?></h4>
+			<?php query_posts( 'post_type=page&post_parent=19940' );?>
+			<?php while ( have_posts() ) : the_post();?>
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<a href="<?php the_permalink();?>"><img src="<?php the_field('services_icon', $post->ID);?>"></a>
+					<span class="pull-left"><?php the_title();?></span>
+				</div>
+			<?php endwhile; wp_reset_query();?>			
+		</div>
+	</div>
+</div>
 		
 <?php get_footer(); ?>

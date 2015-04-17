@@ -461,17 +461,53 @@ Service Detail Page
 **********************/
 .service-detail{
 	@extend .fullwidth;
+	padding:37px 0 84px 0;
+	margin:25px 0 0;
+	background:url(../images/three-lins.png) no-repeat center top;
 	
 	h2{
-		font:700 18px/18px $opensans;
+		font:700 18px/24px $opensans;
 		color:#160d47;
 		text-transform:uppercase;	
 		text-align:center;
 		margin:0;
+		padding: 0 0 17px 0;
+		letter-spacing: 4px;
 	}
 	
 	p{
 		font:400 16px/24px $arail;
 		color:#333333;
+		padding:0 0 15px 0;
+		margin:0;
+	}
+}
+
+.services-links{
+	@extend .fullwidth;
+	text-transform:uppercase;
+	padding:53px 0 0;
+	background-size:cover;
+	
+	h4{
+		margin:0;
+		font:700 24px/24px $opensans;
+		color:#160d47;
+		padding:0 0 45px 0;
+	}
+	a{
+		width:100px;
+		height:100px;
+		@extend .dib;
+		border:5px solid #8cc640;
+		@include border-radius-fourcorners(50%);
+		text-align:center;
+		line-height:90px;
+	}
+	span{
+		@extend .fullwidth;
+		font:700 18px/24px $opensans;
+		color:#333333;
+		padding:22px 0 55px 0;
 	}
 }
