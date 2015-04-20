@@ -25,7 +25,12 @@ http://sass-lang.com/guide#topic-3
 a:focus{
 	outline:none;
 }
-
+p{
+	color: #333333;
+    font: 400 16px/24px Arial,sans-serif;
+    margin: 0;
+    padding: 0 0 15px;
+}
 .padding0{
 	padding: $padding0;
 }
@@ -455,7 +460,14 @@ Footer Section
 	}
 }
 
-
+/**********************
+Services Page
+**********************/
+.page-template-template-services{
+	.service-detail{
+		padding:77px 0 0;
+	}
+}
 /**********************
 Service Detail Page
 **********************/
@@ -472,7 +484,7 @@ Service Detail Page
 		text-align:center;
 		margin:0;
 		padding: 0 0 17px 0;
-		letter-spacing: 4px;
+		letter-spacing: 3px;
 	}
 	
 	p{
@@ -509,5 +521,228 @@ Service Detail Page
 		font:700 18px/24px $opensans;
 		color:#333333;
 		padding:22px 0 55px 0;
+	}
+}
+
+/********************
+Gravity Form
+********************/
+.page-template-template-contact{
+	
+	.contact-main{		
+		@extend .fullwidth;
+		@extend .fleft;
+		padding:72px 0 109px;
+		margin:29px 0 0;
+		background:url(../images/three-lins.png) no-repeat center top;
+		
+		.gform_wrapper{
+			@extend .fullwidth;
+			@extend .fleft;
+			
+			form{
+				.gform_heading{
+					h3.gform_title{
+						font:700 24px/26px $opensans;
+						color:#160d47;
+						text-transform:uppercase;
+						letter-spacing:4px;
+					}
+				}
+				
+				.gform_body{
+					@extend .fullwidth;
+					@extend .fleft;
+					
+					label{
+						display:none;
+					}
+					
+					ul{
+						margin:0;
+						padding:0;
+						list-style:none;
+						@extend .fullwidth;
+						@extend .fleft;
+						
+						li{
+							@extend .fleft;
+							width:49%;
+							@extend .fleft;
+							
+							.ginput_container{
+								border-left:4px solid #7ab83d;
+								margin-top:12px;
+								width:100%;
+									float:left;
+								
+								input[type="text"]{								
+									border:1px solid #e1e1e1;
+									position:relative;
+									height:35px;
+									padding:10px;
+									width:100%;
+									float:left;
+									color:#999999;
+								}
+								select{
+									width:100%;
+									height:35px;
+									float:left;
+									border:1px solid #e1e1e1;
+									color:#999999;
+								}
+								
+								textarea{
+									padding:10px;
+									width:100%;
+									float:left;
+									border:1px solid #e1e1e1;
+									color:#999999;
+									resize:none;
+									height:176px;
+								}
+								
+								
+							}
+						}	
+						li:first-child{
+							@extend .fright;
+						}
+					}
+				}
+				
+				.gform_footer{
+					width:100%;
+					float:left;
+					text-align:center;
+					padding:54px 0 0;
+					
+					input[type="submit"]{
+						background: #7cb93d url(../images/right-angle.png) no-repeat 90% center;
+						color: #fff;
+						display: inline-block;
+						font: 600 16px/40px $opensans;
+						letter-spacing: 2px;
+						padding: 0 53px 0 20px;
+						position: relative;
+						text-decoration: none;
+						border:0;
+						text-transform: uppercase;
+						@include hoverEffect(all, 0.5s, ease-in-out);
+					}
+				}
+				
+				
+			}
+		}
+	}
+}
+
+
+/********************
+Open Positions
+********************/
+.page-template-template-openings-php{
+	.position-main{
+		@extend .fullwidth;
+		@extend .fleft;
+		padding:52px 0 41px;
+		background:#f1f1f1 url(../images/three-lins.png) no-repeat center 19px;
+	
+		.wrapper{
+			margin:0 auto;
+			width:1044px;
+		}
+	}
+}
+
+.job-banner{
+	@extend .fullwidth;
+	padding:59px 0 54px;
+	
+	h1{
+		margin:0;
+		color:$white;
+		text-transform:uppercase;
+		font: 600 40px/42px $opensans;
+		padding:0 0 12px;
+	}
+	h2{
+		margin:0;
+		color:$white;
+		text-transform:uppercase;
+		font: 400 30px/32px $opensans;
+	}
+}
+
+.wpjb-page-index{
+	@extend .fullwidth;
+	@extend .fleft;
+	
+	.wpjb-job-list{
+		@extend .fullwidth;
+		@extend .fleft;
+		
+		.wpjb-grid-row{
+			@extend .fullwidth;
+			@extend .fleft;
+			background:#ffffff;
+			border-bottom:1px solid #f5f5f5;
+			
+			.wpjb-col-title{
+				width:41%;
+				
+				a{
+					font: 400 100%/1.5	 $arail;
+					color:#ad0700;
+				}
+				
+				.wpjb-sub {
+					display: block;
+					font: 400 0.85em/0.95em $arail;
+				}
+			}
+			
+			.wpjb-col-location{
+				color:#444;
+				font: 400 100%/1.5 $arail;
+			}
+			
+			.wpjb-bulb{
+				/*@extend .dnone;*/
+				background-color:#160d47;
+			}
+			
+				a{
+					color:#160d47;
+				}
+		}
+	}
+}
+.wpjb .wpjb-form div input[type="text"]{
+	background-color:#160d47;
+	color:#fff;
+	border:0;
+}
+.wpjb .wpjb-form div input[type="password"]{
+	background-color:#160d47;
+	color:#fff;
+	border:0;
+}
+.wpjb .wpjb-form div textarea{
+	background-color:#160d47;
+	color:#fff;
+	border:0;
+}
+
+/*Default Page css starts here*/
+.page-template-default{
+	.entry-title{
+		color: #160d47;
+		font-family: "PhiRoman";
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 36px;margin: 0 0 1em;
 	}
 }

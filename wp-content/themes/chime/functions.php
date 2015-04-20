@@ -131,6 +131,7 @@ function sparxoo_bp_scripts() {
 		wp_enqueue_style( 'bootstrap-theme', get_template_directory_uri() . '/css/bootstrap/bootstrap-theme.min.css' );
 		//Add them CSS
 		wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/css/style.css' );
+		wp_enqueue_style( 'theme-fonts', get_template_directory_uri() . '/css/fonts.css' );
 		
 		//add custom Google fonts.  The can be replaced with the Google fonts that are relevant to this theme.
 	    //wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');

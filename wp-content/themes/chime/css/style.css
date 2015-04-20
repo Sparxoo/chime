@@ -27,13 +27,13 @@ http://simplebits.com/notebook/2008/08/14/ampersands-2/
 /*********************
 Float Variables
 *********************/
-.fleft, .site-header ul.nav li, .site-header ul.nav li a, .site-header ul.nav li ul.sub-menu li, .site-footer ul, .site-footer ul li, .site-footer ul li a, .site-footer .site-by a { float: left; }
+.fleft, .site-header ul.nav li, .site-header ul.nav li a, .site-header ul.nav li ul.sub-menu li, .site-footer ul, .site-footer ul li, .site-footer ul li a, .site-footer .site-by a, .page-template-template-contact .contact-main, .page-template-template-contact .contact-main .gform_wrapper, .page-template-template-contact .contact-main .gform_wrapper form .gform_body, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul li, .page-template-template-openings-php .position-main, .wpjb-page-index, .wpjb-page-index .wpjb-job-list, .wpjb-page-index .wpjb-job-list .wpjb-grid-row { float: left; }
 
-.fright, .site-header ul.nav, .site-footer .site-by { float: right; }
+.fright, .site-header ul.nav, .site-footer .site-by, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul li:first-child { float: right; }
 
 .fnone { float: none; }
 
-.fullwidth, .site-header, .site-header ul.nav li ul.sub-menu li, .site-header ul.nav li ul.sub-menu li a, .site-content, .after-banner, .services-section, .services-section .services-left, .services-section .services-right .top, .site-footer, .service-detail, .services-links, .services-links span { width: 100%; }
+.fullwidth, .site-header, .site-header ul.nav li ul.sub-menu li, .site-header ul.nav li ul.sub-menu li a, .site-content, .after-banner, .services-section, .services-section .services-left, .services-section .services-right .top, .site-footer, .service-detail, .services-links, .services-links span, .page-template-template-contact .contact-main, .page-template-template-contact .contact-main .gform_wrapper, .page-template-template-contact .contact-main .gform_wrapper form .gform_body, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul, .page-template-template-openings-php .position-main, .job-banner, .wpjb-page-index, .wpjb-page-index .wpjb-job-list, .wpjb-page-index .wpjb-job-list .wpjb-grid-row { width: 100%; }
 
 /*********************
 Display Variables
@@ -158,6 +158,8 @@ http://sass-lang.com/guide#topic-3
 ****************************/
 a:focus { outline: none; }
 
+p { color: #333333; font: 400 16px/24px Arial,sans-serif; margin: 0; padding: 0 0 15px; }
+
 .padding0 { padding: 0; }
 
 .site-header { padding: 10px 0 12px; position: relative; z-index: 9999; }
@@ -239,13 +241,60 @@ Footer Section
 .site-footer .site-by a { padding: 0; color: #999999; font: 700 14px/16px "Open Sans", sans-serif; text-transform: uppercase; text-decoration: none; }
 
 /**********************
+Services Page
+**********************/
+.page-template-template-services .service-detail { padding: 77px 0 0; }
+
+/**********************
 Service Detail Page
 **********************/
 .service-detail { padding: 37px 0 84px 0; margin: 25px 0 0; background: url(../images/three-lins.png) no-repeat center top; }
-.service-detail h2 { font: 700 18px/24px "Open Sans", sans-serif; color: #160d47; text-transform: uppercase; text-align: center; margin: 0; padding: 0 0 17px 0; letter-spacing: 4px; }
+.service-detail h2 { font: 700 18px/24px "Open Sans", sans-serif; color: #160d47; text-transform: uppercase; text-align: center; margin: 0; padding: 0 0 17px 0; letter-spacing: 3px; }
 .service-detail p { font: 400 16px/24px Arial, sans-serif; color: #333333; padding: 0 0 15px 0; margin: 0; }
 
 .services-links { text-transform: uppercase; padding: 53px 0 0; background-size: cover; }
 .services-links h4 { margin: 0; font: 700 24px/24px "Open Sans", sans-serif; color: #160d47; padding: 0 0 45px 0; }
 .services-links a { width: 100px; height: 100px; border: 5px solid #8cc640; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 90px; }
 .services-links span { font: 700 18px/24px "Open Sans", sans-serif; color: #333333; padding: 22px 0 55px 0; }
+
+/********************
+Gravity Form
+********************/
+.page-template-template-contact .contact-main { padding: 72px 0 109px; margin: 29px 0 0; background: url(../images/three-lins.png) no-repeat center top; }
+.page-template-template-contact .contact-main .gform_wrapper form .gform_heading h3.gform_title { font: 700 24px/26px "Open Sans", sans-serif; color: #160d47; text-transform: uppercase; letter-spacing: 4px; }
+.page-template-template-contact .contact-main .gform_wrapper form .gform_body label { display: none; }
+.page-template-template-contact .contact-main .gform_wrapper form .gform_body ul { margin: 0; padding: 0; list-style: none; }
+.page-template-template-contact .contact-main .gform_wrapper form .gform_body ul li { width: 49%; }
+.page-template-template-contact .contact-main .gform_wrapper form .gform_body ul li .ginput_container { border-left: 4px solid #7ab83d; margin-top: 12px; width: 100%; float: left; }
+.page-template-template-contact .contact-main .gform_wrapper form .gform_body ul li .ginput_container input[type="text"] { border: 1px solid #e1e1e1; position: relative; height: 35px; padding: 10px; width: 100%; float: left; color: #999999; }
+.page-template-template-contact .contact-main .gform_wrapper form .gform_body ul li .ginput_container select { width: 100%; height: 35px; float: left; border: 1px solid #e1e1e1; color: #999999; }
+.page-template-template-contact .contact-main .gform_wrapper form .gform_body ul li .ginput_container textarea { padding: 10px; width: 100%; float: left; border: 1px solid #e1e1e1; color: #999999; resize: none; height: 176px; }
+.page-template-template-contact .contact-main .gform_wrapper form .gform_footer { width: 100%; float: left; text-align: center; padding: 54px 0 0; }
+.page-template-template-contact .contact-main .gform_wrapper form .gform_footer input[type="submit"] { background: #7cb93d url(../images/right-angle.png) no-repeat 90% center; color: #fff; display: inline-block; font: 600 16px/40px "Open Sans", sans-serif; letter-spacing: 2px; padding: 0 53px 0 20px; position: relative; text-decoration: none; border: 0; text-transform: uppercase; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+
+/********************
+Open Positions
+********************/
+.page-template-template-openings-php .position-main { padding: 52px 0 41px; background: #f1f1f1 url(../images/three-lins.png) no-repeat center 19px; }
+.page-template-template-openings-php .position-main .wrapper { margin: 0 auto; width: 1044px; }
+
+.job-banner { padding: 59px 0 54px; }
+.job-banner h1 { margin: 0; color: #ffffff; text-transform: uppercase; font: 600 40px/42px "Open Sans", sans-serif; padding: 0 0 12px; }
+.job-banner h2 { margin: 0; color: #ffffff; text-transform: uppercase; font: 400 30px/32px "Open Sans", sans-serif; }
+
+.wpjb-page-index .wpjb-job-list .wpjb-grid-row { background: #ffffff; border-bottom: 1px solid #f5f5f5; }
+.wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-title { width: 41%; }
+.wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-title a { font: 400 100%/1.5 Arial, sans-serif; color: #ad0700; }
+.wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-title .wpjb-sub { display: block; font: 400 0.85em/0.95em Arial, sans-serif; }
+.wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-location { color: #444; font: 400 100%/1.5 Arial, sans-serif; }
+.wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-bulb { /*@extend .dnone;*/ background-color: #160d47; }
+.wpjb-page-index .wpjb-job-list .wpjb-grid-row a { color: #160d47; }
+
+.wpjb .wpjb-form div input[type="text"] { background-color: #160d47; color: #fff; border: 0; }
+
+.wpjb .wpjb-form div input[type="password"] { background-color: #160d47; color: #fff; border: 0; }
+
+.wpjb .wpjb-form div textarea { background-color: #160d47; color: #fff; border: 0; }
+
+/*Default Page css starts here*/
+.page-template-default .entry-title { color: #160d47; font-family: "PhiRoman"; text-align: center; text-transform: uppercase; font-size: 36px; margin: 0 0 1em; }
