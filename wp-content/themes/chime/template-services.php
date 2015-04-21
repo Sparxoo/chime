@@ -9,6 +9,7 @@
 	//add the hero banner to the header.
 	get_template_part("content", "hero"); 
 ?>
+<div class="service-outer" style="background-image:url(<?php echo get_field('service_bg', $post->ID);?>);background-size:cover;">
 <div class="service-detail pull-left text-center">
 	<div class="container">
 		<div class="row">
@@ -23,5 +24,28 @@
 		</div>
 	</div>
 </div>
-	
+<div class="service-links pull-left text-center">
+	<div class="container">
+		<div class="row">			
+			<div class="service-inner pull-left">
+				<?php if( have_rows('page_services') ){
+					while ( have_rows('page_services') ) : the_row();
+					?>
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<a href="<?php the_sub_field('service_link', $post->ID);?>"><img src="<?php the_sub_field('service_icon1', $post->ID);?>"></a>
+						<span class="pull-left"><?php the_sub_field('service_name', $post->ID);?></span>
+						<ul>
+							<?php if( have_rows('service_text') ){
+								while ( have_rows('service_text') ) : the_row();
+								?>
+								<li><?php the_sub_field('text', $post->ID);?></li>
+							<?php endwhile; }?>
+						</ul>
+					</div>
+				<?php endwhile; }?>
+			</div>			
+		</div>
+	</div>
+</div>
+	</div>
 <?php get_footer(); ?>

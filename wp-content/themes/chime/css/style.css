@@ -33,7 +33,7 @@ Float Variables
 
 .fnone { float: none; }
 
-.fullwidth, .site-header, .site-header ul.nav li ul.sub-menu li, .site-header ul.nav li ul.sub-menu li a, .site-content, .after-banner, .services-section, .services-section .services-left, .services-section .services-right .top, .site-footer, .service-detail, .services-links, .services-links span, .page-template-template-contact .contact-main, .page-template-template-contact .contact-main .gform_wrapper, .page-template-template-contact .contact-main .gform_wrapper form .gform_body, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul, .page-template-template-openings-php .position-main, .job-banner, .wpjb-page-index, .wpjb-page-index .wpjb-job-list, .wpjb-page-index .wpjb-job-list .wpjb-grid-row { width: 100%; }
+.fullwidth, .site-header, .site-header ul.nav li ul.sub-menu li, .site-header ul.nav li ul.sub-menu li a, .site-content, .after-banner, .services-section, .services-section .services-left, .services-section .services-right .top, .site-footer, .service-detail, .services-links, .services-links span, body.page-template-template-services .service-outer, body.page-template-template-services .service-links, body.page-template-template-services .service-links .service-inner, body.page-template-template-services .service-links span, body.page-template-template-services .service-links ul, .page-template-template-contact .contact-main, .page-template-template-contact .contact-main .gform_wrapper, .page-template-template-contact .contact-main .gform_wrapper form .gform_body, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul, .page-template-template-openings-php .position-main, .job-banner, .wpjb-page-index, .wpjb-page-index .wpjb-job-list, .wpjb-page-index .wpjb-job-list .wpjb-grid-row, .top-3-reasons, .top-3-reasons .service-inner, .top-3-reasons span.title { width: 100%; }
 
 /*********************
 Display Variables
@@ -42,7 +42,7 @@ Display Variables
 
 .dblock { display: block; }
 
-.dib, .services-links a { display: inline-block; }
+.dib, .services-links a, body.page-template-template-services .service-links a, .top-3-reasons span.image { display: inline-block; }
 
 .dinline { display: inline; }
 
@@ -241,11 +241,6 @@ Footer Section
 .site-footer .site-by a { padding: 0; color: #999999; font: 700 14px/16px "Open Sans", sans-serif; text-transform: uppercase; text-decoration: none; }
 
 /**********************
-Services Page
-**********************/
-.page-template-template-services .service-detail { padding: 77px 0 0; }
-
-/**********************
 Service Detail Page
 **********************/
 .service-detail { padding: 37px 0 84px 0; margin: 25px 0 0; background: url(../images/three-lins.png) no-repeat center top; }
@@ -256,6 +251,19 @@ Service Detail Page
 .services-links h4 { margin: 0; font: 700 24px/24px "Open Sans", sans-serif; color: #160d47; padding: 0 0 45px 0; }
 .services-links a { width: 100px; height: 100px; border: 5px solid #8cc640; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 90px; }
 .services-links span { font: 700 18px/24px "Open Sans", sans-serif; color: #333333; padding: 22px 0 55px 0; }
+
+/**********************
+Services Page
+**********************/
+body.page-template-template-services .service-detail { padding: 77px 0 0; }
+body.page-template-template-services .service-outer { float: left; }
+body.page-template-template-services .service-links { padding: 0 0 120px; background-size: cover; }
+body.page-template-template-services .service-links .service-inner { background: url(../images/service-lines.png) no-repeat center top; padding-top: 93px; }
+body.page-template-template-services .service-links h4 { margin: 0; font: 700 24px/24px "Open Sans", sans-serif; color: #160d47; padding: 0 0 45px 0; }
+body.page-template-template-services .service-links a { width: 100px; height: 100px; border: 5px solid #8cc640; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 90px; }
+body.page-template-template-services .service-links span { font: 700 18px/24px "Open Sans", sans-serif; color: #333333; padding: 22px 0 18px 0; }
+body.page-template-template-services .service-links ul { margin: 0; padding: 0; list-style: none; text-align: left; float: left; }
+body.page-template-template-services .service-links ul li { font: 400 16px/16px "Open Sans", sans-serif; text-transform: inherit !important; color: #333333; padding-left: 22px; background: url(../images/green-bullet.png) no-repeat left 5px; }
 
 /********************
 Gravity Form
@@ -298,3 +306,23 @@ Open Positions
 
 /*Default Page css starts here*/
 .page-template-default .entry-title { color: #160d47; font-family: "PhiRoman"; text-align: center; text-transform: uppercase; font-size: 36px; margin: 0 0 1em; }
+
+/***********************
+Why Chime Page
+***********************/
+.page-template-template-why-chime .service-detail { padding: 57px 0 84px; }
+
+.testimonial-text { padding-top: 33px; }
+.testimonial-text h3 { color: #160d47; font: 700 24px/26px "Open Sans", sans-serif; text-transform: uppercase; letter-spacing: 3px; padding-bottom: 32px; }
+.testimonial-text p { color: #444444; font: 400 20px/30px Arial, sans-serif; background: url(../images/testimonial-start.png) no-repeat left 2px; padding-left: 40px; }
+.testimonial-text p img { position: relative; top: -3px; }
+.testimonial-text span { color: #999999; font: 400 20px/30px Arial, sans-serif; float: right; }
+
+.top-3-reasons { padding: 40px 0 38px; background-size: cover; text-align: center; }
+.top-3-reasons .service-inner { background: url(../images/service-lines.png) no-repeat center top; padding-top: 93px; }
+.top-3-reasons h4 { margin: 0; font: 700 24px/24px "Open Sans", sans-serif; color: #160d47; text-transform: uppercase; padding: 0 0 70px 0; }
+.top-3-reasons span.image { width: 100px; height: 100px; border: 5px solid #8cc640; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 90px; padding: 0; }
+.top-3-reasons span.title { font: 700 18px/24px "Open Sans", sans-serif; color: #160d47; padding: 22px 0 18px 0; text-transfrom: uppercase; letter-spacing: 2px; }
+.top-3-reasons p { color: #444444; font: 400 16px/18px Arial, sans-serif; }
+.top-3-reasons a { background: none repeat scroll 0 0 #7cb93d; color: #fff; display: inline-block; font: 600 16px/40px "Open Sans",sans-serif; letter-spacing: 2px; padding: 0 50px 0 28px; position: relative; text-decoration: none; text-transform: uppercase; margin-top: 60px; }
+.top-3-reasons a::after { background: url("../images/right-angle.png") no-repeat scroll center center transparent; content: ""; height: 40px; position: absolute; right: 15px; top: 0; width: 7px; }

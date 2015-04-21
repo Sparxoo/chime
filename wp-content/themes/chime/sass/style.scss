@@ -460,14 +460,7 @@ Footer Section
 	}
 }
 
-/**********************
-Services Page
-**********************/
-.page-template-template-services{
-	.service-detail{
-		padding:77px 0 0;
-	}
-}
+
 /**********************
 Service Detail Page
 **********************/
@@ -523,7 +516,70 @@ Service Detail Page
 		padding:22px 0 55px 0;
 	}
 }
+/**********************
+Services Page
+**********************/
+body.page-template-template-services{
+	.service-detail{
+		padding:77px 0 0;
+	}
+	.service-outer{
+		@extend .fullwidth;
+		float: left;
+	}
+.service-links{
+	@extend .fullwidth;
+	padding:0 0 120px;
+	background-size:cover;
+	
+	
+	
+	.service-inner{
+		@extend .fullwidth;
+		background:url(../images/service-lines.png) no-repeat center top;
+		padding-top: 93px;
+	}
+	
+	h4{
+		margin:0;
+		font:700 24px/24px $opensans;
+		color:#160d47;
+		padding:0 0 45px 0;
+	}
+	a{
+		width:100px;
+		height:100px;
+		@extend .dib;
+		border:5px solid #8cc640;
+		@include border-radius-fourcorners(50%);
+		text-align:center;
+		line-height:90px;
+	}
+	span{
+		@extend .fullwidth;
+		font:700 18px/24px $opensans;
+		color:#333333;
+		padding:22px 0 18px 0;
+	}
+	ul{
+		margin:0;
+		padding:0;
+		list-style:none;
+		text-align:left;
+		@extend .fullwidth;
+		float:left;
+		
+		li{
+			font:400 16px/16px $opensans;
+			text-transform:inherit !important;
+			color:#333333;
+			padding-left:22px;
+			background:url(../images/green-bullet.png) no-repeat left 5px;
+		}
+	}
+}
 
+}
 /********************
 Gravity Form
 ********************/
@@ -744,5 +800,111 @@ Open Positions
 		text-align: center;
 		text-transform: uppercase;
 		font-size: 36px;margin: 0 0 1em;
+	}
+}
+
+/***********************
+Why Chime Page
+***********************/
+.page-template-template-why-chime{
+	.service-detail{
+		padding: 57px 0 84px;
+	}
+}
+
+
+.testimonial-text{
+	padding-top:33px;
+	h3{
+		color:#160d47;
+		font: 700 24px/26px $opensans;
+		text-transform: uppercase;
+		letter-spacing:3px;
+		padding-bottom:32px;
+	}
+	
+	p{
+		color:#444444;
+		font: 400 20px/30px $arail;
+		background:url(../images/testimonial-start.png) no-repeat left 2px;
+		padding-left:40px;
+		
+		img{
+			position:relative;
+			top:-3px;
+		}
+	}
+	
+	span{
+		color:#999999;
+		font: 400 20px/30px $arail;
+		float:right;
+	}
+}
+
+.top-3-reasons{
+	@extend .fullwidth;
+	padding:40px 0 38px;
+	background-size:cover;
+	text-align: center;
+	
+	
+	.service-inner{
+		@extend .fullwidth;
+		background:url(../images/service-lines.png) no-repeat center top;
+		padding-top: 93px;
+	}
+	
+	h4{
+		margin:0;
+		font:700 24px/24px $opensans;
+		color:#160d47;
+		text-transform: uppercase;
+		padding:0 0 70px 0;
+	}
+	span.image{
+		width:100px;
+		height:100px;
+		@extend .dib;
+		border:5px solid #8cc640;
+		@include border-radius-fourcorners(50%);
+		text-align:center;
+		line-height:90px;
+		padding:0;
+	}
+	span.title{
+		@extend .fullwidth;
+		font:700 18px/24px $opensans;
+		color:#160d47;
+		padding:22px 0 18px 0;
+		text-transfrom:uppercase;
+		letter-spacing:2px;
+	}
+	
+	p{
+		color:#444444;
+		font: 400 16px/18px $arail;
+	}
+	
+	a{
+		background: none repeat scroll 0 0 #7cb93d;
+		color: #fff;
+		display: inline-block;
+		font: 600 16px/40px "Open Sans",sans-serif;
+		letter-spacing: 2px;
+		padding: 0 50px 0 28px;
+		position: relative;
+		text-decoration: none;
+		text-transform: uppercase;
+		margin-top:60px;
+	}
+	a::after {
+		background: url("../images/right-angle.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+		content: "";
+		height: 40px;
+		position: absolute;
+		right: 15px;
+		top: 0;
+		width: 7px;
 	}
 }
