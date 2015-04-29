@@ -35,6 +35,8 @@ if (have_posts()) : while (have_posts()) : the_post();
 	$video_webm = get_field('video_webm');
 	$video_mp4 = get_field('video_mp4');
 	$video_ogg = get_field('video_ogg');
+	$video_3gp = get_field('video_3gp');
+	$video_flv = get_field('video_flv');
 	
 	//if this is a parallax hero image then add the parallax data
 	$parallaxData = ($parallax == 'Yes' && $bannerFormat == 'Photo' ? 'data-top="background-position: 50% 0px;" data-top-bottom="background-position: 50% -120px;" data-anchor-target="#hero"' : '');
@@ -57,10 +59,20 @@ endwhile; endif ;
 						<?php // display the title differently for the mobile site. ?>
 						<img src="<?php //print $hero_mobile; ?>" alt="<?= $hero_alt ?>">
 					</div>-->
+				<?php if($hero_image !='') {?>
+					<img src="<?php print $hero_image ?>" alt="<?= $hero_alt ?>">
+				<?php }?>
 				
-				<img src="<?php print $hero_image ?>" alt="<?= $hero_alt ?>">
 				<?php if($hero_title): ?>
-					<h1 class="title"><?php print $hero_title; ?></h1>
+					<div class="title">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 col-xs-12">
+									<?php print $hero_title; ?>
+								</div>
+							</div>
+						</div>
+					</div>
 				<?php endif; ?>
 					<?php
 					//do the following if the title or description exists
@@ -87,6 +99,9 @@ endwhile; endif ;
 							  <source src="<?php print $video_mp4['url']; ?>" type="video/mp4">
 							  <source src="<?php print $video_webm['url']; ?>" type="video/webm">
 							  <source src="<?php echo $video_ogg['url']; ?>" type="video/ogg">	  
+							  <source src="<?php echo $video_3gp['url']; ?>" type="video/3gp">	  
+							  <source src="<?php echo $video_flv['url']; ?>" type="video/flv">	
+							  Your browser does not support HTML5 video.
 							</video>
 						</div>
 					<?php endif; ?>

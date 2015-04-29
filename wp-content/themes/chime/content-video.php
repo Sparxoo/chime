@@ -8,6 +8,7 @@ $videoClass = $videoType;
 
 //get the video screenshot and alt text
 $screenshotID = get_field('video_screenshot');
+
 $imgObj = wp_get_attachment_image_src($screenshotID, 'banner', false);
 $imgAlt = get_post_meta($screenshotID, '_wp_attachment_image_alt', true);
 $imgURL = $imgObj[0];
@@ -16,6 +17,15 @@ $imgURL = $imgObj[0];
 if($videoID): ?>
 
 	<div id="video-block-container" style="background-image:url(<?= $imgURL ?>)">
+		<div class="video-title">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<?php the_field('video_title',$post->ID);?>
+					</div>
+				</div>
+			</div>
+		</div>
 		<?php // this is where the actual video is displayed.  This is hidden until the play button is clicked. ?>
 		<div id="banner-video-container" class="hide">
 			<div id="video-close-button" class="<?= $videoClass ?>"><?php print do_shortcode('[icon name="close" class="fa-times "]'); ?></div>

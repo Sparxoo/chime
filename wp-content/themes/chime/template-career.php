@@ -53,14 +53,34 @@
 	</div>
 </div>
 
-<div class="our-values">
+<div class="our-values pull-left">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-1 col-sm-1 col-xs-12"></div>
 			<div class="col-md-10 col-sm-10 col-xs-12">
 				<div class="row">
-					<div class="col-md-1 col-sm-1 col-xs-12">
+					<h4><?php the_field('values_title',$post->ID);?></h4>
+					<div class="col-md-1 col-sm-1 col-xs-12"></div>
+					<div class="col-md-10 col-sm-10 col-xs-12">
+						<div class="row">
+							<?php if( have_rows('values') ){
+								while ( have_rows('values') ) : the_row();
+								?>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<div class="value-inner pull-left">
+										<span><?php the_sub_field('value_number', $post->ID);?></span>
+										<p><?php the_sub_field('value', $post->ID);?></p>
+									</div>
+								</div>
+							<?php endwhile; }?>
+							<div class="col-md-6 col-sm-6 col-xs-12 text-center">
+									<div class="value-inner join-team pull-left">
+										<a href="<?php the_field('link', $post->ID);?>"><?php the_field('button_text', $post->ID);?></a>
+									</div>
+								</div>
+						</div>
 					</div>
+					<div class="col-md-1 col-sm-1 col-xs-12"></div>
 				</div>
 			</div>
 			<div class="col-md-1 col-sm-1 col-xs-12"></div>

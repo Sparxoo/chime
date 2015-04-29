@@ -237,7 +237,7 @@ HERO BANNER
 		
 		#hero-banner-video{
 			video{
-		        position: absolute;
+		        /*position: absolute;*/
 				z-index:1;
 		        top:0;
 				right:0;
@@ -255,7 +255,7 @@ HERO BANNER
 			}
 		}
 		
-		h1{
+		.title{
 			background:rgba(0, 0, 0, 0.6);
 			color:#ffffff;
 			font:700 36px/36px $opensans;
@@ -281,7 +281,7 @@ BANNER VIDEO
 	position:relative;
 	display:block;
 	width:100%;
-	height:400px;
+	height:495px;
 	background-size:cover;
 	#banner-video-container{
 		position:absolute;
@@ -310,13 +310,28 @@ BANNER VIDEO
 			display:none;
 		}
 	}	
-	
+	.video-title{
+		background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+		bottom: 0;
+		color: #ffffff;
+		font: 700 36px/36px "Open Sans",sans-serif;
+		left: 0;
+		letter-spacing: 4px;
+		margin: 0;
+		padding: 12px 0;
+		position: absolute;
+		text-align: center;
+		text-transform: uppercase;
+		width: 100%;
+	}
 	#video-playbutton-container{
 		text-align:center;
+		height: 100%;
 		
 		.video-play-button{
 			color:$white;
 			font-size:3em;
+			height: 100%;
 			
 			a{
 				color:$white;
@@ -949,7 +964,7 @@ Why Chime Page
 		background: none repeat scroll 0 0 #7cb93d;
 		color: #fff;
 		display: inline-block;
-		font: 600 16px/40px "Open Sans",sans-serif;
+		font: 600 16px/40px $opensans;
 		letter-spacing: 2px;
 		padding: 0 50px 0 28px;
 		position: relative;
@@ -986,7 +1001,7 @@ Career Page
 		background: none repeat scroll 0 0 #7cb93d;
 		color: #fff;
 		display: inline-block;
-		font: 600 16px/40px "Open Sans",sans-serif;
+		font: 600 16px/40px $opensans;
 		letter-spacing: 2px;
 		padding: 0 50px 0 28px;
 		position: relative;
@@ -1012,5 +1027,86 @@ Career Page
 	
 	.service-detail{
 		background:none;
+	}
+}
+
+.our-values{
+	@extend .fullwidth;
+	background:#160d47;
+	padding:80px 0 60px;
+	
+	h4{
+		color: $white;
+		font: 700 24px/24px $opensans;
+		margin: 0;
+		padding: 0 0 37px;
+		text-transform:uppercase;
+		text-align:center;
+	}
+	
+	.value-inner{
+		@extend .fullwidth;
+		background:#28214c;
+		margin-bottom:20px;
+		padding:16px 15px 7px;
+		
+		span{
+			font: 48px/50px 'avenirmedium';
+			color:#7cb93d;
+			float:left;
+			padding-right:20px;
+		}
+		
+		p{
+			font: 400 16px/20px $arail;
+			padding:0;
+			color:$white;
+		}
+		
+		a{
+			background: none repeat scroll 0 0 #7cb93d;
+			color: #fff;
+			display: inline-block;
+			font: 600 16px/40px $opensans;
+			letter-spacing: 2px;
+			padding: 0 50px 0 28px;
+			position: relative;
+			text-decoration: none;
+			text-transform: uppercase;
+			@include hoverEffect(all, 0.5s, ease-in-out);
+		}
+		a::after {
+			background: url("../images/right-angle.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+			content: "";
+			height: 40px;
+			position: absolute;
+			right: 15px;
+			top: 0;
+			width: 7px;
+		}
+		a:hover{
+			background:#61ae12;
+		}
+	}
+	
+	.value-inner.join-team{
+		padding:16px 15px 17px;
+	}
+}
+
+.testimonial-by{
+	@extend .fullwidth;
+	padding:125px 0 134px;
+	background:#160d47;
+	
+	span{
+		color:#8cc640;
+		font: 700 16px/24px $opensans;
+		text-transform: uppercase;
+	}
+	
+	p{
+		color:$white;
+		font: 400 16px/24px $arail;
 	}
 }
