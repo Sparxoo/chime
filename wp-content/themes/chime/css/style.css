@@ -27,13 +27,13 @@ http://simplebits.com/notebook/2008/08/14/ampersands-2/
 /*********************
 Float Variables
 *********************/
-.fleft, .site-header ul.nav li, .site-header ul.nav li a, .site-header ul.nav li ul.sub-menu li, .site-footer ul, .site-footer ul li, .site-footer ul li a, .site-footer .site-by a, .page-template-template-contact .contact-map-outer, .page-template-template-contact .contact-main, .page-template-template-contact .contact-main .gform_wrapper, .page-template-template-contact .contact-main .gform_wrapper form .gform_body, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul li, .page-template-template-openings-php .position-main, .wpjb-page-index, .wpjb-page-index .wpjb-job-list, .wpjb-page-index .wpjb-job-list .wpjb-grid-row { float: left; }
+.fleft, .site-header a#logo, .site-header ul.nav li, .site-header ul.nav li a, .site-header ul.nav li ul.sub-menu li, .site-footer ul, .site-footer ul li, .site-footer ul li a, .site-footer .site-by a, .page-template-template-contact .contact-map-outer, .page-template-template-contact .contact-main, .page-template-template-contact .contact-main .gform_wrapper, .page-template-template-contact .contact-main .gform_wrapper form .gform_body, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul li, .page-template-template-openings-php .position-main, .wpjb-page-index, .wpjb-page-index .wpjb-job-list, .wpjb-page-index .wpjb-job-list .wpjb-grid-row { float: left; }
 
 .fright, .site-header ul.nav, .site-footer .site-by, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul li:first-child { float: right; }
 
 .fnone { float: none; }
 
-.fullwidth, .site-header, .site-header ul.nav li ul.sub-menu li, .site-header ul.nav li ul.sub-menu li a, .site-content, .after-banner, .services-section, .services-section .services-left, .services-section .services-right .top, .site-footer, .service-detail, .services-links, .services-links span, body.page-template-template-services .service-outer, body.page-template-template-services .service-links, body.page-template-template-services .service-links .service-inner, body.page-template-template-services .service-links span, body.page-template-template-services .service-links ul, .page-template-template-contact .contact-map-outer, .page-template-template-contact .contact-main, .page-template-template-contact .contact-main .gform_wrapper, .page-template-template-contact .contact-main .gform_wrapper form .gform_body, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul, .page-template-template-openings-php .position-main, .job-banner, .wpjb-page-index, .wpjb-page-index .wpjb-job-list, .wpjb-page-index .wpjb-job-list .wpjb-grid-row, .top-3-reasons, .top-3-reasons .service-inner, .top-3-reasons span.title, .job-link, .our-values, .our-values .value-inner, .testimonial-by { width: 100%; }
+.fullwidth, .site-header, .site-header ul.nav li ul.sub-menu li, .site-header ul.nav li ul.sub-menu li a, .site-content, .after-banner, .services-section, .services-section .services-left, .services-section .services-right .top, .site-footer, .service-detail, .services-links, .services-links span, body.page-template-template-services .service-outer, body.page-template-template-services .service-links, body.page-template-template-services .service-links .service-inner, body.page-template-template-services .service-links span, body.page-template-template-services .service-links ul, .page-template-template-contact .contact-map-outer, .page-template-template-contact .contact-main, .page-template-template-contact .contact-main .gform_wrapper, .page-template-template-contact .contact-main .gform_wrapper form .gform_body, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul, .page-template-template-openings-php .position-main, .job-banner, .wpjb-page-index, .wpjb-page-index .wpjb-job-list, .wpjb-page-index .wpjb-job-list .wpjb-grid-row, .testimonial-image, .top-3-reasons, .top-3-reasons .service-inner, .top-3-reasons span.title, .job-link, .our-values, .our-values .value-inner, .testimonial-by { width: 100%; }
 
 /*********************
 Display Variables
@@ -163,6 +163,7 @@ p { color: #333333; font: 400 16px/24px Arial,sans-serif; margin: 0; padding: 0 
 .padding0 { padding: 0; }
 
 .site-header { padding: 10px 0 12px; position: relative; z-index: 9999; }
+@media screen and (max-width: 767px) { .site-header a#logo { margin-left: 10px; } }
 .site-header ul.nav { padding: 52px 0 0 0; }
 .site-header ul.nav li { padding: 0 0 0 34px; position: relative; }
 .site-header ul.nav li a { color: #444444; font: 700 16px/18px "Open Sans", sans-serif; text-transform: uppercase; padding: 0; text-decoration: none; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
@@ -182,22 +183,30 @@ p { color: #333333; font: 400 16px/24px Arial,sans-serif; margin: 0; padding: 0 
 /*********************
 HERO BANNER
 *********************/
-#hero .hero-image { min-height: 500px; background-position: center center; background-repeat: no-repeat; background-size: cover; width: 100%; position: relative; }
+#hero .hero-image { background-position: center center; background-repeat: no-repeat; background-size: cover; width: 100%; position: relative; }
+@media screen and (max-width: 992px) { #hero .hero-image { min-height: 0; } }
 #hero .hero-image img { width: 100%; height: auto; }
 #hero .hero-image #mobile-hero-image { display: none; }
-@media screen and (max-width: 768px) { #hero .hero-image #mobile-hero-image { display: block; position: relative; }
+@media screen and (max-width: 767px) { #hero .hero-image #mobile-hero-image { display: block; position: relative; }
   #hero .hero-image #mobile-hero-image img { width: 100%; height: auto; display: block; } }
-@media screen and (max-width: 768px) { #hero .hero-image { background-image: none !important; min-height: inherit; } }
+@media screen and (max-width: 767px) { #hero .hero-image { background-image: none !important; min-height: inherit; } }
 #hero .hero-image .hero-info { position: absolute; top: 17%; display: block; width: 100%; z-index: 2; }
-@media screen and (max-width: 768px) { #hero .hero-image .hero-info { position: static; } }
+@media screen and (max-width: 767px) { #hero .hero-image .hero-info { position: static; padding: 15px; } }
+@media screen and (max-width: 767px) { #hero .hero-image .hero-info .description { text-align: center; } }
 #hero .hero-image .hero-info .description h2 { color: #444444; font: 700 45px/46px "Open Sans", sans-serif; text-transform: uppercase; letter-spacing: 5px; margin: 0; padding-bottom: 15px; }
+@media screen and (max-width: 992px) { #hero .hero-image .hero-info .description h2 { font: 700 34px/35px "Open Sans", sans-serif; } }
+@media screen and (max-width: 767px) { #hero .hero-image .hero-info .description h2 { font: 700 16px/19px "Open Sans", sans-serif; } }
 #hero .hero-image .hero-info .description h3 { color: #444444; font: 400 45px/46px "Open Sans", sans-serif; text-transform: uppercase; letter-spacing: 4px; margin: 0; padding-bottom: 33px; }
+@media screen and (max-width: 992px) { #hero .hero-image .hero-info .description h3 { font: 400 34px/35px "Open Sans", sans-serif; } }
+@media screen and (max-width: 767px) { #hero .hero-image .hero-info .description h3 { font: 400 16px/19px "Open Sans", sans-serif; } }
 #hero .hero-image .hero-info .description a { float: right; background: #7cb93d; color: #fff; font: 600 16px/40px "Open Sans", sans-serif; text-transform: uppercase; letter-spacing: 2px; padding: 0 50px 0 28px; text-decoration: none; display: block; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; position: relative; }
+@media screen and (max-width: 767px) { #hero .hero-image .hero-info .description a { float: none; display: inline-block; } }
 #hero .hero-image .hero-info .description a:after { position: absolute; right: 15px; top: 0; content: ""; background: url(../images/right-angle.png) no-repeat center center; height: 40px; width: 7px; }
 #hero .hero-image .hero-info .description a:hover { background: #61ae12; }
 #hero .hero-image #hero-banner-video video { /*position: absolute;*/ z-index: 1; top: 0; right: 0; min-width: 100%; min-height: 100%; display: block; -webkit-backface-visibility: hidden; -webkit-transform: translateZ(0); }
 .touch #hero .hero-image #hero-banner-video video { display: none; }
 #hero .hero-image .title { background: rgba(0, 0, 0, 0.6); color: #ffffff; font: 700 36px/36px "Open Sans", sans-serif; text-transform: uppercase; margin: 0; position: absolute; left: 0; bottom: 0; width: 100%; text-align: center; letter-spacing: 4px; padding: 12px 0; }
+@media screen and (max-width: 992px) { #hero .hero-image .title { font: 700 27px/30px "Open Sans", sans-serif; } }
 
 /*********************
 BANNER VIDEO
@@ -220,7 +229,10 @@ BANNER VIDEO
 After Banner
 *********************/
 .after-banner { padding: 71px 0 94px; }
+@media screen and (max-width: 992px) { .after-banner { padding: 40px 0; } }
+@media screen and (max-width: 767px) { .after-banner { padding: 40px 0 0; } }
 .after-banner h1 { font: 700 30px/32px "Open Sans", sans-serif; text-transform: uppercase; color: #444444; padding: 0 0 26px 0; margin: 0 0 41px; background: url(../images/three-lins.png) no-repeat center bottom; }
+@media screen and (max-width: 767px) { .after-banner h1 { font: 700 20px/22px "Open Sans", sans-serif; margin: 0 0 20px; } }
 .after-banner p { font: 400 16px/24px Arial, sans-serif; color: #444444; }
 
 /*********************
@@ -239,21 +251,28 @@ Services Section
 Footer Section
 *********************/
 .site-footer { border-top: 1px solid #000000; padding: 26px 0; }
+@media screen and (max-width: 767px) { .site-footer ul { width: 100%; } }
 .site-footer ul li { padding: 0 30px 0 0; }
+@media screen and (max-width: 767px) { .site-footer ul li { width: 100%; padding: 0 0 35px 0; text-align: center; } }
 .site-footer ul li a { padding: 0; color: #999999; font: 700 14px/16px "Open Sans", sans-serif; text-transform: uppercase; }
+@media screen and (max-width: 767px) { .site-footer ul li a { float: none; font: 700 16px/16px "Open Sans", sans-serif; } }
 .site-footer ul li :hover { background: none; }
+@media screen and (max-width: 767px) { .site-footer .site-by { width: 100%; text-align: center; } }
 .site-footer .site-by a { padding: 0; color: #999999; font: 700 14px/16px "Open Sans", sans-serif; text-transform: uppercase; text-decoration: none; }
+@media screen and (max-width: 767px) { .site-footer .site-by a { font: 400 16px/18px Arial, sans-serif; float: none; } }
 
 /**********************
 Service Detail Page
 **********************/
 .service-detail { padding: 37px 0 84px 0; margin: 25px 0 0; background: url(../images/three-lins.png) no-repeat center top; }
+@media screen and (max-width: 992px) { .service-detail { padding: 37px 0; } }
 .service-detail h2 { font: 700 18px/24px "Open Sans", sans-serif; color: #160d47; text-transform: uppercase; text-align: center; margin: 0; padding: 0 0 17px 0; letter-spacing: 3px; }
 .service-detail p { font: 400 16px/24px Arial, sans-serif; color: #333333; padding: 0 0 15px 0; margin: 0; }
 
 .services-links { text-transform: uppercase; padding: 53px 0 0; background-size: cover; }
 .services-links h4 { margin: 0; font: 700 24px/24px "Open Sans", sans-serif; color: #160d47; padding: 0 0 45px 0; }
-.services-links a { width: 100px; height: 100px; border: 5px solid #8cc640; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 90px; }
+.services-links a { width: 100px; height: 100px; border: 5px solid #8cc640; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 90px; transition: all 0.2s ease-in-out 0s; }
+.services-links a:hover { transform: scale(1.2); }
 .services-links span { font: 700 18px/24px "Open Sans", sans-serif; color: #333333; padding: 22px 0 55px 0; }
 
 /**********************
@@ -263,8 +282,11 @@ body.page-template-template-services .service-detail { padding: 77px 0 0; }
 body.page-template-template-services .service-outer { float: left; }
 body.page-template-template-services .service-links { padding: 0 0 120px; background-size: cover; }
 body.page-template-template-services .service-links .service-inner { background: url(../images/service-lines.png) no-repeat center top; padding-top: 93px; }
+@media screen and (max-width: 992px) { body.page-template-template-services .service-links .service-inner { background-size: 68% auto; padding-top: 70px; } }
+@media screen and (max-width: 992px) { body.page-template-template-services .service-links .service-inner { background: none; padding-top: 10px; } }
 body.page-template-template-services .service-links h4 { margin: 0; font: 700 24px/24px "Open Sans", sans-serif; color: #160d47; padding: 0 0 45px 0; }
-body.page-template-template-services .service-links a { width: 100px; height: 100px; border: 5px solid #8cc640; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 90px; }
+body.page-template-template-services .service-links a { width: 100px; height: 100px; border: 5px solid #8cc640; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 90px; transition: all 0.2s ease-in-out 0s; }
+body.page-template-template-services .service-links a:hover { transform: scale(1.1); }
 body.page-template-template-services .service-links span { font: 700 18px/24px "Open Sans", sans-serif; color: #333333; padding: 22px 0 18px 0; }
 body.page-template-template-services .service-links ul { margin: 0; padding: 0; list-style: none; text-align: left; float: left; }
 body.page-template-template-services .service-links ul li { font: 400 16px/16px "Open Sans", sans-serif; text-transform: inherit !important; color: #333333; padding-left: 22px; background: url(../images/green-bullet.png) no-repeat left 5px; }
@@ -296,6 +318,8 @@ Open Positions
 ********************/
 .page-template-template-openings-php .position-main { padding: 52px 0 41px; background: #f1f1f1 url(../images/three-lins.png) no-repeat center 19px; }
 .page-template-template-openings-php .position-main .wrapper { margin: 0 auto; width: 1044px; }
+@media screen and (max-width: 992px) { .page-template-template-openings-php .position-main .wrapper { width: 750px; } }
+@media screen and (max-width: 1200px) { .page-template-template-openings-php .position-main .wrapper { width: 960px; } }
 
 .job-banner { padding: 59px 0 54px; }
 .job-banner h1 { margin: 0; color: #ffffff; text-transform: uppercase; font: 600 40px/42px "Open Sans", sans-serif; padding: 0 0 12px; }
@@ -325,14 +349,19 @@ Why Chime Page
 
 .testimonial-text { padding-top: 33px; }
 .testimonial-text h3 { color: #160d47; font: 700 24px/26px "Open Sans", sans-serif; text-transform: uppercase; letter-spacing: 3px; padding-bottom: 32px; }
+@media screen and (max-width: 992px) { .testimonial-text h3 { font: 700 20px/22px "Open Sans", sans-serif; } }
 .testimonial-text p { color: #444444; font: 400 20px/30px Arial, sans-serif; background: url(../images/testimonial-start.png) no-repeat left 2px; padding-left: 40px; }
 .testimonial-text p img { position: relative; top: -3px; }
 .testimonial-text span { color: #999999; font: 400 20px/30px Arial, sans-serif; float: right; }
 
+.testimonial-image { float: left; }
+.testimonial-image img { max-width: 100%; }
+
 .top-3-reasons { padding: 40px 0 38px; background-size: cover; text-align: center; }
 .top-3-reasons .service-inner { background: url(../images/service-lines.png) no-repeat center top; padding-top: 93px; }
 .top-3-reasons h4 { margin: 0; font: 700 24px/24px "Open Sans", sans-serif; color: #160d47; text-transform: uppercase; padding: 0 0 70px 0; }
-.top-3-reasons span.image { width: 100px; height: 100px; border: 5px solid #8cc640; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 90px; padding: 0; }
+.top-3-reasons span.image { width: 100px; height: 100px; border: 5px solid #8cc640; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 90px; padding: 0; transition: all 0.2s ease-in-out 0s; }
+.top-3-reasons span.image:hover { transform: scale(1.2); }
 .top-3-reasons span.title { font: 700 18px/24px "Open Sans", sans-serif; color: #160d47; padding: 22px 0 18px 0; text-transfrom: uppercase; letter-spacing: 2px; }
 .top-3-reasons p { color: #444444; font: 400 16px/18px Arial, sans-serif; }
 .top-3-reasons a { background: none repeat scroll 0 0 #7cb93d; color: #fff; display: inline-block; font: 600 16px/40px "Open Sans", sans-serif; letter-spacing: 2px; padding: 0 50px 0 28px; position: relative; text-decoration: none; text-transform: uppercase; margin-top: 60px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; clear: both; }
@@ -348,6 +377,7 @@ Career Page
 .job-link a:hover { background: #61ae12; }
 
 .page-template-template-career .service-detail { background: none; }
+@media screen and (max-width: 992px) { .page-template-template-career .service-detail { margin: 0; padding: 0; } }
 
 .our-values { background: #160d47; padding: 80px 0 60px; }
 .our-values h4 { color: #ffffff; font: 700 24px/24px "Open Sans", sans-serif; margin: 0; padding: 0 0 37px; text-transform: uppercase; text-align: center; }
@@ -355,10 +385,12 @@ Career Page
 .our-values .value-inner span { font: 48px/50px 'avenirmedium'; color: #7cb93d; float: left; padding-right: 20px; }
 .our-values .value-inner p { font: 400 16px/20px Arial, sans-serif; padding: 0; color: #ffffff; }
 .our-values .value-inner a { background: none repeat scroll 0 0 #7cb93d; color: #fff; display: inline-block; font: 600 16px/40px "Open Sans", sans-serif; letter-spacing: 2px; padding: 0 50px 0 28px; position: relative; text-decoration: none; text-transform: uppercase; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+@media screen and (max-width: 992px) { .our-values .value-inner a { padding: 0 35px 0 28px; } }
 .our-values .value-inner a::after { background: url("../images/right-angle.png") no-repeat scroll center center transparent; content: ""; height: 40px; position: absolute; right: 15px; top: 0; width: 7px; }
 .our-values .value-inner a:hover { background: #61ae12; }
 .our-values .value-inner.join-team { padding: 16px 15px 17px; }
 
 .testimonial-by { padding: 125px 0 134px; background: #160d47; }
+@media screen and (max-width: 992px) { .testimonial-by { padding: 40px 0 27px; } }
 .testimonial-by span { color: #8cc640; font: 700 16px/24px "Open Sans", sans-serif; text-transform: uppercase; }
 .testimonial-by p { color: #ffffff; font: 400 16px/24px Arial, sans-serif; }

@@ -39,6 +39,14 @@ p{
 	padding: 10px 0 12px;	
 	position:relative;
 	z-index:9999;
+	
+	a#logo{
+		@extend .fleft;
+
+		@include breakpoint($screen-sm-min){			
+			margin-left:10px;
+		}
+	}
 		
 	ul.nav{
 		@extend .fright;
@@ -138,12 +146,15 @@ HERO BANNER
 *********************/
 #hero{
 	.hero-image{
-		min-height:500px;
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		width: 100%;
 		position:relative;
+		
+		@include breakpoint($screen-md-min){
+			min-height:0;
+		}
 		
 		img{
 			width:100%;
@@ -175,15 +186,19 @@ HERO BANNER
 			top:17%;
 			display:block;
 			width:100%;
-			z-index:2;
+			z-index:2;						
 			
 			@include breakpoint($screen-sm-min){
 				position:static;
+				padding:15px;
 			}
-	
-			
 			
 			.description{
+			
+				@include breakpoint($screen-sm-min){
+					text-align:center;
+				}
+				
 				h2{
 					color:#444444;
 					font:700 45px/46px $opensans;
@@ -191,6 +206,13 @@ HERO BANNER
 					letter-spacing: 5px;
 					margin:0;
 					padding-bottom:15px;
+					
+					@include breakpoint($screen-md-min){
+						font:700 34px/35px $opensans;
+					}
+					@include breakpoint($screen-sm-min){
+						font:700 16px/19px $opensans;
+					}
 				}
 				
 				h3{
@@ -200,6 +222,13 @@ HERO BANNER
 					letter-spacing: 4px;
 					margin:0;
 					padding-bottom:33px;
+					
+					@include breakpoint($screen-md-min){
+						font:400 34px/35px $opensans;
+					}
+					@include breakpoint($screen-sm-min){
+						font:400 16px/19px $opensans;
+					}
 				}
 				
 				a{
@@ -214,6 +243,11 @@ HERO BANNER
 					display:block;
 					@include hoverEffect(all, 0.5s, ease-in-out);
 					position:relative;
+					
+					@include breakpoint($screen-sm-min){
+						float:none;
+						display:inline-block;
+					}
 				}	
 				
 				a:after{
@@ -268,6 +302,10 @@ HERO BANNER
 			text-align:center;
 			letter-spacing:4px;
 			padding:12px 0;
+			
+			@include breakpoint($screen-md-min){
+				font:700 27px/30px $opensans;
+			}
 		}
 		
 	}
@@ -283,6 +321,7 @@ BANNER VIDEO
 	width:100%;
 	height:495px;
 	background-size:cover;
+	
 	#banner-video-container{
 		position:absolute;
 		top:0;
@@ -369,6 +408,13 @@ After Banner
 	@extend .fullwidth;
 	padding: 71px 0 94px;
 	
+	@include breakpoint($screen-md-min){
+		padding: 40px 0;
+	}
+	@include breakpoint($screen-sm-min){
+		padding: 40px 0 0;
+	}
+	
 	h1{
 		font:700 30px/32px $opensans;
 		text-transform:uppercase;
@@ -376,6 +422,11 @@ After Banner
 		padding:0 0 26px 0;
 		margin:0 0 41px;
 		background:url(../images/three-lins.png) no-repeat center bottom;
+		
+		@include breakpoint($screen-sm-min){
+			font:700 20px/22px $opensans;
+			margin:0 0 20px;
+		}
 	}
 	
 	p{
@@ -460,16 +511,31 @@ Footer Section
 	ul{
 		@extend .fleft;
 		
+		@include breakpoint($screen-sm-min){
+			width:100%;
+		}
+		
 		li{
 			@extend .fleft;
 			padding: 0 30px 0 0;
+			
+			@include breakpoint($screen-sm-min){
+				width:100%;
+				padding: 0 0 35px 0;
+				text-align:center;
+			}
 			
 			a{
 				@extend .fleft;
 				padding:0;
 				color:#999999;
 				font:700 14px/16px $opensans;
-				text-transform:uppercase;				
+				text-transform:uppercase;	
+
+				@include breakpoint($screen-sm-min){
+					float:none;
+					font:700 16px/16px $opensans;
+				}
 			}
 			:hover{
 				background:none;
@@ -479,6 +545,12 @@ Footer Section
 	.site-by{
 		@extend .fright;
 		
+		
+		@include breakpoint($screen-sm-min){
+			width:100%;
+			text-align:center;
+		}
+		
 		a{
 			@extend .fleft;
 			padding:0;
@@ -486,6 +558,11 @@ Footer Section
 			font:700 14px/16px $opensans;
 			text-transform:uppercase;	
 			text-decoration:none;
+			
+			@include breakpoint($screen-sm-min){
+				font:400 16px/18px $arail;
+				float:none;
+			}
 		}
 	}
 }
@@ -499,6 +576,10 @@ Service Detail Page
 	padding:37px 0 84px 0;
 	margin:25px 0 0;
 	background:url(../images/three-lins.png) no-repeat center top;
+	
+	@include breakpoint($screen-md-min){
+		padding:37px 0;
+	}
 	
 	h2{
 		font:700 18px/24px $opensans;
@@ -538,7 +619,13 @@ Service Detail Page
 		@include border-radius-fourcorners(50%);
 		text-align:center;
 		line-height:90px;
+		transition: all 0.2s ease-in-out 0s;
 	}
+	
+	a:hover{
+		transform: scale(1.2);
+	}
+	
 	span{
 		@extend .fullwidth;
 		font:700 18px/24px $opensans;
@@ -568,6 +655,15 @@ body.page-template-template-services{
 		@extend .fullwidth;
 		background:url(../images/service-lines.png) no-repeat center top;
 		padding-top: 93px;
+		
+		@include breakpoint($screen-md-min){
+			background-size: 68% auto;
+			padding-top: 70px;
+		}
+		@include breakpoint($screen-md-min){
+			background:none;
+			padding-top: 10px;
+		}
 	}
 	
 	h4{
@@ -584,7 +680,14 @@ body.page-template-template-services{
 		@include border-radius-fourcorners(50%);
 		text-align:center;
 		line-height:90px;
+		transition: all 0.2s ease-in-out 0s;
 	}
+	
+	a:hover{
+		transform: scale(1.1);
+	}
+	
+	
 	span{
 		@extend .fullwidth;
 		font:700 18px/24px $opensans;
@@ -783,6 +886,14 @@ Open Positions
 		.wrapper{
 			margin:0 auto;
 			width:1044px;
+			
+			@include breakpoint($screen-md-min){
+				width:750px;
+			}
+			
+			@include breakpoint($screen-lg-min){
+				width:960px;
+			}
 		}
 	}
 }
@@ -895,6 +1006,10 @@ Why Chime Page
 		text-transform: uppercase;
 		letter-spacing:3px;
 		padding-bottom:32px;
+		
+		@include breakpoint($screen-md-min){
+			font: 700 20px/22px $opensans;
+		}
 	}
 	
 	p{
@@ -916,6 +1031,14 @@ Why Chime Page
 	}
 }
 
+.testimonial-image{
+	@extend .fullwidth;
+	float:left;
+	
+	img{
+		max-width:100%;
+	}
+}
 .top-3-reasons{
 	@extend .fullwidth;
 	padding:40px 0 38px;
@@ -945,7 +1068,12 @@ Why Chime Page
 		text-align:center;
 		line-height:90px;
 		padding:0;
+		transition: all 0.2s ease-in-out 0s;
 	}
+	span.image:hover{
+		transform: scale(1.2);
+	}
+	
 	span.title{
 		@extend .fullwidth;
 		font:700 18px/24px $opensans;
@@ -1027,6 +1155,11 @@ Career Page
 	
 	.service-detail{
 		background:none;
+		
+		@include breakpoint($screen-md-min){
+			margin:0;
+			padding: 0;
+		}
 	}
 }
 
@@ -1074,6 +1207,10 @@ Career Page
 			text-decoration: none;
 			text-transform: uppercase;
 			@include hoverEffect(all, 0.5s, ease-in-out);
+			
+			@include breakpoint($screen-md-min){
+				padding: 0 35px 0 28px;
+			}
 		}
 		a::after {
 			background: url("../images/right-angle.png") no-repeat scroll center center rgba(0, 0, 0, 0);
@@ -1098,6 +1235,10 @@ Career Page
 	@extend .fullwidth;
 	padding:125px 0 134px;
 	background:#160d47;
+	
+	@include breakpoint($screen-md-min){
+		padding: 40px 0 27px;
+	}
 	
 	span{
 		color:#8cc640;

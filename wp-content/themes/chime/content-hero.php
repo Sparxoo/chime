@@ -82,7 +82,7 @@ endwhile; endif ;
 							<?php if($hero_description): ?>
 								<div class="container">
 									<div class="row">
-										<div class="col-md-8 col-sm-8 col-xs-8 pull-right padding0">
+										<div class="col-md-8 col-sm-8 col-xs-12 pull-right padding0">
 											<div class="description"><?php print $hero_description; ?></div>
 										</div>
 									</div>
