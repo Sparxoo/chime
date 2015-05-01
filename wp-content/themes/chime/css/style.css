@@ -165,11 +165,12 @@ p { color: #333333; font: 400 16px/24px Arial,sans-serif; margin: 0; padding: 0 
 .site-header { padding: 10px 0 12px; position: relative; z-index: 9999; }
 @media screen and (max-width: 767px) { .site-header a#logo { margin-left: 10px; } }
 .site-header ul.nav { padding: 52px 0 0 0; }
-.site-header ul.nav li { padding: 0 0 0 34px; position: relative; }
+@media screen and (max-width: 767px) { .site-header ul.nav { display: none; } }
+.site-header ul.nav li { margin: 0 0 0 34px; position: relative; }
 .site-header ul.nav li a { color: #444444; font: 700 16px/18px "Open Sans", sans-serif; text-transform: uppercase; padding: 0; text-decoration: none; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 .site-header ul.nav li a:hover { background: none; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
-.site-header ul.nav li ul.sub-menu { display: none; position: absolute; left: 15px; top: 100%; list-style: none; padding: 22px 0 0 0; width: 189px; }
-.site-header ul.nav li ul.sub-menu li { padding: 0; background: #160d47; border-top: 1px solid #312b53; }
+.site-header ul.nav li ul.sub-menu { display: none; position: absolute; left: -17px; top: 100%; list-style: none; padding: 22px 0 0 0; width: 189px; }
+.site-header ul.nav li ul.sub-menu li { margin: 0; background: #160d47; border-top: 1px solid #312b53; }
 .site-header ul.nav li ul.sub-menu li a { padding: 20px; }
 .site-header ul.nav li ul.sub-menu :hover { background: #7dba3d; }
 .site-header ul.nav li ul.sub-menu .current-menu-item { background: #7dba3d; }
@@ -191,8 +192,8 @@ HERO BANNER
   #hero .hero-image #mobile-hero-image img { width: 100%; height: auto; display: block; } }
 @media screen and (max-width: 767px) { #hero .hero-image { background-image: none !important; min-height: inherit; } }
 #hero .hero-image .hero-info { position: absolute; top: 17%; display: block; width: 100%; z-index: 2; }
-@media screen and (max-width: 767px) { #hero .hero-image .hero-info { position: static; padding: 15px; } }
-@media screen and (max-width: 767px) { #hero .hero-image .hero-info .description { text-align: center; } }
+@media screen and (max-width: 767px) { #hero .hero-image .hero-info { position: static; } }
+@media screen and (max-width: 767px) { #hero .hero-image .hero-info .description { text-align: center; padding: 15px; } }
 #hero .hero-image .hero-info .description h2 { color: #444444; font: 700 45px/46px "Open Sans", sans-serif; text-transform: uppercase; letter-spacing: 5px; margin: 0; padding-bottom: 15px; }
 @media screen and (max-width: 992px) { #hero .hero-image .hero-info .description h2 { font: 700 34px/35px "Open Sans", sans-serif; } }
 @media screen and (max-width: 767px) { #hero .hero-image .hero-info .description h2 { font: 700 16px/19px "Open Sans", sans-serif; } }
@@ -207,6 +208,7 @@ HERO BANNER
 .touch #hero .hero-image #hero-banner-video video { display: none; }
 #hero .hero-image .title { background: rgba(0, 0, 0, 0.6); color: #ffffff; font: 700 36px/36px "Open Sans", sans-serif; text-transform: uppercase; margin: 0; position: absolute; left: 0; bottom: 0; width: 100%; text-align: center; letter-spacing: 4px; padding: 12px 0; }
 @media screen and (max-width: 992px) { #hero .hero-image .title { font: 700 27px/30px "Open Sans", sans-serif; } }
+@media screen and (max-width: 767px) { #hero .hero-image .title { font: 700 18px/23px "Open Sans", sans-serif; position: static; } }
 
 /*********************
 BANNER VIDEO
@@ -266,6 +268,7 @@ Service Detail Page
 **********************/
 .service-detail { padding: 37px 0 84px 0; margin: 25px 0 0; background: url(../images/three-lins.png) no-repeat center top; }
 @media screen and (max-width: 992px) { .service-detail { padding: 37px 0; } }
+@media screen and (max-width: 767px) { .service-detail { text-align: center; } }
 .service-detail h2 { font: 700 18px/24px "Open Sans", sans-serif; color: #160d47; text-transform: uppercase; text-align: center; margin: 0; padding: 0 0 17px 0; letter-spacing: 3px; }
 .service-detail p { font: 400 16px/24px Arial, sans-serif; color: #333333; padding: 0 0 15px 0; margin: 0; }
 
@@ -289,18 +292,22 @@ body.page-template-template-services .service-links a { width: 100px; height: 10
 body.page-template-template-services .service-links a:hover { transform: scale(1.1); }
 body.page-template-template-services .service-links span { font: 700 18px/24px "Open Sans", sans-serif; color: #333333; padding: 22px 0 18px 0; }
 body.page-template-template-services .service-links ul { margin: 0; padding: 0; list-style: none; text-align: left; float: left; }
+@media screen and (max-width: 767px) { body.page-template-template-services .service-links ul { padding-bottom: 30px; } }
 body.page-template-template-services .service-links ul li { font: 400 16px/16px "Open Sans", sans-serif; text-transform: inherit !important; color: #333333; padding-left: 22px; background: url(../images/green-bullet.png) no-repeat left 5px; }
 
 /********************
 Gravity Form
 ********************/
+@media screen and (max-width: 767px) { .page-template-template-contact #contact-map { height: 200px !important; } }
 .page-template-template-contact #contact-map .gmnoprint { display: none; }
 .page-template-template-contact #contact-map .gm-style-cc { display: none; }
 .page-template-template-contact .contact-map-outer { position: relative; }
 .page-template-template-contact .contact-map-outer .location-information { position: absolute; left: 50%; bottom: 60px; margin-left: 35px; background: url(../images/location-bg.png); width: 330px; color: #ffffff; padding: 15px; font: 400 16px/24px "Open Sans", sans-serif; }
+@media screen and (max-width: 767px) { .page-template-template-contact .contact-map-outer .location-information { left: 50%; width: 290px; margin-left: -145px; bottom: 5px; font: 400 13px/15px "Open Sans", sans-serif; } }
 .page-template-template-contact .contact-map-outer .location-information .location-name { font: 700 16px/24px "Open Sans", sans-serif; }
 .page-template-template-contact .contact-map-outer .location-information a { color: #ffffff; }
 .page-template-template-contact .contact-map-outer .location-information:before { content: ""; position: absolute; left: -22px; top: -45px; width: 69px; height: 45px; background: url(../images/address-arrow.png) no-repeat left bottom; }
+@media screen and (max-width: 767px) { .page-template-template-contact .contact-map-outer .location-information:before { display: none; } }
 .page-template-template-contact .contact-main { padding: 72px 0 109px; margin: 29px 0 0; background: url(../images/three-lins.png) no-repeat center top; }
 .page-template-template-contact .contact-main .gform_wrapper form .gform_heading h3.gform_title { font: 700 24px/26px "Open Sans", sans-serif; color: #160d47; text-transform: uppercase; letter-spacing: 4px; }
 .page-template-template-contact .contact-main .gform_wrapper form .gform_body label { display: none; }
@@ -320,16 +327,22 @@ Open Positions
 .page-template-template-openings-php .position-main .wrapper { margin: 0 auto; width: 1044px; }
 @media screen and (max-width: 992px) { .page-template-template-openings-php .position-main .wrapper { width: 750px; } }
 @media screen and (max-width: 1200px) { .page-template-template-openings-php .position-main .wrapper { width: 960px; } }
+@media screen and (max-width: 1200px) { .page-template-template-openings-php .position-main .wrapper { width: 95%; } }
 
 .job-banner { padding: 59px 0 54px; }
 .job-banner h1 { margin: 0; color: #ffffff; text-transform: uppercase; font: 600 40px/42px "Open Sans", sans-serif; padding: 0 0 12px; }
+@media screen and (max-width: 767px) { .job-banner h1 { font: 600 30px/32px "Open Sans", sans-serif; } }
 .job-banner h2 { margin: 0; color: #ffffff; text-transform: uppercase; font: 400 30px/32px "Open Sans", sans-serif; }
+@media screen and (max-width: 767px) { .job-banner h2 { font: 600 20px/22px "Open Sans", sans-serif; } }
 
 .wpjb-page-index .wpjb-job-list .wpjb-grid-row { background: #ffffff; border-bottom: 1px solid #f5f5f5; }
 .wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-title { width: 41%; }
+@media screen and (max-width: 767px) { .wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-title { width: 80%; } }
 .wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-title a { font: 400 100%/1.5 Arial, sans-serif; color: #ad0700; }
 .wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-title .wpjb-sub { display: block; font: 400 0.85em/0.95em Arial, sans-serif; }
 .wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-location { color: #444; font: 400 100%/1.5 Arial, sans-serif; }
+@media screen and (max-width: 767px) { .wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-location { width: 100%; padding: 10px 1%; } }
+@media screen and (max-width: 767px) { .wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-grid-col-right { width: 100%; padding: 10px 1%; text-align: left; } }
 .wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-bulb { /*@extend .dnone;*/ background-color: #160d47; }
 .wpjb-page-index .wpjb-job-list .wpjb-grid-row a { color: #160d47; }
 
@@ -346,10 +359,12 @@ Open Positions
 Why Chime Page
 ***********************/
 .page-template-template-why-chime .service-detail { padding: 57px 0 84px; }
+@media screen and (max-width: 767px) { .page-template-template-why-chime .service-detail { padding: 57px 0 0; } }
 
 .testimonial-text { padding-top: 33px; }
 .testimonial-text h3 { color: #160d47; font: 700 24px/26px "Open Sans", sans-serif; text-transform: uppercase; letter-spacing: 3px; padding-bottom: 32px; }
 @media screen and (max-width: 992px) { .testimonial-text h3 { font: 700 20px/22px "Open Sans", sans-serif; } }
+@media screen and (max-width: 767px) { .testimonial-text h3 { text-align: center; } }
 .testimonial-text p { color: #444444; font: 400 20px/30px Arial, sans-serif; background: url(../images/testimonial-start.png) no-repeat left 2px; padding-left: 40px; }
 .testimonial-text p img { position: relative; top: -3px; }
 .testimonial-text span { color: #999999; font: 400 20px/30px Arial, sans-serif; float: right; }
@@ -394,3 +409,23 @@ Career Page
 @media screen and (max-width: 992px) { .testimonial-by { padding: 40px 0 27px; } }
 .testimonial-by span { color: #8cc640; font: 700 16px/24px "Open Sans", sans-serif; text-transform: uppercase; }
 .testimonial-by p { color: #ffffff; font: 400 16px/24px Arial, sans-serif; }
+
+.mobile-slide { float: left; width: 100%; }
+
+.mobile-menu-wrap { background: none repeat scroll 0 0 #006f8e; height: 100%; margin-right: -70%; overflow-y: scroll; position: fixed; right: 0; width: 70%; z-index: 99999; }
+.mobile-menu-wrap ul { -moz-padding-start: 0; list-style-type: none; }
+.mobile-menu-wrap ul li { border-bottom: 1px solid #0083a8; }
+.mobile-menu-wrap ul li a { display: block; padding: 10px 20px; color: #ffffff; width: 100%; }
+.mobile-menu-wrap ul li ul { display: none; }
+.mobile-menu-wrap ul li ul li { background: #0097c1; border-bottom: 1px solid #00bbef; }
+
+/*****************
+Mobile Menu
+*****************/
+#mobile-toggle { padding: 0; right: 34px; float: right; width: 50px; height: 50px; position: relative; top: 14px; width: 50px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; height: 50px; background-image: url(../images/mobile-menu.png); background-position: 0 0; }
+
+#mobile-toggle.orange { background-position: 0 -50px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+
+.mobile-menu-wrap ul a:hover, .mobile-menu-wrap ul a:focus { background: none repeat scroll 0 0 transparent; }
+
+.mobile-menu-wrap ul li.menu-item-has-children > a::after, .mobile-menu-wrap ul li.top-nav-search > a::after, .mobile-menu-wrap ul li.top-nav-chapters > a::after { color: #ffffff; content: "\f0d7"; float: right; font-family: FontAwesome; font-size: 1em; padding-right: 25px; right: 0; }

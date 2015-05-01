@@ -52,9 +52,13 @@ p{
 		@extend .fright;
 		padding:52px 0 0 0;
 		
+		@include breakpoint($screen-sm-min){
+			display:none;
+		}
+		
 		li{
 			@extend .fleft;
-			padding:0 0 0 34px;
+			margin:0 0 0 34px;
 			position:relative;
 			
 			a{
@@ -75,14 +79,14 @@ p{
 			ul.sub-menu{
 				display:none;
 				position:absolute;
-				left:15px;
+				left:-17px;
 				top:100%;
 				list-style:none;
 				padding:22px 0 0 0;				
 				width:189px;
 				
 				li{
-					padding:0;
+					margin:0;
 					background:#160d47;
 					@extend .fleft;
 					@extend .fullwidth;
@@ -190,13 +194,13 @@ HERO BANNER
 			
 			@include breakpoint($screen-sm-min){
 				position:static;
-				padding:15px;
 			}
 			
 			.description{
 			
 				@include breakpoint($screen-sm-min){
 					text-align:center;
+					padding:15px;
 				}
 				
 				h2{
@@ -305,6 +309,10 @@ HERO BANNER
 			
 			@include breakpoint($screen-md-min){
 				font:700 27px/30px $opensans;
+			}
+			@include breakpoint($screen-sm-min){
+				font:700 18px/23px $opensans;
+				position:static;
 			}
 		}
 		
@@ -580,6 +588,9 @@ Service Detail Page
 	@include breakpoint($screen-md-min){
 		padding:37px 0;
 	}
+	@include breakpoint($screen-sm-min){
+		text-align:center;
+	}
 	
 	h2{
 		font:700 18px/24px $opensans;
@@ -702,6 +713,10 @@ body.page-template-template-services{
 		@extend .fullwidth;
 		float:left;
 		
+		@include breakpoint($screen-sm-min){
+			padding-bottom:30px;
+		}
+		
 		li{
 			font:400 16px/16px $opensans;
 			text-transform:inherit !important;
@@ -719,6 +734,11 @@ Gravity Form
 .page-template-template-contact{
 	
 	#contact-map{
+	
+		@include breakpoint($screen-sm-min){
+			height: 200px !important;
+		}
+		
 		.gmnoprint{
 			display:none;
 		}
@@ -742,6 +762,14 @@ Gravity Form
 			padding:15px;
 			font:400 16px/24px $opensans;
 			
+			@include breakpoint($screen-sm-min){
+				left: 50%;
+				width: 290px;
+				margin-left: -145px;
+				bottom: 5px;
+				font:400 13px/15px $opensans;
+			}
+			
 			.location-name{
 				font:700 16px/24px $opensans;
 			}
@@ -759,6 +787,10 @@ Gravity Form
 			width:69px;
 			height:45px;
 			background:url(../images/address-arrow.png) no-repeat left bottom;
+			
+			@include breakpoint($screen-sm-min){
+				display:none;
+			}
 		}
 	}
 	
@@ -894,6 +926,9 @@ Open Positions
 			@include breakpoint($screen-lg-min){
 				width:960px;
 			}
+			@include breakpoint($screen-lg-min){
+				width:95%;
+			}
 		}
 	}
 }
@@ -908,12 +943,20 @@ Open Positions
 		text-transform:uppercase;
 		font: 600 40px/42px $opensans;
 		padding:0 0 12px;
+		
+		@include breakpoint($screen-sm-min){
+			font: 600 30px/32px $opensans;
+		}
+		
 	}
 	h2{
 		margin:0;
 		color:$white;
 		text-transform:uppercase;
 		font: 400 30px/32px $opensans;
+		@include breakpoint($screen-sm-min){
+			font: 600 20px/22px $opensans;
+		}
 	}
 }
 
@@ -934,6 +977,10 @@ Open Positions
 			.wpjb-col-title{
 				width:41%;
 				
+				@include breakpoint($screen-sm-min){
+					width:80%;
+				}
+				
 				a{
 					font: 400 100%/1.5	 $arail;
 					color:#ad0700;
@@ -948,6 +995,19 @@ Open Positions
 			.wpjb-col-location{
 				color:#444;
 				font: 400 100%/1.5 $arail;
+				
+				@include breakpoint($screen-sm-min){
+					width:100%;
+					padding:10px 1%;
+				}
+			}
+			
+			.wpjb-grid-col-right{
+				@include breakpoint($screen-sm-min){
+					width:100%;
+					padding:10px 1%;
+					text-align:left;
+				}
 			}
 			
 			.wpjb-bulb{
@@ -994,6 +1054,10 @@ Why Chime Page
 .page-template-template-why-chime{
 	.service-detail{
 		padding: 57px 0 84px;
+		
+		@include breakpoint($screen-sm-min){
+			padding: 57px 0 0;
+		}
 	}
 }
 
@@ -1009,6 +1073,10 @@ Why Chime Page
 		
 		@include breakpoint($screen-md-min){
 			font: 700 20px/22px $opensans;
+		}
+		
+		@include breakpoint($screen-sm-min){
+			text-align:center;
 		}
 	}
 	
@@ -1250,4 +1318,76 @@ Career Page
 		color:$white;
 		font: 400 16px/24px $arail;
 	}
+}
+
+.mobile-slide{float:left;width:100%;}
+
+.mobile-menu-wrap {
+    background: none repeat scroll 0 0 #006f8e;
+    height: 100%;
+	margin-right: -70%;
+    overflow-y: scroll;
+    position: fixed;
+    right: 0;
+    width: 70%;
+    z-index: 99999;
+	
+	ul {
+		-moz-padding-start: 0;
+		list-style-type: none;
+		
+		li {
+			border-bottom: 1px solid #0083a8;
+			
+			a {
+				display: block;
+				padding: 10px 20px;color: #ffffff;
+				width: 100%;
+			}
+			
+			ul {
+				display: none;
+				
+				li {
+					background: #0097c1;
+					border-bottom: 1px solid #00bbef;
+				}
+			}
+		}
+	}
+}
+
+
+/*****************
+Mobile Menu
+*****************/
+#mobile-toggle {
+    padding: 0;
+    right: 34px;
+	float:right;
+	width:50px;
+	height:50px;
+	position:relative;
+	top:14px;
+	width:50px;@include hoverEffect(all, 0.5s, ease-in-out);
+	height:50px;
+	background-image:url(../images/mobile-menu.png);background-position:0 0;
+}
+#mobile-toggle.orange{
+	background-position:0 -50px;@include hoverEffect(all, 0.5s, ease-in-out);
+}
+.mobile-menu-wrap ul a:hover, 
+.mobile-menu-wrap ul a:focus {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.mobile-menu-wrap ul li.menu-item-has-children > a::after, 
+.mobile-menu-wrap ul li.top-nav-search > a::after, 
+.mobile-menu-wrap ul li.top-nav-chapters > a::after {
+    color: #ffffff;
+    content: "\f0d7";
+    float: right;
+    font-family: FontAwesome;
+    font-size: 1em;
+    padding-right: 25px;
+    right: 0;
 }

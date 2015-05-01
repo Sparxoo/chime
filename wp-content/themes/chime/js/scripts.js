@@ -40,6 +40,16 @@ jQuery(document).ready(function($) {
 	    });
 	});
 	
+	$('ul.sub-menu').addClass('animated');
+	$('.site-header ul.nav li a').mouseover(function(){
+		$(this).parent().find('ul').stop().addClass('fadeInDown');
+	});
+	$('.site-header ul.nav li a').mouseover(function(){
+		$(this).parent().siblings().find('ul').removeClass('fadeInDown');
+	});
+	/*$('.site-header ul.nav li a').mouseleave(function(){
+		$(this).parent().find('ul').removeClass('fadeInDown');
+	});*/
 	 
 }); /* end of as page load scripts */
 
@@ -65,3 +75,87 @@ jQuery(document).ready(function($) {
 		}
     });
 })(jQuery);
+
+/*
+ * Sparxoo BP Scripts File
+ *
+ * This file should contain any js scripts you want to add to the site.
+ * Instead of calling it in the header or throwing it inside wp_head()
+ * this file will be called automatically in the footer so as not to
+ * slow the page load.
+ *
+*/
+
+/*
+ * Put all your regular jQuery in here.
+ * Within this funtion you can use the namespace $ instead of jQuery
+ * ex. use this $('#id') ... NOT jQuery('#id')
+*/
+
+jQuery(document).ready(function($) {
+	
+
+	/* Mobile menu javascript */
+
+	function toggleMobileNavigation() {
+		if(!$('.mobile-menu-wrap').hasClass('mobile-toggled')) {
+			$(".mobile-menu-wrap").addClass('mobile-toggled').animate({
+				marginRight: '0'
+			}, {duration: 500, queue: false});
+		} else {
+			$(".mobile-menu-wrap").removeClass('mobile-toggled').animate({
+				marginRight: '-70%'
+			}, {duration: 500, queue: false});
+		}
+		
+		if (!$(".mobile-slide").hasClass('mobile-toggled')) {
+			$(".mobile-slide").addClass('mobile-toggled').animate({
+				marginLeft: '-70%',
+				marginRight: '70%'
+			}, {duration: 500, queue: false});
+		} else {
+			$(".mobile-slide").removeClass('mobile-toggled').animate({
+				margin: '0'
+			}, {duration: 500, queue: false});
+		}
+	}
+
+	$('#mobile-toggle').on('click', function(e){
+		$(this).toggleClass("orange");
+		toggleMobileNavigation();
+		e.preventDefault();
+	});
+
+	$(".mobile-menu-wrap").on("swipe", function(e){
+		toggleMobileNavigation();
+		if($('#mobile-toggle').hasClass("orange")) {
+			$('#mobile-toggle').removeClass("orange");
+		}
+		e.preventDefault();
+	});
+
+	$('#mobile-menu > li.menu-item-has-children > a').on("click", function(e){
+		$(this).parent('li').children('ul').slideToggle();
+		e.preventDefault();
+	});
+
+	$('#mobile-menu > li.menu-item-has-children > ul > li.menu-item-has-children > a').on("click", function(e){
+		$(this).parent('li').children('ul').slideToggle();
+		e.preventDefault();
+	});
+
+	$('#mobile-secondary-menu > li > a').on("click", function(e){
+		$(this).parent('li').children('ul').slideToggle();
+	});
+
+	var linksArr = $("#mobile-menu li.menu-item-has-children");
+	
+	for(var i=0; i < linksArr.length; i++) {
+		var link = linksArr[i].firstChild.href;
+		var linkTitle = linksArr[i].firstChild.innerHTML;
+		//alert(linkTitle);
+		$(linksArr[i]).children('ul').prepend('<li><a href="' + link + '">' + linkTitle + '</a></li>');
+	}
+	
+	});
+	

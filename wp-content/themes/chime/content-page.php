@@ -8,7 +8,7 @@
 
 <div class="container">
 	<div class="row">
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<div class="col-md-12 col-sm-12 col-xs-12"><article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header class="entry-header">
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			</header><!-- .entry-header -->
@@ -27,5 +27,6 @@
 				<?php edit_post_link( __( 'Edit', 'sparxoo-bp' ), '<span class="edit-link">', '</span>' ); ?>
 			</footer><!-- .entry-footer -->
 		</article><!-- #post-## -->
+	</div>
 	</div>
 </div>

@@ -63,17 +63,7 @@ endwhile; endif ;
 					<img src="<?php print $hero_image ?>" alt="<?= $hero_alt ?>">
 				<?php }?>
 				
-				<?php if($hero_title): ?>
-					<div class="title">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-12 col-sm-12 col-xs-12">
-									<?php print $hero_title; ?>
-								</div>
-							</div>
-						</div>
-					</div>
-				<?php endif; ?>
+				
 					<?php
 					//do the following if the title or description exists
 					if($hero_title || $hero_description): ?>
@@ -105,6 +95,17 @@ endwhile; endif ;
 							</video>
 						</div>
 					<?php endif; ?>
+					<?php if($hero_title): ?>
+					<div class="title">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 col-xs-12">
+									<?php print $hero_title; ?>
+								</div>
+							</div>
+						</div>
+					</div>
+				<?php endif; ?>
 			</div>
 
 		</section>

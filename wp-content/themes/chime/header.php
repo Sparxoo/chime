@@ -42,7 +42,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+<div class="mobile-menu-wrap">
+<?php 
+				//add the main menu that is defined in the funcitons.php file
+				bp_main_mobile_nav(); 
+			?>
+</div>
+<div class="mobile-slide">
 <header id="masthead" class="site-header pull-left" role="banner">
 	<div class="container">
 		<div class="row">			
@@ -53,7 +59,11 @@
 				?>	
 				<img src="<?php bloginfo('template_url');?>/images/logo.png" alt="">
 			</a>
-		
+		<div class="visible-sm-block visible-xs-block pull-right">
+				
+				<i id="mobile-toggle" class="menu-icon"></i>
+
+			</div>
 			<?php 
 				//add the main menu that is defined in the funcitons.php file
 				bp_main_top_nav(); 

@@ -132,6 +132,7 @@ function sparxoo_bp_scripts() {
 		//Add them CSS
 		wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/css/style.css' );
 		wp_enqueue_style( 'theme-fonts', get_template_directory_uri() . '/css/fonts.css' );
+		wp_enqueue_style( 'theme-animate', get_template_directory_uri() . '/css/animate.css' );
 		
 		//add custom Google fonts.  The can be replaced with the Google fonts that are relevant to this theme.
 	    //wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
@@ -179,6 +180,26 @@ function bp_main_top_nav() {
 		'container_class' => 'menu cf',                 // class of container (should you choose to use it)
 		'menu_class' => 'nav main-nav clearfix',        // adding custom nav class
 		'menu_id' => 'main-menu',                  // id for the menu  
+		'before' => '',                                 // before the menu
+		'after' => '',                                  // after the menu
+		'link_before' => '',                            // before each link
+		'link_after' => '',                             // after each link
+		'depth' => 0,                                   // limit the depth of the nav
+		'fallback_cb' => 'main_nav_fallback'      // fallback function
+	));
+} /* end boilerplate main nav */
+
+// the main menu
+function bp_main_mobile_nav() {
+	//enable to add custom menu functionality to this menu
+	//$walker = new Menu_With_Description;
+	// display the wp3 menu if available
+	wp_nav_menu(array(
+		'container' => false,                           // remove nav container
+		'theme_location' => 'main-menu',                // the location in the theme that this menu is tied to (see register_nav_menus) 
+		'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+		'menu_class' => 'nav main-nav clearfix',        // adding custom nav class
+		'menu_id' => 'mobile-menu',                 	// id for the menu  
 		'before' => '',                                 // before the menu
 		'after' => '',                                  // after the menu
 		'link_before' => '',                            // before each link
@@ -293,3 +314,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
