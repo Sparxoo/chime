@@ -152,7 +152,7 @@ jQuery(document).ready(function($) {
 	
 	for(var i=0; i < linksArr.length; i++) {
 		var link = linksArr[i].firstChild.href;
-		var linkTitle = linksArr[i].firstChild.innerHTML;
+		var linkTitle = linksArr[i].firstChild.innerText;
 		//alert(linkTitle);
 		$(linksArr[i]).children('ul').prepend('<li><a href="' + link + '">' + linkTitle + '</a></li>');
 	}
