@@ -33,7 +33,7 @@ Float Variables
 
 .fnone { float: none; }
 
-.fullwidth, .site-header, .site-header ul.nav li ul.sub-menu li, .site-header ul.nav li ul.sub-menu li a, .site-content, .after-banner, .services-section, .services-section .services-left, .services-section .services-right .top, .site-footer, .service-detail, .services-links, .services-links span, body.page-template-template-services .service-outer, body.page-template-template-services .service-links, body.page-template-template-services .service-links .service-inner, body.page-template-template-services .service-links span, body.page-template-template-services .service-links ul, .page-template-template-contact .contact-map-outer, .page-template-template-contact .contact-main, .page-template-template-contact .contact-main .gform_wrapper, .page-template-template-contact .contact-main .gform_wrapper form .gform_body, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul, .page-template-template-openings-php .position-main, .job-banner, .wpjb-page-index, .wpjb-page-index .wpjb-job-list, .wpjb-page-index .wpjb-job-list .wpjb-grid-row, .testimonial-image, .top-3-reasons, .top-3-reasons .service-inner, .top-3-reasons span.title, .job-link, .our-values, .our-values .value-inner, .testimonial-by { width: 100%; }
+.fullwidth, .site-header, .site-header ul.nav li ul.sub-menu li, .site-header ul.nav li ul.sub-menu li a, .site-content, #hero .hero-image #hero-banner-video, .after-banner, .services-section, .services-section .services-left, .services-section .services-right .top, .services-section .services-right .service, .services-section-mobile, .services-section-mobile .service-mobile, .site-footer, .service-detail, .services-links, .services-links span, body.page-template-template-services .service-outer, body.page-template-template-services .service-links, body.page-template-template-services .service-links .service-inner, body.page-template-template-services .service-links span, body.page-template-template-services .service-links ul, .page-template-template-contact .contact-map-outer, .page-template-template-contact .contact-main, .page-template-template-contact .contact-main .gform_wrapper, .page-template-template-contact .contact-main .gform_wrapper form .gform_body, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul, .page-template-template-openings-php .position-main, .job-banner, .wpjb-page-index, .wpjb-page-index .wpjb-job-list, .wpjb-page-index .wpjb-job-list .wpjb-grid-row, .testimonial-image, .top-3-reasons, .top-3-reasons .service-inner, .top-3-reasons span.title, .job-link, .our-values, .our-values .value-inner, .testimonial-by { width: 100%; }
 
 /*********************
 Display Variables
@@ -156,7 +156,7 @@ ADD ALL YOUR SASS/CSS BELOW
 Please be sure and use SASS nesting
 http://sass-lang.com/guide#topic-3
 ****************************/
-a:focus { outline: none; }
+a:focus, *:focus { outline: none; }
 
 p { color: #333333; font: 400 16px/24px Arial,sans-serif; margin: 0; padding: 0 0 15px; }
 
@@ -204,6 +204,7 @@ HERO BANNER
 @media screen and (max-width: 767px) { #hero .hero-image .hero-info .description a { float: none; display: inline-block; } }
 #hero .hero-image .hero-info .description a:after { position: absolute; right: 15px; top: 0; content: ""; background: url(../images/right-angle.png) no-repeat center center; height: 40px; width: 7px; }
 #hero .hero-image .hero-info .description a:hover { background: #61ae12; }
+#hero .hero-image #hero-banner-video { float: left; }
 #hero .hero-image #hero-banner-video video { /*position: absolute;*/ z-index: 1; top: 0; right: 0; min-width: 100%; min-height: 100%; display: block; -webkit-backface-visibility: hidden; -webkit-transform: translateZ(0); }
 .touch #hero .hero-image #hero-banner-video video { display: none; }
 #hero .hero-image .title { background: rgba(0, 0, 0, 0.6); color: #ffffff; font: 700 36px/36px "Open Sans", sans-serif; text-transform: uppercase; margin: 0; position: absolute; left: 0; bottom: 0; width: 100%; text-align: center; letter-spacing: 4px; padding: 12px 0; }
@@ -241,13 +242,29 @@ After Banner
 Services Section
 *********************/
 .services-section { background: url(../images/services-bg.png) no-repeat left center; background-size: cover; padding: 23px 0 0 0; }
-.services-section .services { -ms-transform: rotate(1deg); -webkit-transform: rotate(1deg); transform: rotate(1deg); list-style: none; width: 357px; position: absolute; top: 0; right: -11; }
-.services-section .services li { text-transform: uppercase; -ms-transform: rotate(-5deg); -webkit-transform: rotate(-5deg); transform: rotate(-5deg); float: right; width: 100%; padding-top: 40px; }
-.services-section .services li a { float: right; width: 100%; text-align: center; -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); transform: rotate(30deg); opacity: 0; }
+@media screen and (max-width: 767px) { .services-section { display: none; } }
 .services-section .services-left { position: relative; }
 .services-section .services-left img { margin-left: -100px; }
+@media screen and (max-width: 1200px) { .services-section .services-left img { margin-left: -15px; } }
 .services-section .services-right .top h3 { text-transform: uppercase; font: 700 30px/32px "Open Sans", sans-serif; }
 .services-section .services-right .top p { text-transform: uppercase; font: 400 16px/18px "Open Sans", sans-serif; color: #999999; }
+.services-section .services-right .service { display: none; padding: 70px 0 0; }
+.services-section .services-right .service span { text-transform: uppercase; font: 700 18px/20px "Open Sans", sans-serif; padding: 0 0 15px 0; display: block; }
+.services-section .services-right .service p { padding: 0 0 30px; font: 400 15px/20px "Open Sans", sans-serif; }
+.services-section .services-right .service a { float: right; background: #7cb93d; color: #fff; font: 600 16px/40px "Open Sans", sans-serif; text-transform: uppercase; letter-spacing: 2px; padding: 0 50px 0 28px; text-decoration: none; display: block; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; position: relative; }
+@media screen and (max-width: 767px) { .services-section .services-right .service a { float: none; display: inline-block; } }
+.services-section .services-right .service a:after { position: absolute; right: 15px; top: 0; content: ""; background: url(../images/right-angle.png) no-repeat center center; height: 40px; width: 7px; }
+.services-section .services-right .service a:hover { background: #61ae12; }
+.services-section .services-right .displayService { display: block; }
+
+.services-section-mobile { background: url(../images/mobile-bg.png) no-repeat left top; background-size: cover; padding: 25px 0 25px; display: none; }
+@media screen and (max-width: 767px) { .services-section-mobile { display: block; } }
+.services-section-mobile h3 { color: #ffffff; text-transform: uppercase; font: 700 24px/27px "Open Sans", sans-serif; padding: 0 0 20px 0; }
+.services-section-mobile .service-mobile { padding-bottom: 20px; }
+.services-section-mobile .service-mobile .image { width: 45%; }
+.services-section-mobile .service-mobile .image img { max-width: 100%; }
+.services-section-mobile .service-mobile .text { width: 45%; height: 100%; padding-top: 22px; }
+.services-section-mobile .service-mobile .text span { font: 700 12px/15px "Open Sans", sans-serif; color: #ffffff; text-transform: uppercase; border-bottom: 3px solid #7cb93d; padding: 0 5px 5px; display: block; }
 
 /*********************
 Footer Section
@@ -413,7 +430,7 @@ Career Page
 .mobile-slide { float: left; width: 100%; }
 
 .mobile-menu-wrap { background: none repeat scroll 0 0 #006f8e; height: 100%; margin-right: -70%; overflow-y: scroll; position: fixed; right: 0; width: 70%; z-index: 99999; }
-.mobile-menu-wrap ul { -moz-padding-start: 0; list-style-type: none; }
+.mobile-menu-wrap ul { -moz-padding-start: 0; list-style-type: none; padding: 0; }
 .mobile-menu-wrap ul li { border-bottom: 1px solid #0083a8; }
 .mobile-menu-wrap ul li a { display: block; padding: 10px 20px; color: #ffffff; width: 100%; }
 .mobile-menu-wrap ul li ul { display: none; }
@@ -423,6 +440,9 @@ Career Page
 Mobile Menu
 *****************/
 #mobile-toggle { padding: 0; right: 34px; float: right; width: 50px; height: 50px; position: relative; top: 14px; width: 50px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; height: 50px; background-image: url(../images/mobile-menu.png); background-position: 0 0; }
+
+@media screen and (max-width: 992px) { .visible-sm-block { display: none !important; } }
+@media screen and (max-width: 767px) { .visible-sm-block { display: block !important; } }
 
 #mobile-toggle.orange { background-position: 0 -50px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
 

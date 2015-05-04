@@ -24,7 +24,6 @@ jQuery(document).ready(function($) {
   	  $('#banner-video-container').addClass('hide');
 	  
     });
-	$('.services li a').circleType({radius: 170});
 	$(function() {
 	    var iframe = $('#video-player')[0];
 	    var player = $f(iframe);
@@ -50,6 +49,51 @@ jQuery(document).ready(function($) {
 	/*$('.site-header ul.nav li a').mouseleave(function(){
 		$(this).parent().find('ul').removeClass('fadeInDown');
 	});*/
+	
+	$('.services-left area').click(function(){
+		//alert($(this).attr('href'));
+		$('.services-right .service').removeClass('displayService');
+		$('.services-right .service').removeClass('slideInLeft');
+		$('.services-right .service' + $(this).attr('href')).addClass('slideInLeft');
+		$('.services-right .service' + $(this).attr('href')).addClass('displayService');		
+		return false;
+	});
+	var siteURL = $('a#logo').attr('href');
+	var ImageURL = siteURL+'/wp-content/themes/chime/images/service-icon.png'
+	var Image1URL = siteURL+'/wp-content/themes/chime/images/service-icon1.gif'
+	var Image2URL = siteURL+'/wp-content/themes/chime/images/service-icon2.gif'
+	var Image3URL = siteURL+'/wp-content/themes/chime/images/service-icon3.gif'
+	var Image4URL = siteURL+'/wp-content/themes/chime/images/customer.png'
+	
+	$('.services-left area[href=#customer-care]').mouseenter(function(){
+		$('.services-left img').attr('src',Image1URL);
+	});
+	$('.services-left area[href=#seasonal-support]').mouseenter(function(){
+		$('.services-left img').attr('src',Image2URL);
+	});
+	$('.services-left area[href=#bpo]').mouseenter(function(){
+		$('.services-left img').attr('src',Image3URL);
+	});
+	
+	var clickCheck = 0;
+	$('.services-left area').mouseleave(function(){
+		if(clickCheck==0){
+			$('.services-left img').attr('src',ImageURL);
+		}
+	});
+	$('.services-left area[href=#customer-care]').click(function(){
+		clickCheck = 1;
+		$('.services-left img').attr('src',Image4URL);
+	});
+	$('.services-left area[href=#seasonal-support]').click(function(){
+		clickCheck = 1;
+		$('.services-left img').attr('src',Image2URL);
+	});
+	$('.services-left area[href=#bpo]').click(function(){
+		clickCheck = 1;
+		$('.services-left img').attr('src',Image3URL);
+	});
+	
 	 
 }); /* end of as page load scripts */
 
@@ -152,7 +196,7 @@ jQuery(document).ready(function($) {
 	
 	for(var i=0; i < linksArr.length; i++) {
 		var link = linksArr[i].firstChild.href;
-		var linkTitle = linksArr[i].firstChild.innerText;
+		var linkTitle = linksArr[i].firstChild.innerHTML;
 		//alert(linkTitle);
 		$(linksArr[i]).children('ul').prepend('<li><a href="' + link + '">' + linkTitle + '</a></li>');
 	}

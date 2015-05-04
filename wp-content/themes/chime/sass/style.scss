@@ -22,7 +22,7 @@ ADD ALL YOUR SASS/CSS BELOW
 Please be sure and use SASS nesting
 http://sass-lang.com/guide#topic-3
 ****************************/
-a:focus{
+a:focus,*:focus{
 	outline:none;
 }
 p{
@@ -274,6 +274,9 @@ HERO BANNER
 		
 		
 		#hero-banner-video{
+			float:left;
+			@extend .fullwidth;
+			
 			video{
 		        /*position: absolute;*/
 				z-index:1;
@@ -451,42 +454,20 @@ Services Section
 	background-size:cover;
 	padding:23px 0 0 0;
 	
-	.services{
-		-ms-transform: rotate(1deg);
-		-webkit-transform: rotate(1deg);
-		transform: rotate(1deg);
-		list-style:none;
-		width:357px;
-		position:absolute;
-		top:0;right:-11;
-		
-		li{
-			text-transform:uppercase;
-			-ms-transform: rotate(-5deg);
-			-webkit-transform: rotate(-5deg);
-			transform: rotate(-5deg);
-			float:right;
-			width:100%;
-			padding-top:40px;
-			
-			a{
-				float:right;
-				width:100%;
-				text-align:center;
-				-ms-transform: rotate(30deg);
-				-webkit-transform: rotate(30deg);
-				transform: rotate(30deg);
-				opacity:0;
-			}
-		}
+	@include breakpoint($screen-sm-min){
+		display:none;
 	}
-	
+		
 	.services-left{
 		@extend .fullwidth;
 		position:relative;
 		
 		img{
 			margin-left:-100px;
+			
+			@include breakpoint($screen-lg-min){
+				margin-left:-15px;
+			}
 		}
 	}
 	
@@ -505,9 +486,110 @@ Services Section
 				color:#999999;
 			}
 		}
+		
+		.service{
+			display:none;
+			@extend .fullwidth;
+			 padding: 70px 0 0;
+			
+			span{
+				text-transform:uppercase;
+				font:700 18px/20px $opensans;
+				padding: 0 0 15px 0;
+				display:block;
+			}
+			
+			p{
+				padding: 0 0 30px;
+				font:400 15px/20px $opensans;
+			}
+			
+			a{
+				float:right;
+				background:#7cb93d;
+				color:#fff;
+				font:600 16px/40px $opensans;
+				text-transform:uppercase;
+				letter-spacing: 2px;
+				padding:0 50px 0 28px;
+				text-decoration:none;
+				display:block;
+				@include hoverEffect(all, 0.5s, ease-in-out);
+				position:relative;
+				
+				@include breakpoint($screen-sm-min){
+					float:none;
+					display:inline-block;
+				}
+			}	
+			
+			a:after{
+				position:absolute;
+				right:15px;
+				top:0;
+				content:"";
+				background:url(../images/right-angle.png) no-repeat center center;
+				height:40px;
+				width:7px;
+			}
+			
+			a:hover{
+				background:#61ae12;
+			}
+		}
+		.displayService{
+			display:block;
+		}
+		
 	}
 }
 
+
+.services-section-mobile{
+	@extend .fullwidth;
+	background:url(../images/mobile-bg.png) no-repeat left top;
+	background-size: cover;
+	padding:25px 0 25px;
+	display:none;
+	@include breakpoint($screen-sm-min){
+		display:block;
+	}
+	
+	h3{
+		color:$white;
+		text-transform:uppercase;
+		font:700 24px/27px $opensans;
+		padding:0 0 20px 0;
+	}
+	
+	.service-mobile{
+		@extend .fullwidth;
+		padding-bottom:20px;
+		
+		.image{
+			width:45%;
+			
+			img{
+				max-width:100%;
+			}
+		}
+		
+		.text{
+			width:45%;
+			height:100%;
+			padding-top:22px;			
+					
+			span{
+				font:700 12px/15px $opensans;
+				color:$white;
+				text-transform:uppercase;
+				border-bottom:3px solid #7cb93d;
+				padding: 0 5px 5px;
+				display:block;
+			}	
+		}
+	}
+}
 /*********************
 Footer Section
 *********************/
@@ -1335,6 +1417,7 @@ Career Page
 	ul {
 		-moz-padding-start: 0;
 		list-style-type: none;
+		padding:0;
 		
 		li {
 			border-bottom: 1px solid #0083a8;
@@ -1372,6 +1455,14 @@ Mobile Menu
 	width:50px;@include hoverEffect(all, 0.5s, ease-in-out);
 	height:50px;
 	background-image:url(../images/mobile-menu.png);background-position:0 0;
+}
+.visible-sm-block{
+	@include breakpoint($screen-md-min){
+		display:none !important;
+	}
+	@include breakpoint($screen-sm-min){
+		display:block !important;
+	}
 }
 #mobile-toggle.orange{
 	background-position:0 -50px;@include hoverEffect(all, 0.5s, ease-in-out);

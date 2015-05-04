@@ -91,7 +91,11 @@ endwhile; endif ;
 							  <source src="<?php echo $video_ogg['url']; ?>" type="video/ogg">	  
 							  <source src="<?php echo $video_3gp['url']; ?>" type="video/3gp">	  
 							  <source src="<?php echo $video_flv['url']; ?>" type="video/flv">	
-							  Your browser does not support HTML5 video.
+							  <object type="application/x-shockwave-flash" data="<?php bloginfo('template_url')?>/player.swf" height="477" width="100%">
+										<param name="movie" value="player.swf">
+										<param name="flashvars" value="autostart=true&amp;controlbar=over&amp;image=poster.jpg&amp;file=<?php print $video_mp4['url']; ?>">
+										
+										</object>
 							</video>
 						</div>
 					<?php endif; ?>

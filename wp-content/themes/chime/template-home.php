@@ -28,7 +28,7 @@
 	//get_template_part("content", "video"); 
 ?>
 <?php 
-	//get_template_part("content", "services"); 
+	get_template_part("content", "services"); 
 ?>
 		
 <?php get_footer(); ?>
