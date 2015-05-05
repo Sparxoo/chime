@@ -204,7 +204,7 @@ HERO BANNER
 @media screen and (max-width: 767px) { #hero .hero-image .hero-info .description a { float: none; display: inline-block; } }
 #hero .hero-image .hero-info .description a:after { position: absolute; right: 15px; top: 0; content: ""; background: url(../images/right-angle.png) no-repeat center center; height: 40px; width: 7px; }
 #hero .hero-image .hero-info .description a:hover { background: #61ae12; }
-#hero .hero-image #hero-banner-video video { /*position: absolute;*/ z-index: 1; top: 0; right: 0; min-width: 100%; min-height: 100%; display: block; -webkit-backface-visibility: hidden; -webkit-transform: translateZ(0); }
+#hero .hero-image #hero-banner-video video { /*position: absolute;*/ z-index: 1; top: 0; right: 0; min-width: 100%; min-height: 100%; max-width: 100%; display: block; -webkit-backface-visibility: hidden; -webkit-transform: translateZ(0); }
 .touch #hero .hero-image #hero-banner-video video { display: none; }
 #hero .hero-image .title { background: rgba(0, 0, 0, 0.6); color: #ffffff; font: 700 36px/36px "Open Sans", sans-serif; text-transform: uppercase; margin: 0; position: absolute; left: 0; bottom: 0; width: 100%; text-align: center; letter-spacing: 4px; padding: 12px 0; }
 @media screen and (max-width: 992px) { #hero .hero-image .title { font: 700 27px/30px "Open Sans", sans-serif; } }

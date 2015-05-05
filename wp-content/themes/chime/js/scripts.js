@@ -58,89 +58,8 @@ jQuery(document).ready(function($) {
 		$('.services-right .service' + $(this).attr('href')).addClass('displayService');		
 		return false;
 	});
-	var siteURL = $('a#logo').attr('href');
-	var ImageURL = siteURL+'/wp-content/themes/chime/images/service-icon.png'
-	var Image1URL = siteURL+'/wp-content/themes/chime/images/service-icon1.gif'
-	var Image2URL = siteURL+'/wp-content/themes/chime/images/service-icon2.gif'
-	var Image3URL = siteURL+'/wp-content/themes/chime/images/service-icon3.gif'
-	var Image4URL = siteURL+'/wp-content/themes/chime/images/customer.png'
 	
-	$('.services-left area[href=#customer-care]').mouseenter(function(){
-		$('.services-left img').attr('src',Image1URL);
-	});
-	$('.services-left area[href=#seasonal-support]').mouseenter(function(){
-		$('.services-left img').attr('src',Image2URL);
-	});
-	$('.services-left area[href=#bpo]').mouseenter(function(){
-		$('.services-left img').attr('src',Image3URL);
-	});
-	
-	var clickCheck = 0;
-	$('.services-left area').mouseleave(function(){
-		if(clickCheck==0){
-			$('.services-left img').attr('src',ImageURL);
-		}
-	});
-	$('.services-left area[href=#customer-care]').click(function(){
-		clickCheck = 1;
-		$('.services-left img').attr('src',Image4URL);
-	});
-	$('.services-left area[href=#seasonal-support]').click(function(){
-		clickCheck = 1;
-		$('.services-left img').attr('src',Image2URL);
-	});
-	$('.services-left area[href=#bpo]').click(function(){
-		clickCheck = 1;
-		$('.services-left img').attr('src',Image3URL);
-	});
-	
-	 
-}); /* end of as page load scripts */
-
-
-
-/*
- * If jquery needs to be called after the page has loaded completely put your jquery in this funciton. 
- * Within this funtion you can use the namespace $ instead of jQuery
- * ex. use this $('#id') ... NOT jQuery('#id')
-*/
-(function($){
-    $(window).load(function() {
-		//parallax scrolling - Skrollr initiate.  need to initiate this once the page loads to make sure all the image heights have been set.
-		if(!$("html").hasClass('touch'))
-		{		
-		  var s = skrollr.init({
-		        forceHeight: false,
-				render: function(data) {
-				      //Debugging - Log the current scroll position.
-				      // console.log(data.curTop);
-				 }
-		  });
-		}
-    });
-})(jQuery);
-
-/*
- * Sparxoo BP Scripts File
- *
- * This file should contain any js scripts you want to add to the site.
- * Instead of calling it in the header or throwing it inside wp_head()
- * this file will be called automatically in the footer so as not to
- * slow the page load.
- *
-*/
-
-/*
- * Put all your regular jQuery in here.
- * Within this funtion you can use the namespace $ instead of jQuery
- * ex. use this $('#id') ... NOT jQuery('#id')
-*/
-
-jQuery(document).ready(function($) {
-	
-
-	/* Mobile menu javascript */
-
+	/* Mobile menu Javascript */
 	function toggleMobileNavigation() {
 		if(!$('.mobile-menu-wrap').hasClass('mobile-toggled')) {
 			$(".mobile-menu-wrap").addClass('mobile-toggled').animate({
@@ -199,7 +118,66 @@ jQuery(document).ready(function($) {
 		var linkTitle = linksArr[i].firstChild.innerHTML;
 		//alert(linkTitle);
 		$(linksArr[i]).children('ul').prepend('<li><a href="' + link + '">' + linkTitle + '</a></li>');
-	}
+	}	
 	
+	/* Services Section on Homepage */
+	var siteURL = $('a#logo').attr('href');
+	var ImageURL = siteURL+'/wp-content/themes/chime/images/service-icon.gif'
+	var Image1URL = siteURL+'/wp-content/themes/chime/images/customer-care-animation.png'
+	var Image2URL = siteURL+'/wp-content/themes/chime/images/seasonal-support-animation.png'
+	var Image3URL = siteURL+'/wp-content/themes/chime/images/bpo-animation.png'
+	
+	$('.services-left area[href=#customer-care]').mouseenter(function(){
+		$('.services-left img').attr('src',Image1URL);
+	});
+	$('.services-left area[href=#seasonal-support]').mouseenter(function(){
+		$('.services-left img').attr('src',Image2URL);
+	});
+	$('.services-left area[href=#bpo]').mouseenter(function(){
+		$('.services-left img').attr('src',Image3URL);
 	});
 	
+	var clickCheck = 0;
+	$('.services-left area').mouseleave(function(){
+		if(clickCheck==0){
+			$('.services-left img').attr('src',ImageURL);
+		}
+	});
+	$('.services-left area[href=#customer-care]').click(function(){
+		clickCheck = 1;
+		$('.services-left img').attr('src',Image4URL);
+	});
+	$('.services-left area[href=#seasonal-support]').click(function(){
+		clickCheck = 1;
+		$('.services-left img').attr('src',Image2URL);
+	});
+	$('.services-left area[href=#bpo]').click(function(){
+		clickCheck = 1;
+		$('.services-left img').attr('src',Image3URL);
+	});
+	
+	 
+}); /* end of as page load scripts */
+
+
+
+/*
+ * If jquery needs to be called after the page has loaded completely put your jquery in this funciton. 
+ * Within this funtion you can use the namespace $ instead of jQuery
+ * ex. use this $('#id') ... NOT jQuery('#id')
+*/
+(function($){
+    $(window).load(function() {
+		//parallax scrolling - Skrollr initiate.  need to initiate this once the page loads to make sure all the image heights have been set.
+		if(!$("html").hasClass('touch'))
+		{		
+		  var s = skrollr.init({
+		        forceHeight: false,
+				render: function(data) {
+				      //Debugging - Log the current scroll position.
+				      // console.log(data.curTop);
+				 }
+		  });
+		}
+    });
+})(jQuery);
