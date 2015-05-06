@@ -42,7 +42,7 @@ Display Variables
 
 .dblock { display: block; }
 
-.dib, .services-links a, body.page-template-template-services .service-links a, .top-3-reasons span.image { display: inline-block; }
+.dib, .services-links a, body.page-template-template-services .service-links a.service-icon, .top-3-reasons span.image { display: inline-block; }
 
 .dinline { display: inline; }
 
@@ -167,7 +167,7 @@ p { color: #333333; font: 400 16px/24px Arial,sans-serif; margin: 0; padding: 0 
 .site-header ul.nav { padding: 52px 0 0 0; }
 @media screen and (max-width: 767px) { .site-header ul.nav { display: none; } }
 .site-header ul.nav li { margin: 0 0 0 34px; position: relative; }
-.site-header ul.nav li a { color: #444444; font: 700 16px/18px "Open Sans", sans-serif; text-transform: uppercase; padding: 0; text-decoration: none; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+.site-header ul.nav li a { color: #444444; font: 600 16px/18px "Open Sans", sans-serif; text-transform: uppercase; padding: 0; text-decoration: none; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 .site-header ul.nav li a:hover { background: none; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 .site-header ul.nav li ul.sub-menu { display: none; position: absolute; left: -17px; top: 100%; list-style: none; padding: 22px 0 0 0; width: 189px; }
 .site-header ul.nav li ul.sub-menu li { margin: 0; background: #160d47; border-top: 1px solid #312b53; }
@@ -268,16 +268,17 @@ Services Section
 /*********************
 Footer Section
 *********************/
-.site-footer { border-top: 1px solid #000000; padding: 26px 0; }
+.site-footer { padding: 26px 0; }
 @media screen and (max-width: 767px) { .site-footer ul { width: 100%; } }
 .site-footer ul li { padding: 0 30px 0 0; }
 @media screen and (max-width: 767px) { .site-footer ul li { width: 100%; padding: 0 0 35px 0; text-align: center; } }
-.site-footer ul li a { padding: 0; color: #999999; font: 700 14px/16px "Open Sans", sans-serif; text-transform: uppercase; }
+.site-footer ul li a { padding: 0; color: #999999; font: 700 14px/16px "Open Sans", sans-serif; text-transform: uppercase; -webkit-transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; -ms-transition: all 0.4s ease-in-out; -o-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; }
 @media screen and (max-width: 767px) { .site-footer ul li a { float: none; font: 700 16px/16px "Open Sans", sans-serif; } }
-.site-footer ul li :hover { background: none; }
+.site-footer ul li :hover { background: none; color: #7dba3d; }
 @media screen and (max-width: 767px) { .site-footer .site-by { width: 100%; text-align: center; } }
-.site-footer .site-by a { padding: 0; color: #999999; font: 700 14px/16px "Open Sans", sans-serif; text-transform: uppercase; text-decoration: none; }
+.site-footer .site-by a { padding: 0; color: #999999; font: 700 14px/16px "Open Sans", sans-serif; text-transform: uppercase; text-decoration: none; -webkit-transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; -ms-transition: all 0.4s ease-in-out; -o-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; }
 @media screen and (max-width: 767px) { .site-footer .site-by a { font: 400 16px/18px Arial, sans-serif; float: none; } }
+.site-footer .site-by :hover { color: #7dba3d; }
 
 /**********************
 Service Detail Page
@@ -304,9 +305,12 @@ body.page-template-template-services .service-links .service-inner { background:
 @media screen and (max-width: 992px) { body.page-template-template-services .service-links .service-inner { background-size: 68% auto; padding-top: 70px; } }
 @media screen and (max-width: 992px) { body.page-template-template-services .service-links .service-inner { background: none; padding-top: 10px; } }
 body.page-template-template-services .service-links h4 { margin: 0; font: 700 24px/24px "Open Sans", sans-serif; color: #160d47; padding: 0 0 45px 0; }
-body.page-template-template-services .service-links a { width: 100px; height: 100px; border: 5px solid #8cc640; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 90px; transition: all 0.2s ease-in-out 0s; }
-body.page-template-template-services .service-links a:hover { transform: scale(1.1); }
+body.page-template-template-services .service-links a.service-icon { width: 100px; height: 100px; border: 5px solid #8cc640; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 90px; transition: all 0.2s ease-in-out 0s; }
+body.page-template-template-services .service-links a.service-icon:hover { transform: scale(1.1); }
 body.page-template-template-services .service-links span { font: 700 18px/24px "Open Sans", sans-serif; color: #333333; padding: 22px 0 18px 0; }
+body.page-template-template-services .service-links span a { color: #333333; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; text-decoration: none; }
+body.page-template-template-services .service-links span a.hover { color: #7dba3d; }
+body.page-template-template-services .service-links span a:hover { color: #7dba3d; }
 body.page-template-template-services .service-links ul { margin: 0; padding: 0; list-style: none; text-align: left; float: left; }
 @media screen and (max-width: 767px) { body.page-template-template-services .service-links ul { padding-bottom: 30px; } }
 body.page-template-template-services .service-links ul li { font: 400 16px/16px "Open Sans", sans-serif; text-transform: inherit !important; color: #333333; padding-left: 22px; background: url(../images/green-bullet.png) no-repeat left 5px; }
@@ -335,6 +339,7 @@ Gravity Form
 .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul li .ginput_container textarea { padding: 10px; width: 100%; float: left; border: 1px solid #e1e1e1; color: #999999; resize: none; height: 176px; }
 .page-template-template-contact .contact-main .gform_wrapper form .gform_footer { width: 100%; float: left; text-align: center; padding: 54px 0 0; }
 .page-template-template-contact .contact-main .gform_wrapper form .gform_footer input[type="submit"] { background: #7cb93d url(../images/right-angle.png) no-repeat 90% center; color: #fff; display: inline-block; font: 600 16px/40px "Open Sans", sans-serif; letter-spacing: 2px; padding: 0 53px 0 20px; position: relative; text-decoration: none; border: 0; text-transform: uppercase; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+.page-template-template-contact .contact-main .gform_wrapper form .gform_footer input[type="submit"]:hover { background: #61ae12 url(../images/right-angle.png) no-repeat 90% center; }
 
 /********************
 Open Positions

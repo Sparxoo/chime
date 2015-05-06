@@ -64,7 +64,7 @@ p{
 			a{
 				@extend .fleft;
 				color:#444444;
-				font:700 16px/18px $opensans;
+				font:600 16px/18px $opensans;
 				text-transform:uppercase;
 				padding:0;
 				text-decoration:none;
@@ -594,7 +594,6 @@ Footer Section
 *********************/
 .site-footer{
 	@extend .fullwidth;
-	border-top:1px solid #000000;
 	padding:26px 0;
 	
 	ul{
@@ -620,6 +619,7 @@ Footer Section
 				color:#999999;
 				font:700 14px/16px $opensans;
 				text-transform:uppercase;	
+				@include hoverEffect(all, 0.4s, ease-in-out);
 
 				@include breakpoint($screen-sm-min){
 					float:none;
@@ -628,6 +628,7 @@ Footer Section
 			}
 			:hover{
 				background:none;
+				color:#7dba3d;
 			}
 		}
 	}
@@ -647,11 +648,16 @@ Footer Section
 			font:700 14px/16px $opensans;
 			text-transform:uppercase;	
 			text-decoration:none;
+			@include hoverEffect(all, 0.4s, ease-in-out);
 			
 			@include breakpoint($screen-sm-min){
 				font:400 16px/18px $arail;
 				float:none;
 			}
+		}
+		
+		:hover{
+			color:#7dba3d;
 		}
 	}
 }
@@ -764,7 +770,7 @@ body.page-template-template-services{
 		color:#160d47;
 		padding:0 0 45px 0;
 	}
-	a{
+	a.service-icon{
 		width:100px;
 		height:100px;
 		@extend .dib;
@@ -775,7 +781,7 @@ body.page-template-template-services{
 		transition: all 0.2s ease-in-out 0s;
 	}
 	
-	a:hover{
+	a.service-icon:hover{
 		transform: scale(1.1);
 	}
 	
@@ -785,6 +791,19 @@ body.page-template-template-services{
 		font:700 18px/24px $opensans;
 		color:#333333;
 		padding:22px 0 18px 0;
+		
+		a{
+			color:#333333;
+			@include hoverEffect(all, 0.2s, ease-in-out);
+			text-decoration:none;
+		}
+		
+		a.hover{			
+			color:#7dba3d;
+		}
+		a:hover{
+			color:#7dba3d;
+		}
 	}
 	ul{
 		margin:0;
@@ -976,6 +995,9 @@ Gravity Form
 						border:0;
 						text-transform: uppercase;
 						@include hoverEffect(all, 0.5s, ease-in-out);
+					}
+					input[type="submit"]:hover{
+						background: #61ae12 url(../images/right-angle.png) no-repeat 90% center;
 					}
 				}
 				

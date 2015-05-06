@@ -37,6 +37,8 @@
     var myOptions = {
       zoom: 10,
       center: latlng,
+	  draggable: false,
+	  scrollwheel: false,
     mapTypeControl: false,
     mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
     navigationControl: false,

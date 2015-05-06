@@ -32,8 +32,8 @@
 					while ( have_rows('page_services') ) : the_row();
 					?>
 					<div class="col-md-4 col-sm-4 col-xs-12">
-						<a href="<?php the_sub_field('service_link', $post->ID);?>"><img src="<?php the_sub_field('service_icon1', $post->ID);?>"></a>
-						<span class="pull-left"><?php the_sub_field('service_name', $post->ID);?></span>
+						<a href="<?php the_sub_field('service_link', $post->ID);?>" class="service-icon"><img src="<?php the_sub_field('service_icon1', $post->ID);?>"></a>
+						<span class="pull-left"><a href="<?php the_sub_field('service_link', $post->ID);?>"><?php the_sub_field('service_name', $post->ID);?></a></span>
 						<ul>
 							<?php if( have_rows('service_text') ){
 								while ( have_rows('service_text') ) : the_row();

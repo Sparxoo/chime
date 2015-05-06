@@ -50,13 +50,28 @@ jQuery(document).ready(function($) {
 		$(this).parent().find('ul').removeClass('fadeInDown');
 	});*/
 	
-	$('.services-left area').click(function(){
+	$('.services-left area').mouseover(function(){
 		//alert($(this).attr('href'));
 		$('.services-right .service').removeClass('displayService');
 		$('.services-right .service').removeClass('slideInLeft');
 		$('.services-right .service' + $(this).attr('href')).addClass('slideInLeft');
 		$('.services-right .service' + $(this).attr('href')).addClass('displayService');		
 		return false;
+	});
+	/*
+	$('.services-left area').mouseleave(function(){
+		//alert($(this).attr('href'));
+		$('.services-right .service').removeClass('displayService');
+		$('.services-right .service').removeClass('slideInLeft');		
+		return false;
+	});*/
+	
+	/* Hover effect for service icon on services page */
+	$('.service-icon').mouseover(function(){
+		$(this).siblings().find('a').addClass('hover');
+	});
+	$('.service-icon').mouseleave(function(){
+		$(this).siblings().find('a').removeClass('hover');
 	});
 	
 	/* Mobile menu Javascript */
@@ -138,24 +153,24 @@ jQuery(document).ready(function($) {
 	});
 	
 	var clickCheck = 0;
+	/*
+	$('.services-left area[href=#customer-care]').mouseover(function(){
+		clickCheck = 1;
+		$('.services-left img').attr('src',Image4URL);
+	});
+	$('.services-left area[href=#seasonal-support]').mouseover(function(){
+		clickCheck = 1;
+		$('.services-left img').attr('src',Image2URL);
+	});
+	$('.services-left area[href=#bpo]').mouseover(function(){
+		clickCheck = 1;
+		$('.services-left img').attr('src',Image3URL);
+	});*/	
 	$('.services-left area').mouseleave(function(){
 		if(clickCheck==0){
 			$('.services-left img').attr('src',ImageURL);
 		}
 	});
-	$('.services-left area[href=#customer-care]').click(function(){
-		clickCheck = 1;
-		$('.services-left img').attr('src',Image4URL);
-	});
-	$('.services-left area[href=#seasonal-support]').click(function(){
-		clickCheck = 1;
-		$('.services-left img').attr('src',Image2URL);
-	});
-	$('.services-left area[href=#bpo]').click(function(){
-		clickCheck = 1;
-		$('.services-left img').attr('src',Image3URL);
-	});
-	
 	 
 }); /* end of as page load scripts */
 
