@@ -176,7 +176,7 @@ p { color: #333333; font: 400 16px/24px Arial,sans-serif; margin: 0; padding: 0 
 .site-header ul.nav li ul.sub-menu .current-menu-item { background: #7dba3d; }
 .site-header ul.nav li ul.sub-menu :first-child { border: 0; }
 .site-header ul.nav li:hover a { color: #7dba3d; }
-.site-header ul.nav li:hover ul.sub-menu { display: block; }
+.site-header ul.nav li:hover ul.sub-menu { /*display:block;*/ }
 .site-header ul.nav li:hover ul.sub-menu a { color: #ffffff; }
 .site-header ul.nav li.current-menu-item a { color: #7dba3d; }
 .site-header ul.nav li.current-page-ancestor a { color: #7dba3d; }

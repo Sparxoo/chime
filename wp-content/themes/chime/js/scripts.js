@@ -39,16 +39,23 @@ jQuery(document).ready(function($) {
 	    });
 	});
 	
-	$('ul.sub-menu').addClass('animated');
+	/*$('ul.sub-menu').addClass('animated');
 	$('.site-header ul.nav li a').mouseover(function(){
 		$(this).parent().find('ul').stop().addClass('fadeInDown');
 	});
 	$('.site-header ul.nav li a').mouseover(function(){
 		$(this).parent().siblings().find('ul').removeClass('fadeInDown');
 	});
-	/*$('.site-header ul.nav li a').mouseleave(function(){
+	$('.site-header ul.nav li a').mouseleave(function(){
 		$(this).parent().find('ul').removeClass('fadeInDown');
 	});*/
+	$('.site-header ul li').mouseover(function(){
+		$(this).find('.sub-menu').stop().slideDown(500);
+	});
+	
+	$('.site-header ul li').mouseleave(function(){
+		$(this).find('.sub-menu').stop().slideUp(500);
+	});		
 	
 	$('.services-left area').mouseover(function(){
 		//alert($(this).attr('href'));
