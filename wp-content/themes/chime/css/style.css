@@ -162,15 +162,15 @@ p { color: #333333; font: 400 16px/24px Arial,sans-serif; margin: 0; padding: 0 
 
 .padding0 { padding: 0; }
 
-.site-header { padding: 10px 0 12px; position: relative; z-index: 9999; }
+.site-header { padding: 10px 0 0; position: relative; z-index: 9999; }
 @media screen and (max-width: 767px) { .site-header a#logo { margin-left: 10px; } }
 .site-header ul.nav { padding: 52px 0 0 0; }
 @media screen and (max-width: 767px) { .site-header ul.nav { display: none; } }
-.site-header ul.nav li { margin: 0 0 0 34px; position: relative; }
+.site-header ul.nav li { margin: 0 0 0 34px; position: relative; padding-bottom: 32px; }
 .site-header ul.nav li a { color: #444444; font: 600 16px/18px "Open Sans", sans-serif; text-transform: uppercase; padding: 0; text-decoration: none; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 .site-header ul.nav li a:hover { background: none; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
-.site-header ul.nav li ul.sub-menu { display: none; position: absolute; left: -17px; top: 100%; list-style: none; padding: 22px 0 0 0; width: 189px; }
-.site-header ul.nav li ul.sub-menu li { margin: 0; background: #160d47; border-top: 1px solid #312b53; }
+.site-header ul.nav li ul.sub-menu { display: none; position: absolute; left: -17px; top: 100%; list-style: none; padding: 0; width: 189px; }
+.site-header ul.nav li ul.sub-menu li { margin: 0; background: #160d47; padding: 0; border-top: 1px solid #312b53; }
 .site-header ul.nav li ul.sub-menu li a { padding: 20px; }
 .site-header ul.nav li ul.sub-menu :hover { background: #7dba3d; }
 .site-header ul.nav li ul.sub-menu .current-menu-item { background: #7dba3d; }

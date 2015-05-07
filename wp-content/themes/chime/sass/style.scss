@@ -36,7 +36,7 @@ p{
 }
 .site-header{
 	@extend .fullwidth;
-	padding: 10px 0 12px;	
+	padding: 10px 0 0;	
 	position:relative;
 	z-index:9999;
 	
@@ -60,6 +60,7 @@ p{
 			@extend .fleft;
 			margin:0 0 0 34px;
 			position:relative;
+			padding-bottom:32px;
 			
 			a{
 				@extend .fleft;
@@ -82,7 +83,7 @@ p{
 				left:-17px;
 				top:100%;
 				list-style:none;
-				padding:22px 0 0 0;				
+				padding:0;				
 				width:189px;
 				
 				li{
@@ -90,6 +91,7 @@ p{
 					background:#160d47;
 					@extend .fleft;
 					@extend .fullwidth;
+					padding:0;
 					border-top:1px solid #312b53;
 					
 					a{
