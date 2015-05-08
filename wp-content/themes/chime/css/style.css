@@ -164,6 +164,7 @@ p { color: #333333; font: 400 16px/24px Arial,sans-serif; margin: 0; padding: 0 
 
 .site-header { padding: 10px 0 0; position: relative; z-index: 9999; }
 @media screen and (max-width: 767px) { .site-header a#logo { margin-left: 10px; } }
+@media screen and (max-width: 767px) { .site-header { padding: 10px 0; } }
 .site-header ul.nav { padding: 52px 0 0 0; }
 @media screen and (max-width: 767px) { .site-header ul.nav { display: none; } }
 .site-header ul.nav li { margin: 0 0 0 34px; position: relative; padding-bottom: 32px; }
@@ -322,7 +323,9 @@ Gravity Form
 .page-template-template-contact #contact-map .gmnoprint { display: none; }
 .page-template-template-contact #contact-map .gm-style-cc { display: none; }
 .page-template-template-contact .contact-map-outer { position: relative; }
-.page-template-template-contact .contact-map-outer .location-information { position: absolute; left: 50%; bottom: 60px; margin-left: 35px; background: url(../images/location-bg.png); width: 330px; color: #ffffff; padding: 15px; font: 400 16px/24px "Open Sans", sans-serif; }
+.page-template-template-contact .contact-map-outer .gm-style-iw { top: 30px !important; left: 35px !important; }
+.page-template-template-contact .contact-map-outer .gm-style-iw div { overflow: visible !important; }
+.page-template-template-contact .contact-map-outer .location-information { position: relative; left: 50%; bottom: -230px; margin-left: 35px; background: url(../images/location-bg.png); width: 330px; color: #ffffff; padding: 15px; font: 400 16px/24px "Open Sans", sans-serif; }
 @media screen and (max-width: 767px) { .page-template-template-contact .contact-map-outer .location-information { left: 50%; width: 290px; margin-left: -145px; bottom: 5px; font: 400 13px/15px "Open Sans", sans-serif; } }
 .page-template-template-contact .contact-map-outer .location-information .location-name { font: 700 16px/24px "Open Sans", sans-serif; }
 .page-template-template-contact .contact-map-outer .location-information a { color: #ffffff; }
@@ -359,13 +362,16 @@ Open Positions
 .wpjb-page-index .wpjb-job-list .wpjb-grid-row { background: #ffffff; border-bottom: 1px solid #f5f5f5; }
 .wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-title { width: 41%; }
 @media screen and (max-width: 767px) { .wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-title { width: 80%; } }
-.wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-title a { font: 400 100%/1.5 Arial, sans-serif; color: #ad0700; }
+.wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-title a { font: 400 100%/1.5 Arial, sans-serif; color: #160d47; }
 .wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-title .wpjb-sub { display: block; font: 400 0.85em/0.95em Arial, sans-serif; }
 .wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-location { color: #444; font: 400 100%/1.5 Arial, sans-serif; }
 @media screen and (max-width: 767px) { .wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-col-location { width: 100%; padding: 10px 1%; } }
 @media screen and (max-width: 767px) { .wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-grid-col-right { width: 100%; padding: 10px 1%; text-align: left; } }
 .wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-bulb { /*@extend .dnone;*/ background-color: #160d47; }
 .wpjb-page-index .wpjb-job-list .wpjb-grid-row a { color: #160d47; }
+.wpjb-page-index .wpjb-job-list .wpjb-grid-row .wpjb-tooltip { color: #160d47; }
+
+.wpjb-grid-row a { color: #160d47; }
 
 .wpjb .wpjb-form div input[type="text"] { background-color: #160d47; color: #fff; border: 0; }
 
@@ -433,12 +439,12 @@ Career Page
 
 .mobile-slide { float: left; width: 100%; }
 
-.mobile-menu-wrap { background: none repeat scroll 0 0 #006f8e; height: 100%; margin-right: -70%; overflow-y: scroll; position: fixed; right: 0; width: 70%; z-index: 99999; }
+.mobile-menu-wrap { background: none repeat scroll 0 0 #160d47; height: 100%; margin-right: -70%; overflow-y: scroll; position: fixed; right: 0; width: 70%; z-index: 99999; }
 .mobile-menu-wrap ul { -moz-padding-start: 0; list-style-type: none; padding: 0; }
-.mobile-menu-wrap ul li { border-bottom: 1px solid #0083a8; }
+.mobile-menu-wrap ul li { border-bottom: 1px solid #241a56; }
 .mobile-menu-wrap ul li a { display: block; padding: 10px 20px; color: #ffffff; width: 100%; }
 .mobile-menu-wrap ul li ul { display: none; }
-.mobile-menu-wrap ul li ul li { background: #0097c1; border-bottom: 1px solid #00bbef; }
+.mobile-menu-wrap ul li ul li { background: #241a56; border-bottom: 1px solid #160d47; }
 
 /*****************
 Mobile Menu

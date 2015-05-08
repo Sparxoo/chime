@@ -205,3 +205,7 @@ jQuery(document).ready(function($) {
 		}
     });
 })(jQuery);
+
+jQuery('window').load(function(){
+	alert('hi');
+});

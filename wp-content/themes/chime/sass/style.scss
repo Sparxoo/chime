@@ -47,6 +47,10 @@ p{
 			margin-left:10px;
 		}
 	}
+	
+	@include breakpoint($screen-sm-min){
+		padding: 10px 0;	
+	}	
 		
 	ul.nav{
 		@extend .fright;
@@ -853,10 +857,20 @@ Gravity Form
 		@extend .fleft;
 		position:relative;
 		
+		.gm-style-iw{
+			top: 30px !important;
+			left: 35px !important;
+			
+			div{
+				overflow:visible !important;
+			}
+		}
+		
+		
 		.location-information{
-			position:absolute;
+			position:relative;
 			left:50%;
-			bottom:60px;
+			bottom:-230px;
 			margin-left: 35px;
 			background:url(../images/location-bg.png);
 			width:330px;
@@ -1088,7 +1102,7 @@ Open Positions
 				
 				a{
 					font: 400 100%/1.5	 $arail;
-					color:#ad0700;
+					color:#160d47;
 				}
 				
 				.wpjb-sub {
@@ -1120,10 +1134,19 @@ Open Positions
 				background-color:#160d47;
 			}
 			
-				a{
-					color:#160d47;
-				}
+			a{
+				color:#160d47;
+			}
+			.wpjb-tooltip{
+				color:#160d47;
+			}
 		}
+	}
+}
+
+.wpjb-grid-row{
+	a{
+		color:#160d47;
 	}
 }
 .wpjb .wpjb-form div input[type="text"]{
@@ -1428,7 +1451,7 @@ Career Page
 .mobile-slide{float:left;width:100%;}
 
 .mobile-menu-wrap {
-    background: none repeat scroll 0 0 #006f8e;
+    background: none repeat scroll 0 0 #160d47;
     height: 100%;
 	margin-right: -70%;
     overflow-y: scroll;
@@ -1443,7 +1466,7 @@ Career Page
 		padding:0;
 		
 		li {
-			border-bottom: 1px solid #0083a8;
+			border-bottom: 1px solid #241a56;
 			
 			a {
 				display: block;
@@ -1455,8 +1478,8 @@ Career Page
 				display: none;
 				
 				li {
-					background: #0097c1;
-					border-bottom: 1px solid #00bbef;
+					background: #241a56;
+					border-bottom: 1px solid #160d47;
 				}
 			}
 		}
