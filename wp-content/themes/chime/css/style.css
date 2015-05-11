@@ -27,13 +27,13 @@ http://simplebits.com/notebook/2008/08/14/ampersands-2/
 /*********************
 Float Variables
 *********************/
-.fleft, .site-header a#logo, .site-header ul.nav li, .site-header ul.nav li a, .site-header ul.nav li ul.sub-menu li, .site-footer ul, .site-footer ul li, .site-footer ul li a, .site-footer .site-by a, .page-template-template-contact .contact-map-outer, .page-template-template-contact .contact-main, .page-template-template-contact .contact-main .gform_wrapper, .page-template-template-contact .contact-main .gform_wrapper form .gform_body, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul li, .page-template-template-openings-php .position-main, .wpjb-page-index, .wpjb-page-index .wpjb-job-list, .wpjb-page-index .wpjb-job-list .wpjb-grid-row { float: left; }
+.fleft, .site-header a#logo, .site-header ul.nav li, .site-header ul.nav li a, .site-header ul.nav li ul.sub-menu li, .site-footer ul, .site-footer ul li, .site-footer ul li a, .site-footer .site-by a, .get-in-touch, .page-template-template-contact .contact-map-outer, .page-template-template-contact .contact-main, .page-template-template-contact .contact-main .gform_wrapper, .page-template-template-contact .contact-main .gform_wrapper form .gform_body, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul li, .page-template-template-openings-php .position-main, .wpjb-page-index, .wpjb-page-index .wpjb-job-list, .wpjb-page-index .wpjb-job-list .wpjb-grid-row { float: left; }
 
 .fright, .site-header ul.nav, .site-footer .site-by, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul li:first-child { float: right; }
 
 .fnone { float: none; }
 
-.fullwidth, .site-header, .site-header ul.nav li ul.sub-menu li, .site-header ul.nav li ul.sub-menu li a, .site-content, .after-banner, .services-section, .services-section .services-left, .services-section .services-right .top, .services-section .services-right .service, .services-section-mobile, .services-section-mobile .service-mobile, .site-footer, .service-detail, .services-links, .services-links span, body.page-template-template-services .service-outer, body.page-template-template-services .service-links, body.page-template-template-services .service-links .service-inner, body.page-template-template-services .service-links span, body.page-template-template-services .service-links ul, .page-template-template-contact .contact-map-outer, .page-template-template-contact .contact-main, .page-template-template-contact .contact-main .gform_wrapper, .page-template-template-contact .contact-main .gform_wrapper form .gform_body, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul, .page-template-template-openings-php .position-main, .job-banner, .wpjb-page-index, .wpjb-page-index .wpjb-job-list, .wpjb-page-index .wpjb-job-list .wpjb-grid-row, .testimonial-image, .top-3-reasons, .top-3-reasons .service-inner, .top-3-reasons span.title, .job-link, .our-values, .our-values .value-inner, .testimonial-by { width: 100%; }
+.fullwidth, .site-header, .site-header ul.nav li ul.sub-menu li, .site-header ul.nav li ul.sub-menu li a, .site-content, .after-banner, .services-section, .services-section .services-left, .services-section .services-right .top, .services-section .services-right .service, .services-section-mobile, .services-section-mobile .service-mobile, .site-footer, .service-detail, .services-links, .services-links span, body.page-template-template-services .service-outer, body.page-template-template-services .service-links, body.page-template-template-services .service-links .service-inner, body.page-template-template-services .service-links span, body.page-template-template-services .service-links ul, .get-in-touch, .page-template-template-contact .contact-map-outer, .page-template-template-contact .contact-main, .page-template-template-contact .contact-main .gform_wrapper, .page-template-template-contact .contact-main .gform_wrapper form .gform_body, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul, .page-template-template-openings-php .position-main, .job-banner, .wpjb-page-index, .wpjb-page-index .wpjb-job-list, .wpjb-page-index .wpjb-job-list .wpjb-grid-row, .testimonial-image, .top-3-reasons, .top-3-reasons .service-inner, .top-3-reasons span.title, .job-link, .our-values, .our-values .value-inner, .testimonial-by { width: 100%; }
 
 /*********************
 Display Variables
@@ -159,6 +159,10 @@ http://sass-lang.com/guide#topic-3
 a:focus, *:focus { outline: none; }
 
 p { color: #333333; font: 400 16px/24px Arial,sans-serif; margin: 0; padding: 0 0 15px; }
+
+ol, ul { padding-left: 15px; }
+
+.site-content ol li, .site-content ul li { font: 400 16px/24px Arial,sans-serif; color: #333333; }
 
 .padding0 { padding: 0; }
 
@@ -290,7 +294,7 @@ Service Detail Page
 .service-detail h2 { font: 700 18px/24px "Open Sans", sans-serif; color: #160d47; text-transform: uppercase; text-align: center; margin: 0; padding: 0 0 17px 0; letter-spacing: 3px; }
 .service-detail p { font: 400 16px/24px Arial, sans-serif; color: #333333; padding: 0 0 15px 0; margin: 0; }
 
-.services-links { text-transform: uppercase; padding: 53px 0 0; background-size: cover; }
+.services-links { text-transform: uppercase; padding: 53px 0 55px; background-size: cover; }
 .services-links h4 { margin: 0; font: 700 24px/24px "Open Sans", sans-serif; color: #160d47; padding: 0 0 45px 0; }
 .services-links a { width: 100px; height: 100px; border: 5px solid #8cc640; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 90px; transition: all 0.2s ease-in-out 0s; }
 .services-links a:hover { transform: scale(1.2); }
@@ -301,8 +305,8 @@ Services Page
 **********************/
 body.page-template-template-services .service-detail { padding: 77px 0 0; }
 body.page-template-template-services .service-outer { float: left; }
-body.page-template-template-services .service-links { padding: 0 0 120px; background-size: cover; }
-body.page-template-template-services .service-links .service-inner { background: url(../images/service-lines.png) no-repeat center top; padding-top: 93px; }
+body.page-template-template-services .service-links { padding: 0 0 70px; background-size: cover; }
+body.page-template-template-services .service-links .service-inner { background: url(../images/service-lines.png) no-repeat center top; padding-top: 93px; padding-bottom: 70px; }
 @media screen and (max-width: 992px) { body.page-template-template-services .service-links .service-inner { background-size: 68% auto; padding-top: 70px; } }
 @media screen and (max-width: 992px) { body.page-template-template-services .service-links .service-inner { background: none; padding-top: 10px; } }
 body.page-template-template-services .service-links h4 { margin: 0; font: 700 24px/24px "Open Sans", sans-serif; color: #160d47; padding: 0 0 45px 0; }
@@ -314,7 +318,12 @@ body.page-template-template-services .service-links span a.hover { color: #7dba3
 body.page-template-template-services .service-links span a:hover { color: #7dba3d; }
 body.page-template-template-services .service-links ul { margin: 0; padding: 0; list-style: none; text-align: left; float: left; }
 @media screen and (max-width: 767px) { body.page-template-template-services .service-links ul { padding-bottom: 30px; } }
-body.page-template-template-services .service-links ul li { font: 400 16px/16px "Open Sans", sans-serif; text-transform: inherit !important; color: #333333; padding-left: 22px; background: url(../images/green-bullet.png) no-repeat left 5px; }
+body.page-template-template-services .service-links ul li { font: 400 16px/20px "Open Sans", sans-serif; text-transform: inherit !important; color: #333333; padding-left: 22px; padding-bottom: 10px; background: url(../images/green-bullet.png) no-repeat left 5px; }
+
+.get-in-touch a { display: inline-block; background: #7cb93d; color: #fff; font: 600 16px/40px "Open Sans", sans-serif; text-transform: uppercase; letter-spacing: 2px; padding: 0 50px 0 28px; text-decoration: none; border-radius: 0; width: auto; height: auto; border: 0; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; position: relative; }
+@media screen and (max-width: 767px) { .get-in-touch a { float: none; display: inline-block; } }
+.get-in-touch a:after { position: absolute; right: 15px; top: 0; content: ""; background: url(../images/right-angle.png) no-repeat center center; height: 40px; width: 7px; }
+.get-in-touch a:hover { background: #61ae12; transform: scale(1); }
 
 /********************
 Gravity Form
@@ -424,8 +433,8 @@ Career Page
 .our-values { background: #160d47; padding: 80px 0 60px; }
 .our-values h4 { color: #ffffff; font: 700 24px/24px "Open Sans", sans-serif; margin: 0; padding: 0 0 37px; text-transform: uppercase; text-align: center; }
 .our-values .value-inner { background: #28214c; margin-bottom: 20px; padding: 16px 15px 7px; }
-.our-values .value-inner span { font: 48px/50px 'avenirmedium'; color: #7cb93d; float: left; padding-right: 20px; }
-.our-values .value-inner p { font: 400 16px/20px Arial, sans-serif; padding: 0; color: #ffffff; }
+.our-values .value-inner span { font: 48px/50px 'avenirmedium'; color: #7cb93d; float: left; width: 16%; padding-right: 20px; }
+.our-values .value-inner p { font: 400 16px/20px Arial, sans-serif; padding: 0; color: #ffffff; float: left; width: 84%; }
 .our-values .value-inner a { background: none repeat scroll 0 0 #7cb93d; color: #fff; display: inline-block; font: 600 16px/40px "Open Sans", sans-serif; letter-spacing: 2px; padding: 0 50px 0 28px; position: relative; text-decoration: none; text-transform: uppercase; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
 @media screen and (max-width: 992px) { .our-values .value-inner a { padding: 0 35px 0 28px; } }
 .our-values .value-inner a::after { background: url("../images/right-angle.png") no-repeat scroll center center transparent; content: ""; height: 40px; position: absolute; right: 15px; top: 0; width: 7px; }
@@ -449,12 +458,12 @@ Career Page
 /*****************
 Mobile Menu
 *****************/
-#mobile-toggle { padding: 0; right: 34px; float: right; width: 50px; height: 50px; position: relative; top: 14px; width: 50px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; height: 50px; background-image: url(../images/mobile-menu.png); background-position: 0 0; }
+#mobile-toggle { padding: 0; right: 34px; float: right; width: 50px; height: 50px; position: relative; top: 14px; width: 50px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; height: 50px; font-size: 50px; color: #160d47; /*background-image:url(../images/mobile-menu.png);background-position:0 0;*/ }
 
 @media screen and (max-width: 992px) { .visible-sm-block { display: none !important; } }
 @media screen and (max-width: 767px) { .visible-sm-block { display: block !important; } }
 
-#mobile-toggle.orange { background-position: 0 -50px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+#mobile-toggle.orange { /*background-position:0 -50px;*/ -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; color: #7cb93d; }
 
 .mobile-menu-wrap ul a:hover, .mobile-menu-wrap ul a:focus { background: none repeat scroll 0 0 transparent; }
 

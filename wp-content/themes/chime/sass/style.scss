@@ -31,6 +31,19 @@ p{
     margin: 0;
     padding: 0 0 15px;
 }
+
+ol, ul{
+	padding-left:15px;
+}
+
+.site-content{
+	ol, ul{
+		li{
+			font: 400 16px/24px Arial,sans-serif;
+			color: #333333;
+		}
+	}
+}
 .padding0{
 	padding: $padding0;
 }
@@ -706,7 +719,7 @@ Service Detail Page
 .services-links{
 	@extend .fullwidth;
 	text-transform:uppercase;
-	padding:53px 0 0;
+	padding:53px 0 55px;
 	background-size:cover;
 	
 	h4{
@@ -750,7 +763,7 @@ body.page-template-template-services{
 	}
 .service-links{
 	@extend .fullwidth;
-	padding:0 0 120px;
+	padding:0 0 70px;
 	background-size:cover;
 	
 	
@@ -759,6 +772,7 @@ body.page-template-template-services{
 		@extend .fullwidth;
 		background:url(../images/service-lines.png) no-repeat center top;
 		padding-top: 93px;
+		padding-bottom:70px;
 		
 		@include breakpoint($screen-md-min){
 			background-size: 68% auto;
@@ -824,15 +838,58 @@ body.page-template-template-services{
 		}
 		
 		li{
-			font:400 16px/16px $opensans;
+			font:400 16px/20px $opensans;
 			text-transform:inherit !important;
 			color:#333333;
 			padding-left:22px;
+			padding-bottom:10px;
 			background:url(../images/green-bullet.png) no-repeat left 5px;
 		}
 	}
 }
 
+}
+
+.get-in-touch{
+	@extend .fullwidth;
+	@extend .fleft;
+	
+	a{
+		display:inline-block;
+		background:#7cb93d;
+		color:#fff;
+		font:600 16px/40px $opensans;
+		text-transform:uppercase;
+		letter-spacing: 2px;
+		padding:0 50px 0 28px;
+		text-decoration:none;
+		border-radius:0;
+		width:auto;
+		height:auto;
+		border:0;		
+		@include hoverEffect(all, 0.5s, ease-in-out);
+		position:relative;
+		
+		@include breakpoint($screen-sm-min){
+			float:none;
+			display:inline-block;
+		}
+	}	
+	
+	a:after{
+		position:absolute;
+		right:15px;
+		top:0;
+		content:"";
+		background:url(../images/right-angle.png) no-repeat center center;
+		height:40px;
+		width:7px;
+	}
+	
+	a:hover{
+		background:#61ae12;
+		transform: scale(1);
+	}
 }
 /********************
 Gravity Form
@@ -1383,6 +1440,7 @@ Career Page
 			font: 48px/50px 'avenirmedium';
 			color:#7cb93d;
 			float:left;
+			width:16%;
 			padding-right:20px;
 		}
 		
@@ -1390,6 +1448,8 @@ Career Page
 			font: 400 16px/20px $arail;
 			padding:0;
 			color:$white;
+			float:left;
+			width:84%;
 		}
 		
 		a{
@@ -1500,7 +1560,9 @@ Mobile Menu
 	top:14px;
 	width:50px;@include hoverEffect(all, 0.5s, ease-in-out);
 	height:50px;
-	background-image:url(../images/mobile-menu.png);background-position:0 0;
+	font-size: 50px;
+	color:#160d47;
+	/*background-image:url(../images/mobile-menu.png);background-position:0 0;*/
 }
 .visible-sm-block{
 	@include breakpoint($screen-md-min){
@@ -1511,7 +1573,8 @@ Mobile Menu
 	}
 }
 #mobile-toggle.orange{
-	background-position:0 -50px;@include hoverEffect(all, 0.5s, ease-in-out);
+	/*background-position:0 -50px;*/@include hoverEffect(all, 0.5s, ease-in-out);
+	color:#7cb93d;
 }
 .mobile-menu-wrap ul a:hover, 
 .mobile-menu-wrap ul a:focus {

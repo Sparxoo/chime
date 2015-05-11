@@ -113,6 +113,15 @@ function sparxoo_bp_widgets_init() {
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
+	register_sidebar( array(
+		'name'          => __( 'Get In Touch', 'sparxoo-bp' ),
+		'id'            => 'get-in-touch',
+		'description'   => '',
+		'before_widget' => '<div class="get-in-touch">',
+		'after_widget'  => '</div>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
 }
 add_action( 'widgets_init', 'sparxoo_bp_widgets_init' );
 

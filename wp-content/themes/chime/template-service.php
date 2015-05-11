@@ -37,7 +37,9 @@
 					<a href="<?php the_permalink();?>"><img src="<?php the_field('services_icon', $post->ID);?>"></a>
 					<span class="pull-left"><?php the_title();?></span>
 				</div>
-			<?php endwhile; wp_reset_query();?>			
+			<?php endwhile; wp_reset_query();?>	
+			
+			<?php dynamic_sidebar('get-in-touch');?>
 		</div>
 	</div>
 </div>

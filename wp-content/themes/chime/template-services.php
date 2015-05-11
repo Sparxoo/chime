@@ -43,7 +43,8 @@
 						</ul>
 					</div>
 				<?php endwhile; }?>
-			</div>			
+			</div>	
+			<?php dynamic_sidebar('get-in-touch');?>
 		</div>
 	</div>
 </div>

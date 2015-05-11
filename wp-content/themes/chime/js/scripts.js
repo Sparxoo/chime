@@ -57,6 +57,7 @@ jQuery(document).ready(function($) {
 		$(this).find('.sub-menu').stop().slideUp(500);
 	});		
 	
+	$('.services-right .service#customer-care').addClass('displayService');
 	$('.services-left area').mouseover(function(){
 		//alert($(this).attr('href'));
 		$('.services-right .service').removeClass('displayService');
@@ -144,7 +145,8 @@ jQuery(document).ready(function($) {
 	
 	/* Services Section on Homepage */
 	var siteURL = $('a#logo').attr('href');
-	var ImageURL = siteURL+'/wp-content/themes/chime/images/service-icon.gif'
+	//var ImageURL = siteURL+'/wp-content/themes/chime/images/service-icon.gif'
+	var ImageURL = siteURL+'/wp-content/themes/chime/images/customer-care-animation.png'
 	var Image1URL = siteURL+'/wp-content/themes/chime/images/customer-care-animation.png'
 	var Image2URL = siteURL+'/wp-content/themes/chime/images/seasonal-support-animation.png'
 	var Image3URL = siteURL+'/wp-content/themes/chime/images/bpo-animation.png'
@@ -183,7 +185,10 @@ jQuery(document).ready(function($) {
 	 
 }); /* end of as page load scripts */
 
-
+jQuery(window).load(function(){
+	jQuery('.gm-style-iw').next().css('display','none');
+	jQuery('.gm-style-iw').prev().css('display','none');
+});
 
 /*
  * If jquery needs to be called after the page has loaded completely put your jquery in this funciton. 
@@ -206,6 +211,3 @@ jQuery(document).ready(function($) {
     });
 })(jQuery);
 
-jQuery('window').load(function(){
-	alert('hi');
-});

@@ -60,8 +60,8 @@
 				<img src="<?php bloginfo('template_url');?>/images/logo.png" alt="">
 			</a>
 		<div class="visible-sm-block visible-xs-block pull-right">
-				
-				<i id="mobile-toggle" class="menu-icon"></i>
+				<i id="mobile-toggle" class="menu-icon fa fa-align-justify"></i>
+				<!--<i id="mobile-toggle" class="menu-icon"></i>-->
 
 			</div>
 			<?php 

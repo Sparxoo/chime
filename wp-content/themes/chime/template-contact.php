@@ -11,15 +11,6 @@
 ?>
 <div class="contact-map-outer">
 	<div id="contact-map" style="height: 451px;width: 100%;"></div>
-	
-		
-			
-			
-			
-			
-			
-				
-		
 	</div>
 </div>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyAC1bhAKKlW-4YIJgaiGMlOrCKWMZ_aSDo"></script>
