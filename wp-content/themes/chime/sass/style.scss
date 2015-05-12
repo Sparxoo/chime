@@ -168,12 +168,20 @@ ol, ul{
 HERO BANNER
 *********************/
 #hero{
+	.home &{
+		.hero-image{
+			max-height: inherit;
+		}
+	}
+
 	.hero-image{
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		width: 100%;
 		position:relative;
+		overflow: hidden;
+		max-height:350px;
 		
 		@include breakpoint($screen-md-min){
 			min-height:0;

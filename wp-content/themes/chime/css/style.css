@@ -189,7 +189,8 @@ ol, ul { padding-left: 15px; }
 /*********************
 HERO BANNER
 *********************/
-#hero .hero-image { background-position: center center; background-repeat: no-repeat; background-size: cover; width: 100%; position: relative; }
+.home #hero .hero-image { max-height: inherit; }
+#hero .hero-image { background-position: center center; background-repeat: no-repeat; background-size: cover; width: 100%; position: relative; overflow: hidden; max-height: 350px; }
 @media screen and (max-width: 992px) { #hero .hero-image { min-height: 0; } }
 #hero .hero-image img { width: 100%; height: auto; }
 #hero .hero-image #mobile-hero-image { display: none; }
