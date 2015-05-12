@@ -40,9 +40,9 @@
 				<?php while ( have_posts() ) : the_post();?>
 					<div class="service-mobile pull-left">
 						<div class="image pull-left">
-							<img src="<?php the_field('mobile_service_image',$post->ID);?>" alt="">
+							<a href="<?php the_permalink();?>"><img src="<?php the_field('mobile_service_image',$post->ID);?>" alt=""></a>
 						</div>
-						<div class="text text-center pull-right">							
+						<div class="text text-center pull-left">							
 							<span><?php the_field('mobile_service_title',$post->ID);?></span>
 						</div>
 					</div>

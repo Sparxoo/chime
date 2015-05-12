@@ -582,27 +582,43 @@ Services Section
 	
 	.service-mobile{
 		@extend .fullwidth;
-		padding-bottom:20px;
+		padding-bottom:50px;
 		
 		.image{
 			width:45%;
 			
-			img{
-				max-width:100%;
+			a{
+				width:130px;
+				height:130px;
+				line-height:130px;
+				text-align:center;
+				display: inline-block;
+				border: 5px solid #8cc640;
+				border-radius: 50%;
+				transition: all 0.2s ease-in-out 0s;
+				
+				img{
+					max-width:65%;
+				}			
+			}
+			
+			a:hover{
+				transform: scale(1.1);
 			}
 		}
 		
 		.text{
-			width:45%;
+			width:49%;
 			height:100%;
-			padding-top:22px;			
+			padding-top:45px;	
+			margin-left: 5%;			
 					
 			span{
-				font:700 12px/15px $opensans;
+				font:700 13px/15px $opensans;
 				color:$white;
 				text-transform:uppercase;
-				border-bottom:3px solid #7cb93d;
-				padding: 0 5px 5px;
+				background:url(../images/green-line.png) no-repeat center bottom;
+				padding: 0 5px 8px;
 				display:block;
 			}	
 		}
@@ -694,9 +710,6 @@ Service Detail Page
 	@include breakpoint($screen-md-min){
 		padding:37px 0;
 	}
-	@include breakpoint($screen-sm-min){
-		text-align:center;
-	}
 	
 	h2{
 		font:700 18px/24px $opensans;
@@ -716,6 +729,17 @@ Service Detail Page
 	}
 }
 
+.page-template-template-service-php{
+	.service-detail{
+		ul{
+			margin-left:25px;
+			
+			@include breakpoint($screen-sm-min){
+				margin-left:0;
+			}			
+		}
+	}
+}
 .services-links{
 	@extend .fullwidth;
 	text-transform:uppercase;
@@ -1532,6 +1556,7 @@ Career Page
 				display: block;
 				padding: 10px 20px;color: #ffffff;
 				width: 100%;
+				text-transform:capitalize;
 			}
 			
 			ul {

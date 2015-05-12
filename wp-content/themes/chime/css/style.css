@@ -264,11 +264,13 @@ Services Section
 .services-section-mobile { background: url(../images/mobile-bg.png) no-repeat left top; background-size: cover; padding: 25px 0 25px; display: none; }
 @media screen and (max-width: 767px) { .services-section-mobile { display: block; } }
 .services-section-mobile h3 { color: #ffffff; text-transform: uppercase; font: 700 24px/27px "Open Sans", sans-serif; padding: 0 0 20px 0; }
-.services-section-mobile .service-mobile { padding-bottom: 20px; }
+.services-section-mobile .service-mobile { padding-bottom: 50px; }
 .services-section-mobile .service-mobile .image { width: 45%; }
-.services-section-mobile .service-mobile .image img { max-width: 100%; }
-.services-section-mobile .service-mobile .text { width: 45%; height: 100%; padding-top: 22px; }
-.services-section-mobile .service-mobile .text span { font: 700 12px/15px "Open Sans", sans-serif; color: #ffffff; text-transform: uppercase; border-bottom: 3px solid #7cb93d; padding: 0 5px 5px; display: block; }
+.services-section-mobile .service-mobile .image a { width: 130px; height: 130px; line-height: 130px; text-align: center; display: inline-block; border: 5px solid #8cc640; border-radius: 50%; transition: all 0.2s ease-in-out 0s; }
+.services-section-mobile .service-mobile .image a img { max-width: 65%; }
+.services-section-mobile .service-mobile .image a:hover { transform: scale(1.1); }
+.services-section-mobile .service-mobile .text { width: 49%; height: 100%; padding-top: 45px; margin-left: 5%; }
+.services-section-mobile .service-mobile .text span { font: 700 13px/15px "Open Sans", sans-serif; color: #ffffff; text-transform: uppercase; background: url(../images/green-line.png) no-repeat center bottom; padding: 0 5px 8px; display: block; }
 
 /*********************
 Footer Section
@@ -290,9 +292,11 @@ Service Detail Page
 **********************/
 .service-detail { padding: 37px 0 84px 0; margin: 25px 0 0; background: url(../images/three-lins.png) no-repeat center top; }
 @media screen and (max-width: 992px) { .service-detail { padding: 37px 0; } }
-@media screen and (max-width: 767px) { .service-detail { text-align: center; } }
 .service-detail h2 { font: 700 18px/24px "Open Sans", sans-serif; color: #160d47; text-transform: uppercase; text-align: center; margin: 0; padding: 0 0 17px 0; letter-spacing: 3px; }
 .service-detail p { font: 400 16px/24px Arial, sans-serif; color: #333333; padding: 0 0 15px 0; margin: 0; }
+
+.page-template-template-service-php .service-detail ul { margin-left: 25px; }
+@media screen and (max-width: 767px) { .page-template-template-service-php .service-detail ul { margin-left: 0; } }
 
 .services-links { text-transform: uppercase; padding: 53px 0 55px; background-size: cover; }
 .services-links h4 { margin: 0; font: 700 24px/24px "Open Sans", sans-serif; color: #160d47; padding: 0 0 45px 0; }
@@ -451,7 +455,7 @@ Career Page
 .mobile-menu-wrap { background: none repeat scroll 0 0 #160d47; height: 100%; margin-right: -70%; overflow-y: scroll; position: fixed; right: 0; width: 70%; z-index: 99999; }
 .mobile-menu-wrap ul { -moz-padding-start: 0; list-style-type: none; padding: 0; }
 .mobile-menu-wrap ul li { border-bottom: 1px solid #241a56; }
-.mobile-menu-wrap ul li a { display: block; padding: 10px 20px; color: #ffffff; width: 100%; }
+.mobile-menu-wrap ul li a { display: block; padding: 10px 20px; color: #ffffff; width: 100%; text-transform: capitalize; }
 .mobile-menu-wrap ul li ul { display: none; }
 .mobile-menu-wrap ul li ul li { background: #241a56; border-bottom: 1px solid #160d47; }
 

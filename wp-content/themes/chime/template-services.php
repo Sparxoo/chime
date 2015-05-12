@@ -9,7 +9,7 @@
 	//add the hero banner to the header.
 	get_template_part("content", "hero"); 
 ?>
-<div class="service-outer" style="background-image:url(<?php echo get_field('service_bg', $post->ID);?>);background-size:cover;">
+<div class="service-outer" style="background-image:url(<?php echo get_field('service_bg', $post->ID);?>);background-size:100%;background-repeat:no-repeat;background-position:left bottom;">
 <div class="service-detail pull-left text-center">
 	<div class="container">
 		<div class="row">

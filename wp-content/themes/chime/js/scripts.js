@@ -14,6 +14,12 @@
  * ex. use this $('#id') ... NOT jQuery('#id')
 */
 jQuery(document).ready(function($) {
+ setInterval(function(){
+	//$('.gm-style-iw').parent('div').addClass('jhukahu');
+	jQuery('.gm-style-iw').next().css('display','none');
+	jQuery('.gm-style-iw').prev().css('display','none');
+ },0);
+  
 	
     /** Play and Stop Controls for the page block video **/
     $('#video-play-button').click(function(){
@@ -39,16 +45,6 @@ jQuery(document).ready(function($) {
 	    });
 	});
 	
-	/*$('ul.sub-menu').addClass('animated');
-	$('.site-header ul.nav li a').mouseover(function(){
-		$(this).parent().find('ul').stop().addClass('fadeInDown');
-	});
-	$('.site-header ul.nav li a').mouseover(function(){
-		$(this).parent().siblings().find('ul').removeClass('fadeInDown');
-	});
-	$('.site-header ul.nav li a').mouseleave(function(){
-		$(this).parent().find('ul').removeClass('fadeInDown');
-	});*/
 	$('.site-header ul li').mouseover(function(){
 		$(this).find('.sub-menu').stop().slideDown(500);
 	});
@@ -66,13 +62,6 @@ jQuery(document).ready(function($) {
 		$('.services-right .service' + $(this).attr('href')).addClass('displayService');		
 		return false;
 	});
-	/*
-	$('.services-left area').mouseleave(function(){
-		//alert($(this).attr('href'));
-		$('.services-right .service').removeClass('displayService');
-		$('.services-right .service').removeClass('slideInLeft');		
-		return false;
-	});*/
 	
 	/* Hover effect for service icon on services page */
 	$('.service-icon').mouseover(function(){
@@ -145,7 +134,6 @@ jQuery(document).ready(function($) {
 	
 	/* Services Section on Homepage */
 	var siteURL = $('a#logo').attr('href');
-	//var ImageURL = siteURL+'/wp-content/themes/chime/images/service-icon.gif'
 	var ImageURL = siteURL+'/wp-content/themes/chime/images/customer-care-animation.png'
 	var Image1URL = siteURL+'/wp-content/themes/chime/images/customer-care-animation.png'
 	var Image2URL = siteURL+'/wp-content/themes/chime/images/seasonal-support-animation.png'
@@ -161,33 +149,15 @@ jQuery(document).ready(function($) {
 		$('.services-left img').attr('src',Image3URL);
 	});
 	
+	val2='';       
+    jQuery('input[type="text"],textarea','.contact-main').focus(function(){val=jQuery(this).val();if(val=='name*'||val=='email*'||val=='phone'||val=='comments'){jQuery(this).val('');val2=val;}});
+    jQuery('input[type="text"],textarea','.contact-main').blur(function(){if(jQuery(this).val()=='')jQuery(this).val(val2);});
 	
-	
-	var clickCheck = 0;
-	/*
-	$('.services-left area[href=#customer-care]').mouseover(function(){
-		clickCheck = 1;
-		$('.services-left img').attr('src',Image4URL);
-	});
-	$('.services-left area[href=#seasonal-support]').mouseover(function(){
-		clickCheck = 1;
-		$('.services-left img').attr('src',Image2URL);
-	});
-	$('.services-left area[href=#bpo]').mouseover(function(){
-		clickCheck = 1;
-		$('.services-left img').attr('src',Image3URL);
-	});*/	
-	/*$('.services-left area').mouseleave(function(){
-		if(clickCheck==0){
-			$('.services-left img').attr('src',ImageURL);
-		}
-	});*/
-	 
 }); /* end of as page load scripts */
 
 jQuery(window).load(function(){
-	jQuery('.gm-style-iw').next().css('display','none');
-	jQuery('.gm-style-iw').prev().css('display','none');
+	/* jQuery('.gm-style-iw').next().css('display','none');
+	jQuery('.gm-style-iw').prev().css('display','none'); */
 });
 
 /*
