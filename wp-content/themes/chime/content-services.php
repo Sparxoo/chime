@@ -43,7 +43,7 @@
 							<a href="<?php the_permalink();?>"><img src="<?php the_field('mobile_service_image',$post->ID);?>" alt=""></a>
 						</div>
 						<div class="text text-center pull-left">							
-							<span><?php the_field('mobile_service_title',$post->ID);?></span>
+							<span><a href="<?php the_permalink();?>"><?php the_field('mobile_service_title',$post->ID);?></a></span>
 						</div>
 					</div>
 				<?php endwhile; wp_reset_query();?>

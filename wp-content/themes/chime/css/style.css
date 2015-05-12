@@ -271,6 +271,7 @@ Services Section
 .services-section-mobile .service-mobile .image a:hover { transform: scale(1.1); }
 .services-section-mobile .service-mobile .text { width: 49%; height: 100%; padding-top: 45px; margin-left: 5%; }
 .services-section-mobile .service-mobile .text span { font: 700 13px/15px "Open Sans", sans-serif; color: #ffffff; text-transform: uppercase; background: url(../images/green-line.png) no-repeat center bottom; padding: 0 5px 8px; display: block; }
+.services-section-mobile .service-mobile .text span a { color: #ffffff; text-decoration: none; }
 
 /*********************
 Footer Section

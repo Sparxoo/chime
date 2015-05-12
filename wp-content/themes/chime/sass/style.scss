@@ -620,6 +620,11 @@ Services Section
 				background:url(../images/green-line.png) no-repeat center bottom;
 				padding: 0 5px 8px;
 				display:block;
+				
+				a{
+					color:$white;
+					text-decoration:none;
+				}
 			}	
 		}
 	}
