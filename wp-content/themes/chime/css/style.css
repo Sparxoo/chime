@@ -189,10 +189,13 @@ ol, ul { padding-left: 15px; }
 /*********************
 HERO BANNER
 *********************/
+#hero { text-align: center; background-color: #000000; }
+.parent-pageid-19940 #hero { background-color: #324D01; }
 .home #hero .hero-image { max-height: inherit; }
-#hero .hero-image { background-position: center center; background-repeat: no-repeat; background-size: cover; width: 100%; position: relative; overflow: hidden; max-height: 350px; }
+#hero .hero-image { background-position: center center; background-repeat: no-repeat; background-size: cover; width: 100%; position: relative; overflow: hidden; max-height: 400px; }
 @media screen and (max-width: 992px) { #hero .hero-image { min-height: 0; } }
-#hero .hero-image img { width: 100%; height: auto; }
+#hero .hero-image img { width: auto; height: auto; }
+@media screen and (max-width: 992px) { #hero .hero-image img { width: 100%; height: auto; } }
 #hero .hero-image #mobile-hero-image { display: none; }
 @media screen and (max-width: 767px) { #hero .hero-image #mobile-hero-image { display: block; position: relative; }
   #hero .hero-image #mobile-hero-image img { width: 100%; height: auto; display: block; } }

@@ -168,6 +168,13 @@ ol, ul{
 HERO BANNER
 *********************/
 #hero{
+	text-align:center;
+	background-color:$black;
+
+	.parent-pageid-19940 &{
+		background-color:#324D01;
+	}
+	
 	.home &{
 		.hero-image{
 			max-height: inherit;
@@ -181,15 +188,20 @@ HERO BANNER
 		width: 100%;
 		position:relative;
 		overflow: hidden;
-		max-height:350px;
+		max-height:400px;
 		
 		@include breakpoint($screen-md-min){
 			min-height:0;
 		}
 		
 		img{
-			width:100%;
+			width:auto;
 			height:auto;
+
+			@include breakpoint($screen-md-min){
+				width:100%;
+				height:auto;
+			}
 		}
 		
 		#mobile-hero-image{
