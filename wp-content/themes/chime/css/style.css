@@ -343,7 +343,9 @@ Gravity Form
 .page-template-template-contact .contact-map-outer { position: relative; }
 .page-template-template-contact .contact-map-outer .gm-style-iw { top: 30px !important; left: 35px !important; }
 .page-template-template-contact .contact-map-outer .gm-style-iw div { overflow: visible !important; }
-.page-template-template-contact .contact-map-outer .location-information { position: relative; left: 50%; bottom: -230px; margin-left: 35px; background: url(../images/location-bg.png); width: 330px; color: #ffffff; padding: 15px; font: 400 16px/24px "Open Sans", sans-serif; }
+.page-template-template-contact .contact-map-outer .location-information { position: relative; /*left:50%;
+bottom:-230px;
+margin-left: 35px;*/ background: url(../images/location-bg.png); width: 330px; color: #ffffff; padding: 15px; font: 400 16px/24px "Open Sans", sans-serif; }
 @media screen and (max-width: 767px) { .page-template-template-contact .contact-map-outer .location-information { left: 50%; width: 290px; margin-left: -145px; bottom: 5px; font: 400 13px/15px "Open Sans", sans-serif; } }
 .page-template-template-contact .contact-map-outer .location-information .location-name { font: 700 16px/24px "Open Sans", sans-serif; }
 .page-template-template-contact .contact-map-outer .location-information a { color: #ffffff; }
