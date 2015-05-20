@@ -345,14 +345,14 @@ Gravity Form
 .page-template-template-contact .contact-map-outer .gm-style-iw div { overflow: visible !important; }
 .page-template-template-contact .contact-map-outer .location-information { position: relative; /*left:50%;
 bottom:-230px;
-margin-left: 35px;*/ background: url(../images/location-bg.png); width: 330px; color: #ffffff; padding: 15px; font: 400 16px/24px "Open Sans", sans-serif; }
+margin-left: 35px;*/ background: url(../images/location-bg.png); width: 330px; color: #ffffff; padding: 6px; margin: 45px 0 0 163px; font: 400 16px/24px "Open Sans", sans-serif; }
 @media screen and (max-width: 767px) { .page-template-template-contact .contact-map-outer .location-information { /*left: 50%;
-margin-left: -145px;
-bottom: 0px;*/ width: 100%; padding: 5px; font: 400 13px/15px "Open Sans", sans-serif; } }
+bottom: 0px;*/ margin: 40px 0 0 0px; width: 100%; padding: 5px; font: 400 13px/15px "Open Sans", sans-serif; } }
 .page-template-template-contact .contact-map-outer .location-information .location-name { font: 700 16px/24px "Open Sans", sans-serif; }
 .page-template-template-contact .contact-map-outer .location-information a { color: #ffffff; }
 .page-template-template-contact .contact-map-outer .location-information:before { content: ""; position: absolute; left: -22px; top: -45px; width: 69px; height: 45px; background: url(../images/address-arrow.png) no-repeat left bottom; }
-@media screen and (max-width: 767px) { .page-template-template-contact .contact-map-outer .location-information:before { display: none; } }
+@media screen and (max-width: 767px) { .page-template-template-contact .contact-map-outer .location-information:before { /*display:none;*/ left: 0; right: 0; margin: auto; background: url(../images/address-arrow1.png) no-repeat center bottom; } }
+.page-template-template-contact .infoBox img { margin: 50px 2px 0 0 !important; z-index: 50; }
 .page-template-template-contact .contact-main { padding: 72px 0 109px; margin: 29px 0 0; background: url(../images/three-lins.png) no-repeat center top; }
 .page-template-template-contact .contact-main .gform_wrapper form .gform_heading h3.gform_title { font: 700 24px/26px "Open Sans", sans-serif; color: #160d47; text-transform: uppercase; letter-spacing: 4px; }
 .page-template-template-contact .contact-main .gform_wrapper form .gform_body label { display: none; }

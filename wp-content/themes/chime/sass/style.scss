@@ -981,13 +981,14 @@ Gravity Form
 			background:url(../images/location-bg.png);
 			width:330px;
 			color:$white;
-			padding:15px;
+			padding:6px;
+                        margin:45px 0 0 163px;
 			font:400 16px/24px $opensans;
 			
 			@include breakpoint($screen-sm-min){
 				/*left: 50%;
-				margin-left: -145px;
 				bottom: 0px;*/
+				margin:40px 0 0 0px;
 				width: 100%;
                                 padding:5px;
 				font:400 13px/15px $opensans;
@@ -1012,10 +1013,15 @@ Gravity Form
 			background:url(../images/address-arrow.png) no-repeat left bottom;
 			
 			@include breakpoint($screen-sm-min){
-				display:none;
+				/*display:none;*/
+left:0;
+right:0;
+margin:auto;
+			background:url(../images/address-arrow1.png) no-repeat center bottom;                
 			}
 		}
 	}
+.infoBox img{ margin:50px 2px 0 0!important; z-index:50;}
 	
 	.contact-main{		
 		@extend .fullwidth;
