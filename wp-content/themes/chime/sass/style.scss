@@ -898,6 +898,104 @@ body.page-template-template-services{
 }
 
 }
+body.page-template-template-service-php{
+	.service-detail{
+		padding:77px 0 0;
+	}
+	.service-outer{
+		@extend .fullwidth;
+		float: left;
+	}
+.service-links{
+	@extend .fullwidth;
+	padding:0 0 70px;
+	background-size:100% auto;
+        background-repeat:no-repeat;
+        background-position:center bottom;
+	
+	
+	
+	.service-inner{
+		@extend .fullwidth;
+		background:url(../images/service-lines.png) no-repeat center top;
+		padding-top: 93px;
+		padding-bottom:70px;
+		
+		@include breakpoint($screen-md-min){
+			background-size: 68% auto;
+			padding-top: 70px;
+		}
+		@include breakpoint($screen-md-min){
+			background:none;
+			padding-top: 10px;
+		}
+	}
+	
+	h4{
+		margin:0;
+		font:700 24px/24px $opensans;
+		color:#160d47;
+		padding:0 0 45px 0;
+	}
+	a.service-icon{
+		width:100px;
+		height:100px;
+		@extend .dib;
+		border:5px solid #8cc640;
+		@include border-radius-fourcorners(50%);
+		text-align:center;
+		line-height:90px;
+		transition: all 0.2s ease-in-out 0s;
+	}
+	
+	a.service-icon:hover{
+		transform: scale(1.1);
+	}
+	
+	
+	span{
+		@extend .fullwidth;
+		font:700 18px/24px $opensans;
+		color:#333333;
+		padding:22px 0 18px 0;
+		
+		a{
+			color:#333333;
+			@include hoverEffect(all, 0.2s, ease-in-out);
+			text-decoration:none;
+		}
+		
+		a.hover{			
+			color:#7dba3d;
+		}
+		a:hover{
+			color:#7dba3d;
+		}
+	}
+	ul{
+		margin:0;
+		padding:0;
+		list-style:none;
+		text-align:left;
+		@extend .fullwidth;
+		float:left;
+		
+		@include breakpoint($screen-sm-min){
+			padding-bottom:30px;
+		}
+		
+		li{
+			font:400 16px/20px $opensans;
+			text-transform:inherit !important;
+			color:#333333;
+			padding-left:22px;
+			padding-bottom:10px;
+			background:url(../images/green-bullet.png) no-repeat left 5px;
+		}
+	}
+}
+
+}
 
 .get-in-touch{
 	@extend .fullwidth;

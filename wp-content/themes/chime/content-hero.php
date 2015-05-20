@@ -50,7 +50,7 @@ endwhile; endif ;
 				
 		<section id="hero">
 			<?php /* ?><div style="background-image:url('<?php print $hero_image ?>');" class="hero-image" <?= $parallaxData; ?> ><?php */?>
-				<div class="hero-image">
+				<div class="hero-image" style="background-color:<?php the_field('background_color'); ?>">
 					<?php
 					//add the image to use for the mobile version of the site.
 					//TODO:  Figure out how to do this without having an extra image loaded to the site.

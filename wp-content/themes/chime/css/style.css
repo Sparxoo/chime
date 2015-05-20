@@ -33,7 +33,7 @@ Float Variables
 
 .fnone { float: none; }
 
-.fullwidth, .site-header, .site-header ul.nav li ul.sub-menu li, .site-header ul.nav li ul.sub-menu li a, .site-content, .after-banner, .services-section, .services-section .services-left, .services-section .services-right .top, .services-section .services-right .service, .services-section-mobile, .services-section-mobile .service-mobile, .site-footer, .service-detail, .services-links, .services-links span, body.page-template-template-services .service-outer, body.page-template-template-services .service-links, body.page-template-template-services .service-links .service-inner, body.page-template-template-services .service-links span, body.page-template-template-services .service-links ul, .get-in-touch, .page-template-template-contact .contact-map-outer, .page-template-template-contact .contact-main, .page-template-template-contact .contact-main .gform_wrapper, .page-template-template-contact .contact-main .gform_wrapper form .gform_body, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul, .page-template-template-openings-php .position-main, .job-banner, .wpjb-page-index, .wpjb-page-index .wpjb-job-list, .wpjb-page-index .wpjb-job-list .wpjb-grid-row, .testimonial-image, .top-3-reasons, .top-3-reasons .service-inner, .top-3-reasons span.title, .job-link, .our-values, .our-values .value-inner, .testimonial-by { width: 100%; }
+.fullwidth, .site-header, .site-header ul.nav li ul.sub-menu li, .site-header ul.nav li ul.sub-menu li a, .site-content, .after-banner, .services-section, .services-section .services-left, .services-section .services-right .top, .services-section .services-right .service, .services-section-mobile, .services-section-mobile .service-mobile, .site-footer, .service-detail, .services-links, .services-links span, body.page-template-template-services .service-outer, body.page-template-template-services .service-links, body.page-template-template-services .service-links .service-inner, body.page-template-template-services .service-links span, body.page-template-template-services .service-links ul, body.page-template-template-service-php .service-outer, body.page-template-template-service-php .service-links, body.page-template-template-service-php .service-links .service-inner, body.page-template-template-service-php .service-links span, body.page-template-template-service-php .service-links ul, .get-in-touch, .page-template-template-contact .contact-map-outer, .page-template-template-contact .contact-main, .page-template-template-contact .contact-main .gform_wrapper, .page-template-template-contact .contact-main .gform_wrapper form .gform_body, .page-template-template-contact .contact-main .gform_wrapper form .gform_body ul, .page-template-template-openings-php .position-main, .job-banner, .wpjb-page-index, .wpjb-page-index .wpjb-job-list, .wpjb-page-index .wpjb-job-list .wpjb-grid-row, .testimonial-image, .top-3-reasons, .top-3-reasons .service-inner, .top-3-reasons span.title, .job-link, .our-values, .our-values .value-inner, .testimonial-by { width: 100%; }
 
 /*********************
 Display Variables
@@ -42,7 +42,7 @@ Display Variables
 
 .dblock { display: block; }
 
-.dib, .services-links a, body.page-template-template-services .service-links a.service-icon, .top-3-reasons span.image { display: inline-block; }
+.dib, .services-links a, body.page-template-template-services .service-links a.service-icon, body.page-template-template-service-php .service-links a.service-icon, .top-3-reasons span.image { display: inline-block; }
 
 .dinline { display: inline; }
 
@@ -328,6 +328,23 @@ body.page-template-template-services .service-links span a:hover { color: #7dba3
 body.page-template-template-services .service-links ul { margin: 0; padding: 0; list-style: none; text-align: left; float: left; }
 @media screen and (max-width: 767px) { body.page-template-template-services .service-links ul { padding-bottom: 30px; } }
 body.page-template-template-services .service-links ul li { font: 400 16px/20px "Open Sans", sans-serif; text-transform: inherit !important; color: #333333; padding-left: 22px; padding-bottom: 10px; background: url(../images/green-bullet.png) no-repeat left 5px; }
+
+body.page-template-template-service-php .service-detail { padding: 77px 0 0; }
+body.page-template-template-service-php .service-outer { float: left; }
+body.page-template-template-service-php .service-links { padding: 0 0 70px; background-size: 100% auto; background-repeat: no-repeat; background-position: center bottom; }
+body.page-template-template-service-php .service-links .service-inner { background: url(../images/service-lines.png) no-repeat center top; padding-top: 93px; padding-bottom: 70px; }
+@media screen and (max-width: 992px) { body.page-template-template-service-php .service-links .service-inner { background-size: 68% auto; padding-top: 70px; } }
+@media screen and (max-width: 992px) { body.page-template-template-service-php .service-links .service-inner { background: none; padding-top: 10px; } }
+body.page-template-template-service-php .service-links h4 { margin: 0; font: 700 24px/24px "Open Sans", sans-serif; color: #160d47; padding: 0 0 45px 0; }
+body.page-template-template-service-php .service-links a.service-icon { width: 100px; height: 100px; border: 5px solid #8cc640; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; text-align: center; line-height: 90px; transition: all 0.2s ease-in-out 0s; }
+body.page-template-template-service-php .service-links a.service-icon:hover { transform: scale(1.1); }
+body.page-template-template-service-php .service-links span { font: 700 18px/24px "Open Sans", sans-serif; color: #333333; padding: 22px 0 18px 0; }
+body.page-template-template-service-php .service-links span a { color: #333333; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; text-decoration: none; }
+body.page-template-template-service-php .service-links span a.hover { color: #7dba3d; }
+body.page-template-template-service-php .service-links span a:hover { color: #7dba3d; }
+body.page-template-template-service-php .service-links ul { margin: 0; padding: 0; list-style: none; text-align: left; float: left; }
+@media screen and (max-width: 767px) { body.page-template-template-service-php .service-links ul { padding-bottom: 30px; } }
+body.page-template-template-service-php .service-links ul li { font: 400 16px/20px "Open Sans", sans-serif; text-transform: inherit !important; color: #333333; padding-left: 22px; padding-bottom: 10px; background: url(../images/green-bullet.png) no-repeat left 5px; }
 
 .get-in-touch a { display: inline-block; background: #7cb93d; color: #fff; font: 600 16px/40px "Open Sans", sans-serif; text-transform: uppercase; letter-spacing: 2px; padding: 0 50px 0 28px; text-decoration: none; border-radius: 0; width: auto; height: auto; border: 0; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; position: relative; }
 @media screen and (max-width: 767px) { .get-in-touch a { float: none; display: inline-block; } }
