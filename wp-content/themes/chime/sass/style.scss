@@ -359,7 +359,49 @@ HERO BANNER
 		
 	}
 }
-
+.after-banner {
+	h1.sub_heading_chime{
+		background-position:center top;
+		padding:40px 0 20px 0;
+		margin:0;
+		color:#160d47;
+		font:700 24px/23px $opensans;
+		letter-spacing:2px;
+	}
+}
+.after-banner.why_chime_div{
+	padding:40px 0 0 0;
+}
+.green_bg_div{
+	padding:14px;
+	height:109px;
+	text-align:right;
+	display:table;
+	background:#8cc640;
+	color:#fff;
+	font:bold 18px/24px arial;
+}
+.blue_bg_div{
+	padding:14px;
+	height:109px;
+	background:#140d46;
+	color:#fff;
+	font:normal 16px/24px arial;
+}
+.after-banner {
+	.blue_bg_div p{
+		color:#fff;
+		font:normal 16px/24px arial;	
+	}
+}
+.page-template-template-why-chime {
+	.top-3-reasons.pull-left{
+			border-bottom:1px solid #000000;
+	}
+}
+.gap_div{
+	margin:0 0 20px;
+}
 
 /*********************
 BANNER VIDEO
