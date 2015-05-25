@@ -359,6 +359,16 @@ HERO BANNER
 		
 	}
 }
+.page-template-template-why-chime {
+	#hero {
+		.hero-image {
+			.title{
+			letter-spacing:7px;
+			}
+		}
+	}
+}
+
 .after-banner {
 	h1.sub_heading_chime{
 		background-position:center top;
@@ -369,24 +379,52 @@ HERO BANNER
 		letter-spacing:2px;
 	}
 }
+
+.page-template-template-why-chime {
+	.after-banner {
+		h1.sub_heading_chime{
+			  letter-spacing: 5px;
+			  padding-top: 57px;
+		}
+	}
+}
+.float_center{
+	float:none;
+	margin:0 auto;
+	padding:10px 12px;
+	clear:both;
+}
+
 .after-banner.why_chime_div{
-	padding:40px 0 0 0;
+	padding:25px 0 0 0;
 }
 .green_bg_div{
-	padding:14px;
-	height:109px;
+	height:100%;
+	display:table-cell;
+	width:22%;
+	padding:13px 19px;
 	text-align:right;
-	display:table;
 	background:#8cc640;
 	color:#fff;
 	font:bold 18px/24px arial;
+		@include breakpoint($screen-sm-min){
+			width:100%;
+			display:block;
+			text-align:center;
+		}
 }
 .blue_bg_div{
-	padding:14px;
-	height:109px;
+	height:100%;
+	display:table-cell;
+	width:78%;
+	padding:15px 11px 0 19px;
 	background:#140d46;
 	color:#fff;
 	font:normal 16px/24px arial;
+		@include breakpoint($screen-sm-min){
+			width:100%;
+			display:block;
+		}
 }
 .after-banner {
 	.blue_bg_div p{
@@ -400,7 +438,12 @@ HERO BANNER
 	}
 }
 .gap_div{
-	margin:0 0 20px;
+	display:table;
+	margin:0 0 15px;
+		@include breakpoint($screen-sm-min){
+			width:100%;
+			display:block;
+		}
 }
 
 /*********************
@@ -1488,6 +1531,23 @@ Why Chime Page
 		max-width:100%;
 	}
 }
+.page-template-template-why-chime{
+	.top-3-reasons{	
+		padding-top:85px;
+	}
+}
+.page-template-template-why-chime{
+	.top-3-reasons h4{
+		letter-spacing: 5px;
+	}
+}
+.page-template-template-why-chime{
+	.top-3-reasons span.title{
+		text-transform:uppercase;
+		padding-top:27px;
+		letter-spacing:4px;
+	}	
+}
 .top-3-reasons{
 	@extend .fullwidth;
 	padding:40px 0 38px;
@@ -1565,7 +1625,9 @@ Why Chime Page
 		background:#61ae12;
 	}
 }
-
+.clear{
+	clear:both;
+}
 
 /****************
 Career Page

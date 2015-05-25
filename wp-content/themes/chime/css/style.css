@@ -219,19 +219,28 @@ HERO BANNER
 @media screen and (max-width: 992px) { #hero .hero-image .title { font: 700 27px/30px "Open Sans", sans-serif; } }
 @media screen and (max-width: 767px) { #hero .hero-image .title { font: 700 18px/23px "Open Sans", sans-serif; position: static; } }
 
+.page-template-template-why-chime #hero .hero-image .title { letter-spacing: 7px; }
+
 .after-banner h1.sub_heading_chime { background-position: center top; padding: 40px 0 20px 0; margin: 0; color: #160d47; font: 700 24px/23px "Open Sans", sans-serif; letter-spacing: 2px; }
 
-.after-banner.why_chime_div { padding: 40px 0 0 0; }
+.page-template-template-why-chime .after-banner h1.sub_heading_chime { letter-spacing: 5px; padding-top: 57px; }
 
-.green_bg_div { padding: 14px; height: 109px; text-align: right; display: table; background: #8cc640; color: #fff; font: bold 18px/24px arial; }
+.float_center { float: none; margin: 0 auto; padding: 10px 12px; clear: both; }
 
-.blue_bg_div { padding: 14px; height: 109px; background: #140d46; color: #fff; font: normal 16px/24px arial; }
+.after-banner.why_chime_div { padding: 25px 0 0 0; }
+
+.green_bg_div { height: 100%; display: table-cell; width: 22%; padding: 13px 19px; text-align: right; background: #8cc640; color: #fff; font: bold 18px/24px arial; }
+@media screen and (max-width: 767px) { .green_bg_div { width: 100%; display: block; text-align: center; } }
+
+.blue_bg_div { height: 100%; display: table-cell; width: 78%; padding: 15px 11px 0 19px; background: #140d46; color: #fff; font: normal 16px/24px arial; }
+@media screen and (max-width: 767px) { .blue_bg_div { width: 100%; display: block; } }
 
 .after-banner .blue_bg_div p { color: #fff; font: normal 16px/24px arial; }
 
 .page-template-template-why-chime .top-3-reasons.pull-left { border-bottom: 1px solid #000000; }
 
-.gap_div { margin: 0 0 20px; }
+.gap_div { display: table; margin: 0 0 15px; }
+@media screen and (max-width: 767px) { .gap_div { width: 100%; display: block; } }
 
 /*********************
 BANNER VIDEO
@@ -452,6 +461,12 @@ Why Chime Page
 .testimonial-image { float: left; }
 .testimonial-image img { max-width: 100%; }
 
+.page-template-template-why-chime .top-3-reasons { padding-top: 85px; }
+
+.page-template-template-why-chime .top-3-reasons h4 { letter-spacing: 5px; }
+
+.page-template-template-why-chime .top-3-reasons span.title { text-transform: uppercase; padding-top: 27px; letter-spacing: 4px; }
+
 .top-3-reasons { padding: 40px 0 38px; background-size: cover; text-align: center; }
 .top-3-reasons .service-inner { background: url(../images/service-lines.png) no-repeat center top; padding-top: 93px; }
 .top-3-reasons h4 { margin: 0; font: 700 24px/24px "Open Sans", sans-serif; color: #160d47; text-transform: uppercase; padding: 0 0 70px 0; }
@@ -462,6 +477,8 @@ Why Chime Page
 .top-3-reasons a { background: none repeat scroll 0 0 #7cb93d; color: #fff; display: inline-block; font: 600 16px/40px "Open Sans", sans-serif; letter-spacing: 2px; padding: 0 50px 0 28px; position: relative; text-decoration: none; text-transform: uppercase; margin-top: 60px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; clear: both; }
 .top-3-reasons a::after { background: url("../images/right-angle.png") no-repeat scroll center center transparent; content: ""; height: 40px; position: absolute; right: 15px; top: 0; width: 7px; }
 .top-3-reasons a:hover { background: #61ae12; }
+
+.clear { clear: both; }
 
 /****************
 Career Page
