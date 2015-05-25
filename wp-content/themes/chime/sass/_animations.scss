@@ -1,0 +1,71 @@
+/******************************************************************
+Stylesheet: Animations
+
+This is where we can add some fun CSS3 animations that can be called in the style.scss file.
+
+When adding CSS animations to a element you will want to include these lines of code in addition to the animation-name:
+	@include vendor-prefix('animation-timing-function', 'linear');
+	@include vendor-prefix('animation-duration', '20s' );
+	@include vendor-prefix('animation-iteration-count', 'infinite');
+	@include vendor-prefix('animation-fill-mode', 'both');
+	@include vendor-prefix('transform-style', 'preserve-3D');
+******************************************************************/
+
+/*********************
+360 Rotationi Animation
+USAGE: @include vendor-prefix('animation-name', 'spin360');
+*********************/
+
+@-webkit-keyframes spin360 {
+	0% {
+		@include rotate(0deg);
+	}
+	100% {
+		@include rotate(360deg);
+	}
+}
+@-moz-keyframes spin360 {
+	0% {
+		@include rotate(0deg);
+	}
+	100% {
+		@include rotate(360deg);
+	}
+}
+@-o-keyframes spin360 {
+	0% {
+		@include rotate(0deg);
+	}
+	100% {
+		@include rotate(360deg);
+	}
+}
+@keyframes spin360 {
+	0% {
+		@include rotate(0deg);
+	}
+	100% {
+		@include rotate(360deg);
+	}
+}
+
+
+/*********************
+EXAMPLE animation used to make an item rotate around in a circle.
+*********************/
+@-webkit-keyframes orbitTopMiddle {
+    from { -webkit-transform: rotate(0deg) translateY(-200px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateY(-200px) rotate(-360deg); }
+}
+@-moz-keyframes orbitTopMiddle {
+    from { -moz-transform: rotate(0deg) translateY(-200px) rotate(0deg); }
+    to   { -moz-transform: rotate(360deg) translateY(-200px) rotate(-360deg); }
+}
+@-o-keyframes orbitTopMiddle {
+    from { -o-transform: rotate(0deg) translateY(-200px) rotate(0deg); }
+    to   { -o-transform: rotate(360deg) translateY(-200px) rotate(-360deg); }
+}
+@keyframes orbitTopMiddle {
+    from { transform: rotate(0deg) translateY(-200px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateY(-200px) rotate(-360deg); }
+}
