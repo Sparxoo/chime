@@ -18,7 +18,7 @@
 					bp_footer_nav();
 				?>
 				<div class="site-by pull-right">
-					<?php dynamic_sidebar('site-by');?>
+					<?php dynamic_sidebar('site-by');?> 
 				</div>
 			</div>
 			
