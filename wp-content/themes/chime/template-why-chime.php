@@ -19,17 +19,18 @@
 			<div class="col-md-8 col-sm-8 col-xs-12 text-center">
 				<p><?php the_field('sub_description');?></p>
 			</div>
-			<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="col-md-11 col-sm-11 col-xs-11 float_center">
 <?php if( have_rows('what_we_value') ){
 	while ( have_rows('what_we_value') ) : the_row();
 	?>
 	<div class="col-md-12 col-sm-12 col-xs-12 gap_div">
-	<div class="col-md-3 col-sm-3 col-xs-12 green_bg_div">
+	<div class="green_bg_div">
 		<?php the_sub_field('title', $post->ID); ?>
 	</div>
-	<div class="col-md-9 col-sm-9 col-xs-12 blue_bg_div">
+	<div class="blue_bg_div">
 		<?php the_sub_field('discription', $post->ID);?>
 	</div>
+	<div class="clear"></div>
 </div>
 <?php endwhile; }?>
 			</div>
