@@ -26,7 +26,8 @@ if (have_posts()) : while (have_posts()) : the_post();
 	
 	//basic banner information
 	$hero_title = get_field('hero_title');
-	$hero_description = get_field('hero_description');
+	$heading = get_field('heading');
+	$postObject = get_field('page_link');
 	
 	$parallax = get_field('parallax_banner');
 	$bannerFormat = get_field('video_or_photo');
@@ -59,21 +60,30 @@ endwhile; endif ;
 						<?php // display the title differently for the mobile site. ?>
 						<img src="<?php //print $hero_mobile; ?>" alt="<?= $hero_alt ?>">
 					</div>-->
+				<?php if( is_front_page() ) :
+					$fullWidthHero = "full-width-hero";
+				endif; ?>
 				<?php if($hero_image !='') {?>
-					<img src="<?php print $hero_image ?>" alt="<?= $hero_alt ?>">
+					<img src="<?php print $hero_image ?>" alt="<?= $hero_alt ?>" class="<?php echo $fullWidthHero; ?>">
 				<?php }?>
 				
 				
 					<?php
 					//do the following if the title or description exists
-					if($hero_title || $hero_description): ?>
+					if($hero_title || $heading): ?>
 						<div class="hero-info">
 							
-							<?php if($hero_description): ?>
+							<?php if($heading): ?>
 								<div class="container">
 									<div class="row">
 										<div class="col-md-8 col-sm-8 col-xs-12 pull-right padding0">
-											<div class="description"><?php print $hero_description; ?></div>
+											<div class="description">
+												<h2><?php the_field('heading'); ?></h2>
+												<h3><?php the_field('sub-heading'); ?></h3>
+												<a href="<?php echo get_permalink($postObject->ID); ?>">
+													<?php echo $postObject->post_title; ?>
+												</a>
+											</div>
 										</div>
 									</div>
 								</div>

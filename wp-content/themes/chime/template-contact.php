@@ -9,17 +9,19 @@
 <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
 <script type="text/javascript">
 function initialize() {
-    var loc, map, marker, infobox;
+    var headquarterLocation, map, marker, infobox, mapCenter;
     
-    loc = new google.maps.LatLng(33.5749881, -84.35139529999998);
+    headquarterLocation = new google.maps.LatLng(33.5749881, -84.35139529999998);
+    mapCenter = new google.maps.LatLng(33.6749881, -84.35139529999998);
+
  
     
     map = new google.maps.Map(document.getElementById("map"), {
          
-         center: loc,
+    center: mapCenter,
        
-          zoom: 10,
-      panControl: false,
+    zoom: 10,
+    panControl: true,
     zoomControl: false,
     scaleControl: false,
 	  draggable: false,
@@ -32,7 +34,7 @@ function initialize() {
     
     marker = new google.maps.Marker({
         map: map,
-        position: loc,
+        position: headquarterLocation,
         visible: true
     });
 
@@ -42,13 +44,13 @@ function initialize() {
       '<span itemprop="name" class="location-name"><?php the_field('company_name', $post->ID);?><br></span>'+
       '<span itemprop="streetAddress"><?php the_field('company_street', $post->ID);?> | </span>'+
       '<span itemprop="addressLocality"><?php the_field('location', $post->ID);?>, </span>'+
-      '<span itemprop="addressRegion"><?php the_field('region', $post->ID);?></span>' +
+      '<span itemprop="addressRegion"><?php the_field('region', $post->ID);?>&nbsp;</span>' +
       '<span itemprop="postalCode"><?php the_field('postal_code', $post->ID);?></span><br>'+
       '<span itemprop="telephone"><a href="tel:<?php the_field('number', $post->ID);?>"><?php the_field('display_contact_number', $post->ID);?></a></span>	'+
       '</div>',
          disableAutoPan:  false,
          maxWidth: 150,
-         pixelOffset: new google.maps.Size(-140, 0),
+         pixelOffset: new google.maps.Size(-125, -175),
          zIndex: null,
          boxStyle: {
             //background: "url('http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/examples/tipbox.gif') no-repeat",
@@ -62,10 +64,11 @@ function initialize() {
     
     google.maps.event.addListener(marker, 'click', function() {
         infobox.open(map, this);
-        map.panTo(loc);
+        map.panTo(headquarterLocation);
     });
      infobox.open(map, marker);
-        map.panTo(loc);
+
+        
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 

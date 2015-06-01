@@ -374,16 +374,19 @@ HERO BANNER
 }
 .green_bg_div{
 	padding:14px;
-	height:109px;
 	text-align:right;
+	height: 100%;
 	display:table;
 	background:#8cc640;
 	color:#fff;
 	font:bold 18px/24px arial;
+
+	@include breakpoint($screen-sm-min){
+		text-align: left;
+	}
 }
 .blue_bg_div{
 	padding:14px;
-	height:109px;
 	background:#140d46;
 	color:#fff;
 	font:normal 16px/24px arial;
@@ -401,6 +404,13 @@ HERO BANNER
 }
 .gap_div{
 	margin:0 0 20px;
+	padding:0;
+	background:#8cc640;
+
+}
+
+.full-width-hero {
+	width: 100% !important;
 }
 
 /*********************
@@ -1122,7 +1132,7 @@ Gravity Form
 			width:330px;
 			color:$white;
 			padding:6px;
-                        margin:45px 0 0 163px;
+            margin: 0 0 45px 163px;
 			font:400 16px/24px $opensans;
 			
 			@include breakpoint($screen-sm-min){
@@ -1146,22 +1156,35 @@ Gravity Form
 		.location-information:before{
 			content:"";
 			position:absolute;
-			left:-22px;
-			top:-45px;
+			left: -22px;
+			bottom: -45px;	
 			width:69px;
 			height:45px;
+			-moz-transform: scaleY(-1);
+			-o-transform: scaleY(-1);
+			-webkit-transform: scaleY(-1);
+			transform: scaleY(-1);
+			filter: FlipY;
+	        -ms-filter: "FlipY";
 			background:url(../images/address-arrow.png) no-repeat left bottom;
 			
 			@include breakpoint($screen-sm-min){
 				/*display:none;*/
-left:0;
-right:0;
-margin:auto;
-			background:url(../images/address-arrow1.png) no-repeat center bottom;                
+				left:0;
+				right:0;
+				margin:auto;
+				background:url(../images/address-arrow1.png) no-repeat center bottom;                
 			}
 		}
 	}
-.infoBox img{ margin:50px 2px 0 0!important; z-index:50;}
+.infoBox {
+	img{ 
+		position:absolute !important;
+		top: 5px !important;
+		right: 5px !important;
+		z-index: 50;
+	}
+}
 	
 	.contact-main{		
 		@extend .fullwidth;
@@ -1787,4 +1810,8 @@ Mobile Menu
     font-size: 1em;
     padding-right: 25px;
     right: 0;
+}
+
+.wpjb-grid-row {
+  padding: 15px 20px !important;
 }

@@ -223,15 +223,18 @@ HERO BANNER
 
 .after-banner.why_chime_div { padding: 40px 0 0 0; }
 
-.green_bg_div { padding: 14px; height: 109px; text-align: right; display: table; background: #8cc640; color: #fff; font: bold 18px/24px arial; }
+.green_bg_div { padding: 14px; text-align: right; height: 100%; display: table; background: #8cc640; color: #fff; font: bold 18px/24px arial; }
+@media screen and (max-width: 767px) { .green_bg_div { text-align: left; } }
 
-.blue_bg_div { padding: 14px; height: 109px; background: #140d46; color: #fff; font: normal 16px/24px arial; }
+.blue_bg_div { padding: 14px; background: #140d46; color: #fff; font: normal 16px/24px arial; }
 
 .after-banner .blue_bg_div p { color: #fff; font: normal 16px/24px arial; }
 
 .page-template-template-why-chime .top-3-reasons.pull-left { border-bottom: 1px solid #000000; }
 
-.gap_div { margin: 0 0 20px; }
+.gap_div { margin: 0 0 20px; padding: 0; background: #8cc640; }
+
+.full-width-hero { width: 100% !important; }
 
 /*********************
 BANNER VIDEO
@@ -376,14 +379,14 @@ Gravity Form
 .page-template-template-contact .contact-map-outer .gm-style-iw div { overflow: visible !important; }
 .page-template-template-contact .contact-map-outer .location-information { position: relative; /*left:50%;
 bottom:-230px;
-margin-left: 35px;*/ background: url(../images/location-bg.png); width: 330px; color: #ffffff; padding: 6px; margin: 45px 0 0 163px; font: 400 16px/24px "Open Sans", sans-serif; }
+margin-left: 35px;*/ background: url(../images/location-bg.png); width: 330px; color: #ffffff; padding: 6px; margin: 0 0 45px 163px; font: 400 16px/24px "Open Sans", sans-serif; }
 @media screen and (max-width: 767px) { .page-template-template-contact .contact-map-outer .location-information { /*left: 50%;
 bottom: 0px;*/ margin: 40px 0 0 0px; width: 100%; padding: 5px; font: 400 13px/15px "Open Sans", sans-serif; } }
 .page-template-template-contact .contact-map-outer .location-information .location-name { font: 700 16px/24px "Open Sans", sans-serif; }
 .page-template-template-contact .contact-map-outer .location-information a { color: #ffffff; }
-.page-template-template-contact .contact-map-outer .location-information:before { content: ""; position: absolute; left: -22px; top: -45px; width: 69px; height: 45px; background: url(../images/address-arrow.png) no-repeat left bottom; }
+.page-template-template-contact .contact-map-outer .location-information:before { content: ""; position: absolute; left: -22px; bottom: -45px; width: 69px; height: 45px; -moz-transform: scaleY(-1); -o-transform: scaleY(-1); -webkit-transform: scaleY(-1); transform: scaleY(-1); filter: FlipY; -ms-filter: "FlipY"; background: url(../images/address-arrow.png) no-repeat left bottom; }
 @media screen and (max-width: 767px) { .page-template-template-contact .contact-map-outer .location-information:before { /*display:none;*/ left: 0; right: 0; margin: auto; background: url(../images/address-arrow1.png) no-repeat center bottom; } }
-.page-template-template-contact .infoBox img { margin: 50px 2px 0 0 !important; z-index: 50; }
+.page-template-template-contact .infoBox img { position: absolute !important; top: 5px !important; right: 5px !important; z-index: 50; }
 .page-template-template-contact .contact-main { padding: 72px 0 109px; margin: 29px 0 0; background: url(../images/three-lins.png) no-repeat center top; }
 .page-template-template-contact .contact-main .gform_wrapper form .gform_heading h3.gform_title { font: 700 24px/26px "Open Sans", sans-serif; color: #160d47; text-transform: uppercase; letter-spacing: 4px; }
 .page-template-template-contact .contact-main .gform_wrapper form .gform_body label { display: none; }
@@ -512,3 +515,5 @@ Mobile Menu
 .mobile-menu-wrap ul a:hover, .mobile-menu-wrap ul a:focus { background: none repeat scroll 0 0 transparent; }
 
 .mobile-menu-wrap ul li.menu-item-has-children > a::after, .mobile-menu-wrap ul li.top-nav-search > a::after, .mobile-menu-wrap ul li.top-nav-chapters > a::after { color: #ffffff; content: "\f0d7"; float: right; font-family: FontAwesome; font-size: 1em; padding-right: 25px; right: 0; }
+
+.wpjb-grid-row { padding: 15px 20px !important; }
