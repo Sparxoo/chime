@@ -44,7 +44,14 @@ if (have_posts()) : while (have_posts()) : the_post();
 		
 endwhile; endif ;
 ?>
-		
+	
+<?php if (is_front_page()) {
+	$fullWidthFrontPage = "full-width-one-hundred";
+} 
+else {
+	$fullWidthFrontPage = NULL;
+}
+?>	
 <?php //check to make sure an image or video is present. ?>
 
 <?php if(has_post_thumbnail() || $videoWebm || $videoMp4 || $video_ogg):?>
@@ -64,7 +71,7 @@ endwhile; endif ;
 					$fullWidthHero = "full-width-hero";
 				endif; ?>
 				<?php if($hero_image !='') {?>
-					<img src="<?php print $hero_image ?>" alt="<?= $hero_alt ?>" class="<?php echo $fullWidthHero; ?>">
+					<img src="<?php print $hero_image ?>" alt="<?= $hero_alt ?>" class="<?php echo $fullWidthHero . ' ' . $fullWidthFrontPage; ?>">
 				<?php }?>
 				
 				

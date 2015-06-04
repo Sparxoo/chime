@@ -226,7 +226,7 @@ HERO BANNER
 	
 		.hero-info{
 			position:absolute;
-			top:17%;
+			top:10%;
 			display:block;
 			width:100%;
 			z-index:2;						
@@ -244,7 +244,7 @@ HERO BANNER
 				
 				h2{
 					color:#444444;
-					font:700 45px/46px $opensans;
+					font:700 38px/39px $opensans;
 					text-transform:uppercase;
 					letter-spacing: 5px;
 					margin:0;
@@ -260,7 +260,7 @@ HERO BANNER
 				
 				h3{
 					color:#444444;
-					font:400 45px/46px $opensans;
+					font:400 38px/39px $opensans;
 					text-transform:uppercase;
 					letter-spacing: 4px;
 					margin:0;
@@ -1145,6 +1145,7 @@ Gravity Form
 		@extend .fullwidth;
 		@extend .fleft;
 		position:relative;
+		padding: 15px;
 		
 		.gm-style-iw{
 			top: 30px !important;
@@ -1866,4 +1867,8 @@ Mobile Menu
 
 .wpjb-grid-row {
   padding: 15px 20px !important;
+}
+
+.full-width-one-hundred {
+	width: 100% !important;
 }
