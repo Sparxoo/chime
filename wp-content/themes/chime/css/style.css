@@ -450,7 +450,6 @@ Why Chime Page
 .page-template-template-why-chime .service-detail { padding: 57px 0 84px; }
 @media screen and (max-width: 767px) { .page-template-template-why-chime .service-detail { padding: 57px 0 0; } }
 
-.testimonial-text { padding-top: 33px; }
 .testimonial-text h3 { color: #160d47; font: 700 24px/26px "Open Sans", sans-serif; text-transform: uppercase; letter-spacing: 3px; padding-bottom: 32px; }
 @media screen and (max-width: 992px) { .testimonial-text h3 { font: 700 20px/22px "Open Sans", sans-serif; } }
 @media screen and (max-width: 767px) { .testimonial-text h3 { text-align: center; } }
