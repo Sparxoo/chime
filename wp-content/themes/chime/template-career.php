@@ -18,7 +18,7 @@
 		</div>
 	</div>
 </div>
-<div class="service-detail pull-left">
+<div class="service-detail ">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2 col-sm-2 col-xs-12 pull-left"></div>
@@ -32,7 +32,10 @@
 			<div class="col-md-2 col-sm-2 col-xs-12 pull-left"></div>
 		</div>
 	</div>
-</div>	
+</div>
+
+<?php 
+get_template_part('content', 'news'); ?>
 
 <div class="top-3-reasons pull-left" style="background-image:url(<?php the_field('reasons_background', $post->ID);?>);background-size:cover;background-position:center left;">
 	<div class="container">

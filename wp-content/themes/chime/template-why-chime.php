@@ -9,7 +9,7 @@
 	//add the hero banner to the header.
 	get_template_part("content", "hero"); 
 ?>
-<div class="after-banner why_chime_div pull-left">
+<div class="after-banner why_chime_div">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12 col-xs-12 text-center ">
@@ -39,7 +39,8 @@
 </div>
 
 
-
+<?php 
+get_template_part('content', 'news'); ?>
 
 
 

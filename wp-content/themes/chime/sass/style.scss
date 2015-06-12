@@ -1818,6 +1818,45 @@ Career Page
 	}
 }
 
+/****************
+In The News
+****************/
+.in-the-news {
+	min-height:400px;
+	position:relative;
+	background-size:cover;
+	padding: 25px 0;
+	h2 {
+		color:$white;
+		padding:0 0 25px 40px;
+	}
+	img {
+		padding:50px 0;
+		@include breakpoint($screen-sm-min) {
+			display: block;
+			margin:0 auto;
+			padding:0;
+		}
+	}
+	.news-link {
+		width:100%;
+		display: block;
+		margin-left:50px;
+		max-width:200px;
+		background:#7cb93d;
+		text-align:center;
+		padding:10px 0;
+		text-transform: uppercase;
+		color:$white;
+		text-decoration:none;
+		&:hover {
+			background:lighten(#7cb93d, 20%);
+		}
+		@include breakpoint($screen-sm-min) {
+			margin:0 auto;
+		}
+	}
+}
 
 /*****************
 Mobile Menu

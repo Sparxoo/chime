@@ -3,11 +3,11 @@
 Plugin Name: Black Studio TinyMCE Widget
 Plugin URI: https://wordpress.org/plugins/black-studio-tinymce-widget/
 Description: Adds a new "Visual Editor" widget type based on the native WordPress TinyMCE editor.
-Version: 2.2.2
+Version: 2.2.4
 Author: Black Studio
 Author URI: http://www.blackstudio.it
 Requires at least: 3.1
-Tested up to: 4.1
+Tested up to: 4.2
 License: GPLv3
 Text Domain: black-studio-tinymce-widget
 Domain Path: /languages
@@ -35,7 +35,7 @@ if ( ! class_exists( 'Black_Studio_TinyMCE_Plugin' ) ) {
 		 * @var string
 		 * @since 2.0.0
 		 */
-		public static $version = '2.2.2';
+		public static $version = '2.2.4';
 
 		/**
 		 * The single instance of the plugin class
@@ -161,7 +161,6 @@ if ( ! class_exists( 'Black_Studio_TinyMCE_Plugin' ) ) {
 		 * @uses get_bloginfo()
 		 *
 		 * @global object $wp_embed
-		 * @return void
 		 * @since 2.0.0
 		 */
 		protected function __construct() {
@@ -237,7 +236,7 @@ if ( ! class_exists( 'Black_Studio_TinyMCE_Plugin' ) ) {
 		 * @since 2.0.0
 		 */
 		public function check_widget( $widget ) {
-			return gettype( $widget ) == 'object' && get_class( $widget ) == 'WP_Widget_Black_Studio_TinyMCE';
+			return 'object' == gettype( $widget ) && ( 'WP_Widget_Black_Studio_TinyMCE' == get_class( $widget ) || is_subclass_of( $widget , 'WP_Widget_Black_Studio_TinyMCE' ) );
 		}
 
 	} // END class Black_Studio_TinyMCE_Plugin
@@ -282,7 +281,7 @@ else {
 			}
 		}
 		add_action( 'admin_notices', 'bstw_multiple_notice' );
-	
+
 	} // END function_exists bstw_multiple_notice check
 
 } // END else function_exists bstw check
