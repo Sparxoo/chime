@@ -19,7 +19,7 @@ $news_bg = get_field('news_background');?>
 				<?php echo $text; ?>
 					<div class="row">
 						<div class="col-md-12">
-						<a class="news-link" href="<?php echo $news_link; ?>"><?php echo $link_text; ?></a>
+						<a target="_blank" class="news-link" href="<?php echo $news_link; ?>"><?php echo $link_text; ?></a>
 					</div>
 				</div>
 			</div>
